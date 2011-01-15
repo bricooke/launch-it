@@ -1,0 +1,1 @@
+mogenerator -m ./LaunchIt/Resources/LaunchIt.xcdatamodeld/v2.xcdatamodel -O ./LaunchIt/Classes/Models/LaunchIt
