@@ -150,6 +150,7 @@
 		D6BF68F512E268BF008BCC5B /* LIWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68F412E268BE008BCC5B /* LIWindowController.m */; };
 		D6BF690012E2A794008BCC5B /* LIEditApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68FE12E2A794008BCC5B /* LIEditApplicationViewController.m */; };
 		D6BF690112E2A794008BCC5B /* LIEditApplicationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BF68FF12E2A794008BCC5B /* LIEditApplicationView.xib */; };
+		D6BF690412E39B9E008BCC5B /* MACollectionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF690312E39B9E008BCC5B /* MACollectionUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -370,6 +371,8 @@
 		D6BF68FD12E2A794008BCC5B /* LIEditApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIEditApplicationViewController.h; path = Classes/Controllers/LIEditApplicationViewController.h; sourceTree = "<group>"; };
 		D6BF68FE12E2A794008BCC5B /* LIEditApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LIEditApplicationViewController.m; path = Classes/Controllers/LIEditApplicationViewController.m; sourceTree = "<group>"; };
 		D6BF68FF12E2A794008BCC5B /* LIEditApplicationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LIEditApplicationView.xib; path = Classes/Controllers/LIEditApplicationView.xib; sourceTree = "<group>"; };
+		D6BF690212E39B9E008BCC5B /* MACollectionUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MACollectionUtilities.h; path = Classes/3rdParty/MACollectionUtilities.h; sourceTree = "<group>"; };
+		D6BF690312E39B9E008BCC5B /* MACollectionUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACollectionUtilities.m; path = Classes/3rdParty/MACollectionUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -474,6 +477,8 @@
 				D6BF67B612E25E44008BCC5B /* SynthesizeSingleton.h */,
 				D6BF67B712E25E44008BCC5B /* validatereceipt.h */,
 				D6BF67B812E25E44008BCC5B /* validatereceipt.m */,
+				D6BF690212E39B9E008BCC5B /* MACollectionUtilities.h */,
+				D6BF690312E39B9E008BCC5B /* MACollectionUtilities.m */,
 			);
 			name = 3rdParty;
 			sourceTree = "<group>";
@@ -923,6 +928,7 @@
 				D6BF68F212E26821008BCC5B /* LIWindow.m in Sources */,
 				D6BF68F512E268BF008BCC5B /* LIWindowController.m in Sources */,
 				D6BF690012E2A794008BCC5B /* LIEditApplicationViewController.m in Sources */,
+				D6BF690412E39B9E008BCC5B /* MACollectionUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

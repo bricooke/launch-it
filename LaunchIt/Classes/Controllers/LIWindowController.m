@@ -11,6 +11,14 @@
 #import "CoreData+ActiveRecordFetching.h"
 #import "AppDelegate.h"
 #import "LIEditApplicationViewController.h"
+#import "MACollectionUtilities.h"
+
+
+@interface LIWindowController(private)
+- (void) slideInEditView;
+- (void) slideBackToMainView;
+@end
+
 
 @implementation LIWindowController
 
@@ -39,17 +47,62 @@
 
 - (void) editApplication:(Application *)anApp
 {
-  NSLog(@"%@", anApp);
-  
+  [self slideInEditView];
+}
+
+
+#pragma mark -
+#pragma mark animations
+- (void) slideInEditView
+{
   NSRect current = [self.containerView frame];
   [[self.containerView animator] setFrame:NSOffsetRect(current, -current.size.width, 0)];
   
+  // make sure it's off screen, to the right.
   [self.editAppController.view setFrame:NSOffsetRect(current, current.size.width, 0)];
-
+  
   if ([self.editAppController.view superview] == nil)
     [[[self window] contentView] addSubview:self.editAppController.view];
   
   [[self.editAppController.view animator] setFrame:current];
+
+  for (NSButton *but in ARRAY(self.cancelButton, self.saveButton)) {
+    [[but animator] setHidden:NO];
+  }
+  
+  for (NSButton *but in ARRAY(self.addButton, self.settingsButton)) {
+    [[but animator] setHidden:YES];
+  }
+}
+
+
+- (void) slideBackToMainView
+{
+  NSRect current = [self.containerView frame];
+  [[self.containerView animator] setFrame:NSOffsetRect(current, current.size.width, 0)];
+  [[self.editAppController.view animator] setFrame:NSOffsetRect(current, current.size.width*2, 0)];
+  
+  for (NSButton *but in ARRAY(self.cancelButton, self.saveButton)) {
+    [[but animator] setHidden:YES];
+  }
+  
+  for (NSButton *but in ARRAY(self.addButton, self.settingsButton)) {
+    [[but animator] setHidden:NO];
+  }
+}
+
+
+#pragma mark -
+#pragma mark actions
+- (IBAction)cancel:(id)sender
+{
+  [self slideBackToMainView];
+}
+
+
+- (IBAction)save:(id)sender
+{
+  [self slideBackToMainView];  
 }
 
 
@@ -57,6 +110,7 @@
 @synthesize editAppController;
 @synthesize cancelButton;
 @synthesize saveButton;
-
+@synthesize addButton;
+@synthesize settingsButton;
 
 @end
