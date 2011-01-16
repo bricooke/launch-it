@@ -14,6 +14,7 @@
 - (void)        bindHotkeyTo:(id)delegate action:(SEL)selector;
 - (void)        unbindHotkey;
 - (void)        launch;
+- (NSString *)  shortcutCodeStringForMenus;
 - (NSString *)  shortcutCodeString;
 - (NSUInteger)  modifierMask;
 @end

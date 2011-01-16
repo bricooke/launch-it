@@ -5,6 +5,8 @@
 #import <ShortcutRecorder/ShortcutRecorder.h>
 #import "CoreData+ActiveRecordFetching.h"
 #import "AppDelegate.h"
+#import "LIWindowController.h"
+
 
 @interface Application(private)
 - (void) launch:(SGHotKey *)aHotKey;
@@ -22,6 +24,12 @@
   }  
 }
 
+
+- (IBAction) edit:(id)sender
+{
+  [[AppDelegate sharedAppDelegate].windowController editApplication:self];
+}
+
 - (NSImage *) appIcon
 {
   if (self.renderedImage == nil) {
@@ -35,7 +43,7 @@
 {
   RSApplicationFileAnalyzer *analyzer = [[RSApplicationFileAnalyzer alloc] initWithApplication:self.path];
   NSImage *icon = [[NSImage alloc] initWithContentsOfFile:[analyzer iconPath]];
-  [icon setSize:NSMakeSize(16,16)];
+  [icon setSize:NSMakeSize(20,20)];
   [analyzer release];
   return [icon autorelease];
 }
@@ -64,7 +72,7 @@
 }
 
 
-- (NSString *) shortcutCodeString
+- (NSString *) shortcutCodeStringForMenus
 {
   SRRecorderControl *shortcutRecorder = [[SRRecorderControl alloc] init];
   SGKeyCombo *combo = [SGKeyCombo keyComboWithKeyCode:[self shortcutCodeValue] modifiers:[shortcutRecorder cocoaToCarbonFlags:[self shortcutFlagsValue]]];
@@ -115,9 +123,16 @@
     return code;
   }
   
-  return [NSString stringWithCharacters:ch length:1];
+  NSString *ret = [NSString stringWithCharacters:ch length:1];
+  NSLog(@"%@", ret);
+  return ret;
 }
 
+
+- (NSString *) shortcutCodeString
+{
+  return SRStringForCocoaModifierFlagsAndKeyCode([self shortcutFlagsValue], [self shortcutCodeValue]);
+}
 
 - (NSUInteger) modifierMask
 {
