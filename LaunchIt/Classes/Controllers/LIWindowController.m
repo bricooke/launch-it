@@ -53,6 +53,18 @@
 
 #pragma mark -
 #pragma mark animations
+- (void) setSaveAndCancelVisible:(BOOL)visible
+{
+  for (NSButton *but in ARRAY(self.cancelButton, self.saveButton)) {
+    [[but animator] setHidden:!visible];
+  }
+  
+  for (NSButton *but in ARRAY(self.addButton, self.settingsButton)) {
+    [[but animator] setHidden:visible];
+  }
+}
+
+
 - (void) slideInEditView
 {
   NSRect current = [self.containerView frame];
@@ -66,13 +78,7 @@
   
   [[self.editAppController.view animator] setFrame:current];
 
-  for (NSButton *but in ARRAY(self.cancelButton, self.saveButton)) {
-    [[but animator] setHidden:NO];
-  }
-  
-  for (NSButton *but in ARRAY(self.addButton, self.settingsButton)) {
-    [[but animator] setHidden:YES];
-  }
+  [self setSaveAndCancelVisible:YES];
 }
 
 
@@ -81,14 +87,8 @@
   NSRect current = [self.containerView frame];
   [[self.containerView animator] setFrame:NSOffsetRect(current, current.size.width, 0)];
   [[self.editAppController.view animator] setFrame:NSOffsetRect(current, current.size.width*2, 0)];
-  
-  for (NSButton *but in ARRAY(self.cancelButton, self.saveButton)) {
-    [[but animator] setHidden:YES];
-  }
-  
-  for (NSButton *but in ARRAY(self.addButton, self.settingsButton)) {
-    [[but animator] setHidden:NO];
-  }
+
+  [self setSaveAndCancelVisible:NO];
 }
 
 
