@@ -12,7 +12,7 @@
 #import "AppDelegate.h"
 #import "LIEditApplicationViewController.h"
 #import "MACollectionUtilities.h"
-
+#import "LIMenubarView.h"
 
 @interface LIWindowController(private)
 - (void) slideInEditView;
@@ -42,6 +42,12 @@
   [self.collectionView setBackgroundColors:[NSArray arrayWithObject:[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg_middle.png"]]]];
   
   [self.collectionView setContent:[Application findAll]];
+  
+  float width = 22.0;
+  float height = [[NSStatusBar systemStatusBar] thickness];
+  NSRect viewFrame = NSMakeRect(0, 0, width, height);
+  self.statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
+  [self.statusItem setView:[[[LIMenubarView alloc] initWithFrame:viewFrame controller:self] autorelease]];
 }
 
 
@@ -106,11 +112,27 @@
 }
 
 
+- (void)toggleWindowAtPoint:(NSPoint)pt makeVisible:(BOOL)visible
+{
+  pt.x -= [self.window frame].size.width/2;
+  pt.y -= [self.window frame].size.height;
+  
+  [self.window setFrameOrigin:pt];
+  if (visible) {
+    [NSApp activateIgnoringOtherApps:YES];
+    [self.window makeKeyAndOrderFront:self];
+  } else {
+    [self.window orderOut:self];
+  }
+}
+
+
 @synthesize collectionView, containerView;
 @synthesize editAppController;
 @synthesize cancelButton;
 @synthesize saveButton;
 @synthesize addButton;
 @synthesize settingsButton;
+@synthesize statusItem;
 
 @end

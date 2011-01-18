@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D60B153E12E5308700985B33 /* LIMenubarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D60B153D12E5308700985B33 /* LIMenubarView.m */; };
+		D60B154012E5358500985B33 /* menubar_white.png in Resources */ = {isa = PBXBuildFile; fileRef = D60B153F12E5358500985B33 /* menubar_white.png */; };
 		D60DECF512E26E64002F77DD /* LaunchIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6BF680812E26704008BCC5B /* LaunchIt.xcdatamodeld */; };
 		D60DED0F12E2701C002F77DD /* SGKeyCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = D60DED0D12E2701C002F77DD /* SGKeyCodes.plist */; };
 		D6BF674712E2562C008BCC5B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF674612E2562C008BCC5B /* Cocoa.framework */; };
@@ -154,6 +156,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D60B153C12E5308700985B33 /* LIMenubarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIMenubarView.h; path = Classes/Views/LIMenubarView.h; sourceTree = "<group>"; };
+		D60B153D12E5308700985B33 /* LIMenubarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LIMenubarView.m; path = Classes/Views/LIMenubarView.m; sourceTree = "<group>"; };
+		D60B153F12E5358500985B33 /* menubar_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menubar_white.png; path = Resources/menubar_white.png; sourceTree = "<group>"; };
 		D60DED0E12E2701C002F77DD /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = en; path = LaunchIt/Resources/en.lproj/SGKeyCodes.plist; sourceTree = SOURCE_ROOT; };
 		D6BF674212E2562C008BCC5B /* Launch it!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Launch it!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BF674612E2562C008BCC5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -490,6 +495,7 @@
 				D6BF67DC12E26259008BCC5B /* Icon.icns */,
 				D6BF67DD12E26259008BCC5B /* menubar_bw.png */,
 				D6BF67DE12E26259008BCC5B /* menubar_flames.png */,
+				D60B153F12E5358500985B33 /* menubar_white.png */,
 				D6BF678A12E25D73008BCC5B /* MainMenu.xib */,
 			);
 			name = Resources;
@@ -526,6 +532,8 @@
 				D6BF68EE12E26821008BCC5B /* LIResizableWindowFrame.m */,
 				D6BF68EF12E26821008BCC5B /* LIWindow.h */,
 				D6BF68F012E26821008BCC5B /* LIWindow.m */,
+				D60B153C12E5308700985B33 /* LIMenubarView.h */,
+				D60B153D12E5308700985B33 /* LIMenubarView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -856,6 +864,7 @@
 				D6BF68EC12E267F7008BCC5B /* TransparentSliderTriangleThumbP.tiff in Resources */,
 				D60DED0F12E2701C002F77DD /* SGKeyCodes.plist in Resources */,
 				D6BF690112E2A794008BCC5B /* LIEditApplicationView.xib in Resources */,
+				D60B154012E5358500985B33 /* menubar_white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -929,6 +938,7 @@
 				D6BF68F512E268BF008BCC5B /* LIWindowController.m in Sources */,
 				D6BF690012E2A794008BCC5B /* LIEditApplicationViewController.m in Sources */,
 				D6BF690412E39B9E008BCC5B /* MACollectionUtilities.m in Sources */,
+				D60B153E12E5308700985B33 /* LIMenubarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

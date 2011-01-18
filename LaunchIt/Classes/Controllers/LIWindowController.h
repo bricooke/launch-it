@@ -18,6 +18,7 @@
   NSButton                        *saveButton;
   NSButton *addButton;
   NSButton *settingsButton;
+  NSStatusItem *statusItem;
 }
 
 @property (nonatomic, retain) IBOutlet NSCollectionView       *collectionView;
@@ -27,9 +28,11 @@
 @property (nonatomic, retain) IBOutlet NSButton               *saveButton;
 @property (nonatomic, retain) IBOutlet NSButton *addButton;
 @property (nonatomic, retain) IBOutlet NSButton *settingsButton;
+@property (nonatomic, retain) NSStatusItem *statusItem;
 
 - (void)editApplication:(Application *)anApp;
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
+- (void)toggleWindowAtPoint:(NSPoint)pt makeVisible:(BOOL)visible;
 
 @end
