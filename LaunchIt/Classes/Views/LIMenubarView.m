@@ -18,6 +18,7 @@
     self.controller = ctrlr;
     
     [[NSNotificationCenter defaultCenter] addObserverForName:NSWindowDidResignKeyNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *arg1) {
+      clicked = YES; // force it to go away.
       [self mouseDown:nil];
     }];
   }
