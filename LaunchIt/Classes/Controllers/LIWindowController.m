@@ -53,6 +53,7 @@
 
 - (void) editApplication:(Application *)anApp
 {
+  self.editAppController.application = anApp;
   [self slideInEditView];
 }
 

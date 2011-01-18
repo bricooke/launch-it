@@ -7,22 +7,16 @@
 //
 
 #import "LIEditApplicationViewController.h"
-
+#import <ShortcutRecorder/ShortcutRecorder.h>
 
 @implementation LIEditApplicationViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
 - (void)dealloc {
-    // Clean-up code here.
-    
-    [super dealloc];
+  self.application = nil;
+  [super dealloc];
 }
 
+
+@synthesize application=_application;
+@synthesize shortcutCode, shortcutFlags, shortcutRecorderControl, applicationName, applicationPath;
 @end
