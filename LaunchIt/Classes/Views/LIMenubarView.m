@@ -16,6 +16,10 @@
 {
   if ((self = [super initWithFrame:frame])) {
     self.controller = ctrlr;
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:NSWindowDidResignKeyNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *arg1) {
+      [self mouseDown:nil];
+    }];
   }
   
   return self;

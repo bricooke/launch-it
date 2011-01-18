@@ -1379,7 +1379,7 @@
 												<int key="NSColorSpace">1</int>
 												<bytes key="NSRGB">MSAwIDAuMDI1ODAyNjEyMwA</bytes>
 											</object>
-											<int key="NScvFlags">6</int>
+											<int key="NScvFlags">2</int>
 										</object>
 										<object class="NSScroller" id="763280256">
 											<reference key="NSNextResponder" ref="249628636"/>
@@ -3844,7 +3844,7 @@
 					<string>{{205, 293}, {250, 346}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{205, 293}, {250, 346}}</string>
-					<integer value="1"/>
+					<boolean value="NO"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<real value="0.0"/>

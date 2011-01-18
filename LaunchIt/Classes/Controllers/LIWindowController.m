@@ -127,6 +127,7 @@
 }
 
 
+
 @synthesize collectionView, containerView;
 @synthesize editAppController;
 @synthesize cancelButton;
