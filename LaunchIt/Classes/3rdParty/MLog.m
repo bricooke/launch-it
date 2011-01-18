@@ -3,7 +3,7 @@
 //  rooVid
 //
 //  Created by Brian Cooke on 1/18/06.
-//  Copyright 2006 roobasoft, LLC. All rights reserved.
+//  Copyright 2006 Made By Rocket, Inc.. All rights reserved.
 //
 
 #import "MLog.h"
