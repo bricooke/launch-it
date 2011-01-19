@@ -1133,7 +1133,7 @@
 				<string key="NSWindowClass">LIWindow</string>
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{250, 1024}</string>
-				<string key="NSWindowContentMinSize">{250, 200}</string>
+				<string key="NSWindowContentMinSize">{250, 300}</string>
 				<object class="NSView" key="NSWindowView" id="439893737">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
@@ -1303,6 +1303,7 @@
 							<string key="NSFrame">{{214, 5}, {25, 25}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<bool key="NSViewIsLayerTreeHost">YES</bool>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSEnabled">YES</bool>
@@ -1434,7 +1435,7 @@
 					<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
-				<string key="NSMinSize">{250, 222}</string>
+				<string key="NSMinSize">{250, 322}</string>
 				<string key="NSMaxSize">{250, 1046}</string>
 				<string key="NSFrameAutosaveName">launchit_mainwindow</string>
 			</object>

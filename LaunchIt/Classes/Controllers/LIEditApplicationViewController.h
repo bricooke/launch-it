@@ -19,13 +19,17 @@
   NSString                   *applicationPath;
   NSInteger                   shortcutCode;
   NSUInteger                  shortcutFlags;  
+  NSButton *chooseApplicationButton;
 }
 
 @property (nonatomic, retain) Application *application;
 @property (nonatomic, retain) IBOutlet SRRecorderControl *shortcutRecorderControl;
+@property (nonatomic, retain) IBOutlet NSButton *chooseApplicationButton;
 @property (nonatomic, retain) NSString                   *applicationName;
 @property (nonatomic, retain) NSString                   *applicationPath;
 @property (nonatomic, assign) NSInteger                   shortcutCode;
 @property (nonatomic, assign) NSUInteger                  shortcutFlags;
+
+- (IBAction)chooseApplication:(id)sender;
 
 @end

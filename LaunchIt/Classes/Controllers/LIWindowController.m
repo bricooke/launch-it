@@ -103,12 +103,20 @@
 #pragma mark actions
 - (IBAction)cancel:(id)sender
 {
+  [self.editAppController.application willChangeValueForKey:@"appIcon"];
+  [self.editAppController.application willChangeValueForKey:@"smallAppIcon"];
+  [[NSManagedObjectContext defaultContext] rollback];
+  self.editAppController.application.renderedImage = nil;
+  [self.editAppController.application didChangeValueForKey:@"appIcon"];
+  [self.editAppController.application didChangeValueForKey:@"smallAppIcon"];
+
   [self slideBackToMainView];
 }
 
 
 - (IBAction)save:(id)sender
 {
+  [[NSManagedObjectContext defaultContext] save];
   [self slideBackToMainView];  
 }
 

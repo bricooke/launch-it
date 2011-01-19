@@ -56,7 +56,7 @@
   
   NSImageRep *sourceImageRep = [icon bestRepresentationForRect:NSMakeRect(0, 0, aSize.width, aSize.height) context:nil hints:nil];
   NSImage *newImage = [[NSImage alloc] initWithSize:aSize];    
-  [newImage setFlipped:YES];
+  [newImage setFlipped:NO];
   [newImage lockFocus];
   {
     [[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationHigh];

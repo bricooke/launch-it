@@ -35,7 +35,7 @@
 					<object class="NSTextField" id="518960682">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{65, 131}, {160, 17}}</string>
+						<string key="NSFrame">{{65, 136}, {160, 17}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
@@ -43,13 +43,13 @@
 							<int key="NSCellFlags">68288064</int>
 							<int key="NSCellFlags2">272630784</int>
 							<string key="NSContents">Label</string>
-							<object class="NSFont" key="NSSupport" id="751654527">
-								<string key="NSName">LucidaGrande</string>
+							<object class="NSFont" key="NSSupport">
+								<string key="NSName">LucidaGrande-Bold</string>
 								<double key="NSSize">13</double>
-								<int key="NSfFlags">1044</int>
+								<int key="NSfFlags">16</int>
 							</object>
 							<reference key="NSControlView" ref="518960682"/>
-							<object class="NSColor" key="NSBackgroundColor" id="652965768">
+							<object class="NSColor" key="NSBackgroundColor">
 								<int key="NSColorSpace">6</int>
 								<string key="NSCatalogName">System</string>
 								<string key="NSColorName">controlColor</string>
@@ -59,20 +59,15 @@
 								</object>
 							</object>
 							<object class="NSColor" key="NSTextColor">
-								<int key="NSColorSpace">6</int>
-								<string key="NSCatalogName">System</string>
-								<string key="NSColorName">controlTextColor</string>
-								<object class="NSColor" key="NSColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MAA</bytes>
-								</object>
+								<int key="NSColorSpace">1</int>
+								<bytes key="NSRGB">MSAxIDEAA</bytes>
 							</object>
 						</object>
 					</object>
 					<object class="SRRecorderControl" id="27799942">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{68, 64}, {154, 22}}</string>
+						<string key="NSFrame">{{68, 69}, {154, 22}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
@@ -91,27 +86,6 @@
 							<integer value="1" key="style"/>
 						</object>
 					</object>
-					<object class="NSTextField" id="714247462">
-						<reference key="NSNextResponder" ref="1005"/>
-						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{86, 102}, {139, 17}}</string>
-						<reference key="NSSuperview" ref="1005"/>
-						<reference key="NSNextKeyView" ref="55592696"/>
-						<int key="NSViewLayerContentsRedrawPolicy">2</int>
-						<bool key="NSEnabled">YES</bool>
-						<object class="NSTextFieldCell" key="NSCell" id="282147729">
-							<int key="NSCellFlags">68288064</int>
-							<int key="NSCellFlags2">272630784</int>
-							<string key="NSContents">Choose Application</string>
-							<reference key="NSSupport" ref="751654527"/>
-							<reference key="NSControlView" ref="714247462"/>
-							<reference key="NSBackgroundColor" ref="652965768"/>
-							<object class="NSColor" key="NSTextColor">
-								<int key="NSColorSpace">1</int>
-								<bytes key="NSRGB">MC44MDU2ODcxODkxIDAuODA1Njg3MTg5MSAwLjgwNTY4NzE4OTEAA</bytes>
-							</object>
-						</object>
-					</object>
 					<object class="NSButton" id="687811259">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
@@ -124,7 +98,11 @@
 							<int key="NSCellFlags">67239424</int>
 							<int key="NSCellFlags2">134217728</int>
 							<string key="NSContents"/>
-							<reference key="NSSupport" ref="751654527"/>
+							<object class="NSFont" key="NSSupport" id="751654527">
+								<string key="NSName">LucidaGrande</string>
+								<double key="NSSize">13</double>
+								<int key="NSfFlags">1044</int>
+							</object>
 							<reference key="NSControlView" ref="687811259"/>
 							<int key="NSButtonFlags">-2041822977</int>
 							<int key="NSButtonFlags2">129</int>
@@ -141,7 +119,7 @@
 					<object class="NSButton" id="55592696">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{6, 112}, {48, 48}}</string>
+						<string key="NSFrame">{{11, 100}, {48, 48}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
@@ -152,7 +130,7 @@
 							<reference key="NSSupport" ref="751654527"/>
 							<reference key="NSControlView" ref="55592696"/>
 							<int key="NSButtonFlags">-2042347265</int>
-							<int key="NSButtonFlags2">1</int>
+							<int key="NSButtonFlags2">129</int>
 							<object class="NSCustomResource" key="NSNormalImage">
 								<string key="NSClassName">NSImage</string>
 								<string key="NSResourceName">icon_launchit</string>
@@ -166,9 +144,9 @@
 					<object class="NSButton" id="103485294">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{68, 90}, {156, 32}}</string>
+						<string key="NSFrame">{{68, 95}, {156, 32}}</string>
 						<reference key="NSSuperview" ref="1005"/>
-						<reference key="NSNextKeyView" ref="714247462"/>
+						<reference key="NSNextKeyView"/>
 						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="934411760">
@@ -239,22 +217,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">image: application.smallAppIcon</string>
-						<reference key="source" ref="55592696"/>
-						<reference key="destination" ref="1001"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="55592696"/>
-							<reference key="NSDestination" ref="1001"/>
-							<string key="NSLabel">image: application.smallAppIcon</string>
-							<string key="NSBinding">image</string>
-							<string key="NSKeyPath">application.smallAppIcon</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">27</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: application.name</string>
 						<reference key="source" ref="518960682"/>
 						<reference key="destination" ref="1001"/>
@@ -272,6 +234,46 @@
 						</object>
 					</object>
 					<int key="connectionID">34</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">shortcutRecorderControl</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="27799942"/>
+					</object>
+					<int key="connectionID">35</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">chooseApplicationButton</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="103485294"/>
+					</object>
+					<int key="connectionID">36</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">chooseApplication:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="103485294"/>
+					</object>
+					<int key="connectionID">37</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">image: application.appIcon</string>
+						<reference key="source" ref="55592696"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="55592696"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">image: application.appIcon</string>
+							<string key="NSBinding">image</string>
+							<string key="NSKeyPath">application.appIcon</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">38</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -307,7 +309,6 @@
 							<reference ref="896988008"/>
 							<reference ref="687811259"/>
 							<reference ref="103485294"/>
-							<reference ref="714247462"/>
 							<reference ref="55592696"/>
 							<reference ref="27799942"/>
 							<reference ref="518960682"/>
@@ -339,19 +340,6 @@
 						<int key="objectID">14</int>
 						<reference key="object" ref="934411760"/>
 						<reference key="parent" ref="103485294"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">15</int>
-						<reference key="object" ref="714247462"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="282147729"/>
-						</array>
-						<reference key="parent" ref="1005"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">16</int>
-						<reference key="object" ref="282147729"/>
-						<reference key="parent" ref="714247462"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">7</int>
@@ -414,16 +402,15 @@
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<dictionary class="NSMutableDictionary" key="-2.IBAttributePlaceholdersKey"/>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="-3.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="1.IBEditorWindowLastContentRect">{{331, 175}, {252, 220}}</string>
+				<string key="1.IBEditorWindowLastContentRect">{{331, 180}, {252, 220}}</string>
 				<string key="1.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1.WindowOrigin">{628, 654}</string>
 				<string key="1.editorWindowContentRectSynchronizationRect">{{357, 416}, {480, 272}}</string>
 				<string key="13.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="14.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="16.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="19.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="20.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="21.IBPluginDependency">net.wafflesoftware.ShortcutRecorder.IB.Leopard</string>
@@ -441,7 +428,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">34</int>
+			<int key="maxID">38</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -465,6 +452,41 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">LaunchIt/Classes/3rdParty/BWToolkit/NSView+BWAdditions.h</string>
+					</object>
+				</object>
+			</array>
+			<array class="NSMutableArray" key="referencedPartialClassDescriptionsV3.1+">
+				<object class="IBPartialClassDescription">
+					<string key="className">LIEditApplicationViewController</string>
+					<string key="superclassName">NSViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">chooseApplication:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">chooseApplication:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">chooseApplication:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="chooseApplicationButton">NSButton</string>
+						<string key="shortcutRecorderControl">SRRecorderControl</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="chooseApplicationButton">
+							<string key="name">chooseApplicationButton</string>
+							<string key="candidateClassName">NSButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="shortcutRecorderControl">
+							<string key="name">shortcutRecorderControl</string>
+							<string key="candidateClassName">SRRecorderControl</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBDocumentRelativeSource</string>
+						<string key="minorKey">LIEditApplicationViewController.h</string>
 					</object>
 				</object>
 			</array>
