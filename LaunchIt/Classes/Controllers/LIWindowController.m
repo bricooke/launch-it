@@ -51,6 +51,16 @@
 }
 
 
+- (IBAction)addApplication:(id)sender
+{
+  Application *app = [Application createEntity];
+  
+  self.editAppController.application = app;
+  
+  [self slideInEditView];  
+}
+
+
 - (void) editApplication:(Application *)anApp
 {
   self.editAppController.application = anApp;
@@ -64,7 +74,7 @@
 #pragma mark animations
 - (void) setSaveAndCancelVisible:(BOOL)visible
 {
-  for (NSButton *but in ARRAY(self.cancelButton, self.saveButton)) {
+  for (NSButton *but in ARRAY(self.cancelButton, self.saveButton, self.deleteButton)) {
     [[but animator] setHidden:!visible];
   }
   
@@ -127,7 +137,22 @@
   [self.editAppController.application bindHotkey];
   
   [[NSManagedObjectContext defaultContext] save];
+  
+  [self.collectionView setContent:[Application findAll]];
+
   [self slideBackToMainView];  
+}
+
+
+- (IBAction)delete:(id)sender
+{
+  NSAlert *alert = [NSAlert alertWithMessageText:@"Are you sure you want to delete this shortcut?" defaultButton:@"Yes, delete it" alternateButton:@"Don't delete" otherButton:nil informativeTextWithFormat:[NSString stringWithFormat:@"Really delete the shortcut for %@?", self.editAppController.application.name]];
+  if ([alert runModal] == 1) {
+    [self.editAppController.application deleteEntity];
+    [[NSManagedObjectContext defaultContext] save];  
+    [self.collectionView setContent:[Application findAll]];
+    [self slideBackToMainView];
+  }
 }
 
 
@@ -150,6 +175,7 @@
 @synthesize collectionView, containerView;
 @synthesize editAppController;
 @synthesize cancelButton;
+@synthesize deleteButton;
 @synthesize saveButton;
 @synthesize addButton;
 @synthesize settingsButton;

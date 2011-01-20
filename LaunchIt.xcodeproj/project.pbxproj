@@ -11,6 +11,7 @@
 		D60B154012E5358500985B33 /* menubar_white.png in Resources */ = {isa = PBXBuildFile; fileRef = D60B153F12E5358500985B33 /* menubar_white.png */; };
 		D60DECF512E26E64002F77DD /* LaunchIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6BF680812E26704008BCC5B /* LaunchIt.xcdatamodeld */; };
 		D60DED0F12E2701C002F77DD /* SGKeyCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = D60DED0D12E2701C002F77DD /* SGKeyCodes.plist */; };
+		D661B3FD12E7ED6A0088DFC7 /* btn_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = D661B3FC12E7ED6A0088DFC7 /* btn_delete.png */; };
 		D6BF674712E2562C008BCC5B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF674612E2562C008BCC5B /* Cocoa.framework */; };
 		D6BF675412E2562C008BCC5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF675312E2562C008BCC5B /* main.m */; };
 		D6BF67B912E25E44008BCC5B /* ActiveRecordHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF679712E25E44008BCC5B /* ActiveRecordHelpers.m */; };
@@ -160,6 +161,7 @@
 		D60B153D12E5308700985B33 /* LIMenubarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LIMenubarView.m; path = Classes/Views/LIMenubarView.m; sourceTree = "<group>"; };
 		D60B153F12E5358500985B33 /* menubar_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menubar_white.png; path = Resources/menubar_white.png; sourceTree = "<group>"; };
 		D60DED0E12E2701C002F77DD /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = en; path = LaunchIt/Resources/en.lproj/SGKeyCodes.plist; sourceTree = SOURCE_ROOT; };
+		D661B3FC12E7ED6A0088DFC7 /* btn_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_delete.png; path = Resources/btn_delete.png; sourceTree = "<group>"; };
 		D6BF674212E2562C008BCC5B /* Launch it!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Launch it!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BF674612E2562C008BCC5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D6BF674912E2562C008BCC5B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -496,7 +498,6 @@
 				D6BF67DD12E26259008BCC5B /* menubar_bw.png */,
 				D6BF67DE12E26259008BCC5B /* menubar_flames.png */,
 				D60B153F12E5358500985B33 /* menubar_white.png */,
-				D6BF678A12E25D73008BCC5B /* MainMenu.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -506,6 +507,7 @@
 			children = (
 				D6BF68F312E268BE008BCC5B /* LIWindowController.h */,
 				D6BF68F412E268BE008BCC5B /* LIWindowController.m */,
+				D6BF678A12E25D73008BCC5B /* MainMenu.xib */,
 				D6BF68FD12E2A794008BCC5B /* LIEditApplicationViewController.h */,
 				D6BF68FE12E2A794008BCC5B /* LIEditApplicationViewController.m */,
 				D6BF68FF12E2A794008BCC5B /* LIEditApplicationView.xib */,
@@ -579,6 +581,7 @@
 		D6BF67E512E266E7008BCC5B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D661B3FC12E7ED6A0088DFC7 /* btn_delete.png */,
 				D6BF67E612E266F3008BCC5B /* about.png */,
 				D6BF67E712E266F3008BCC5B /* bg_bottom.png */,
 				D6BF67E812E266F3008BCC5B /* bg_header.png */,
@@ -865,6 +868,7 @@
 				D60DED0F12E2701C002F77DD /* SGKeyCodes.plist in Resources */,
 				D6BF690112E2A794008BCC5B /* LIEditApplicationView.xib in Resources */,
 				D60B154012E5358500985B33 /* menubar_white.png in Resources */,
+				D661B3FD12E7ED6A0088DFC7 /* btn_delete.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

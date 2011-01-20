@@ -10,6 +10,8 @@
 #import <ShortcutRecorder/ShortcutRecorder.h>
 #import "RSApplicationFileAnalyzer.h"
 #import "Application.h"
+#import "CoreData+ActiveRecordFetching.h"
+#import "AppDelegate.h"
 
 
 @interface LIEditApplicationViewController(private)
@@ -32,6 +34,7 @@
   combo.code = self.application.shortcutCodeValue;
   [self.shortcutRecorderControl setKeyCombo:combo];
 }
+
 
 
 - (IBAction)chooseApplication:(id)sender

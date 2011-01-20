@@ -17,10 +17,7 @@
   if ((self = [super initWithFrame:frame])) {
     self.controller = ctrlr;
     
-    [[NSNotificationCenter defaultCenter] addObserverForName:NSWindowDidResignKeyNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *arg1) {
-      if ([NSApp isActive]) 
-        return;
-      
+    [[NSNotificationCenter defaultCenter] addObserverForName:NSApplicationDidResignActiveNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *arg1) {
       clicked = YES; // force it to go away.
       [self mouseDown:nil];
     }];
