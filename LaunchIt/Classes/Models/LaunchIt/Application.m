@@ -32,6 +32,9 @@
 
 - (NSImage *) appIcon
 {
+  if (self.name == nil) {
+    return [NSImage imageNamed:@"icon_launchit.png"];
+  }
   if (self.renderedImage == nil) {
     self.renderedImage = [[self appIconForSize:NSMakeSize(48, 48)] TIFFRepresentation];
   }
