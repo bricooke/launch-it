@@ -54,6 +54,8 @@
 - (void) editApplication:(Application *)anApp
 {
   self.editAppController.application = anApp;
+  [self.editAppController.application unbindHotkey];
+
   [self slideInEditView];
 }
 
@@ -103,12 +105,18 @@
 #pragma mark actions
 - (IBAction)cancel:(id)sender
 {
+  [self.editAppController.application willChangeValueForKey:@"shortcutCodeString"];
+  [self.editAppController.application willChangeValueForKey:@"shortcutCodeStringForMenus"];
   [self.editAppController.application willChangeValueForKey:@"appIcon"];
   [self.editAppController.application willChangeValueForKey:@"smallAppIcon"];
   [[NSManagedObjectContext defaultContext] rollback];
   self.editAppController.application.renderedImage = nil;
   [self.editAppController.application didChangeValueForKey:@"appIcon"];
   [self.editAppController.application didChangeValueForKey:@"smallAppIcon"];
+  [self.editAppController.application didChangeValueForKey:@"shortcutCodeString"];
+  [self.editAppController.application didChangeValueForKey:@"shortcutCodeStringForMenus"];
+  
+  [self.editAppController.application bindHotkey];
 
   [self slideBackToMainView];
 }
@@ -116,7 +124,6 @@
 
 - (IBAction)save:(id)sender
 {
-  [self.editAppController.application unbindHotkey];
   [self.editAppController.application bindHotkey];
   
   [[NSManagedObjectContext defaultContext] save];
