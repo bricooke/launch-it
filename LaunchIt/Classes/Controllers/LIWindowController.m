@@ -116,6 +116,9 @@
 
 - (IBAction)save:(id)sender
 {
+  [self.editAppController.application unbindHotkey];
+  [self.editAppController.application bindHotkey];
+  
   [[NSManagedObjectContext defaultContext] save];
   [self slideBackToMainView];  
 }

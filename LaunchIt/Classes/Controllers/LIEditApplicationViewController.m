@@ -25,6 +25,15 @@
 }
 
 
+- (void) awakeFromNib
+{
+  KeyCombo combo;
+  combo.flags = self.application.shortcutFlagsValue;
+  combo.code = self.application.shortcutCodeValue;
+  [self.shortcutRecorderControl setKeyCombo:combo];
+}
+
+
 - (IBAction)chooseApplication:(id)sender
 {
   NSMenu *runningAppsMenu = [[NSMenu alloc] initWithTitle:@"Running Applications"];
@@ -125,6 +134,46 @@
   
   [analyzer release];  
 }
+
+#pragma mark -
+#pragma mark things
+- (void) setApplication:(Application *)application
+{
+  if (_application == application)
+    return;
+  [self willChangeValueForKey:@"_application"];
+  [_application release];
+  _application = [application retain];
+  [self didChangeValueForKey:@"_application"];
+  
+  KeyCombo combo;
+  combo.flags = self.application.shortcutFlagsValue;
+  combo.code = self.application.shortcutCodeValue;
+  [self.shortcutRecorderControl setKeyCombo:combo];
+}
+
+
+#pragma mark -
+#pragma mark ShortcutRecorder Delegate Methods
+- (BOOL)shortcutRecorder:(SRRecorderControl *)aRecorder isKeyCode:(NSInteger)keyCode andFlagsTaken:(NSUInteger)flags reason:(NSString **)aReason 
+{	
+	return NO;
+}
+
+- (void)shortcutRecorder:(SRRecorderControl *)aRecorder keyComboDidChange:(KeyCombo)newKeyCombo 
+{
+  [self willChangeValueForKey:@"canSave"];
+  [self.application willChangeValueForKey:@"shortcutCodeString"];
+  [self.application willChangeValueForKey:@"shortcutCodeStringForMenus"];
+  self.shortcutCode = newKeyCombo.code;
+  self.shortcutFlags = newKeyCombo.flags;
+  [self.application setShortcutCodeValue:self.shortcutCode];
+  [self.application setShortcutFlagsValue:self.shortcutFlags];
+  [self.application didChangeValueForKey:@"shortcutCodeString"];
+  [self.application didChangeValueForKey:@"shortcutCodeStringForMenus"];
+  [self didChangeValueForKey:@"canSave"];
+}
+
 
 
 @synthesize application=_application;
