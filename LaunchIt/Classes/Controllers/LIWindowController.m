@@ -41,7 +41,7 @@
   
   [self.collectionView setBackgroundColors:[NSArray arrayWithObject:[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg_middle.png"]]]];
   
-  [self.collectionView setContent:[Application findAll]];
+  [self.collectionView setContent:[Application findAllSortedBy:@"name" ascending:YES]];
   
   float width = 22.0;
   float height = [[NSStatusBar systemStatusBar] thickness];
@@ -138,7 +138,7 @@
   
   [[NSManagedObjectContext defaultContext] save];
   
-  [self.collectionView setContent:[Application findAll]];
+  [self.collectionView setContent:[Application findAllSortedBy:@"name" ascending:YES]];
 
   [self slideBackToMainView];  
 }
@@ -150,7 +150,7 @@
   if ([alert runModal] == 1) {
     [self.editAppController.application deleteEntity];
     [[NSManagedObjectContext defaultContext] save];  
-    [self.collectionView setContent:[Application findAll]];
+    [self.collectionView setContent:[Application findAllSortedBy:@"name" ascending:YES]];
     [self slideBackToMainView];
   }
 }
