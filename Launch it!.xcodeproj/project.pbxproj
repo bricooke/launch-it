@@ -156,7 +156,7 @@
 		D6BF68F212E26821008BCC5B /* LIWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68F012E26821008BCC5B /* LIWindow.m */; };
 		D6BF68F512E268BF008BCC5B /* LIWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68F412E268BE008BCC5B /* LIWindowController.m */; };
 		D6BF690012E2A794008BCC5B /* LIEditGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68FE12E2A794008BCC5B /* LIEditGroupViewController.m */; };
-		D6BF690112E2A794008BCC5B /* LIEditApplicationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BF68FF12E2A794008BCC5B /* LIEditApplicationView.xib */; };
+		D6BF690112E2A794008BCC5B /* LIEditGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BF68FF12E2A794008BCC5B /* LIEditGroupView.xib */; };
 		D6BF690412E39B9E008BCC5B /* MACollectionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF690312E39B9E008BCC5B /* MACollectionUtilities.m */; };
 /* End PBXBuildFile section */
 
@@ -390,7 +390,7 @@
 		D6BF68F412E268BE008BCC5B /* LIWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LIWindowController.m; path = Classes/Controllers/LIWindowController.m; sourceTree = "<group>"; };
 		D6BF68FD12E2A794008BCC5B /* LIEditGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIEditGroupViewController.h; path = Classes/Controllers/LIEditGroupViewController.h; sourceTree = "<group>"; };
 		D6BF68FE12E2A794008BCC5B /* LIEditGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LIEditGroupViewController.m; path = Classes/Controllers/LIEditGroupViewController.m; sourceTree = "<group>"; };
-		D6BF68FF12E2A794008BCC5B /* LIEditApplicationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LIEditApplicationView.xib; path = Classes/Controllers/LIEditApplicationView.xib; sourceTree = "<group>"; };
+		D6BF68FF12E2A794008BCC5B /* LIEditGroupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LIEditGroupView.xib; path = Classes/Controllers/LIEditGroupView.xib; sourceTree = "<group>"; };
 		D6BF690212E39B9E008BCC5B /* MACollectionUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MACollectionUtilities.h; path = Classes/3rdParty/MACollectionUtilities.h; sourceTree = "<group>"; };
 		D6BF690312E39B9E008BCC5B /* MACollectionUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACollectionUtilities.m; path = Classes/3rdParty/MACollectionUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -523,7 +523,7 @@
 				D6BF678A12E25D73008BCC5B /* MainMenu.xib */,
 				D6BF68FD12E2A794008BCC5B /* LIEditGroupViewController.h */,
 				D6BF68FE12E2A794008BCC5B /* LIEditGroupViewController.m */,
-				D6BF68FF12E2A794008BCC5B /* LIEditApplicationView.xib */,
+				D6BF68FF12E2A794008BCC5B /* LIEditGroupView.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -887,7 +887,7 @@
 				D6BF68EB12E267F7008BCC5B /* TransparentSliderTriangleThumbN.tiff in Resources */,
 				D6BF68EC12E267F7008BCC5B /* TransparentSliderTriangleThumbP.tiff in Resources */,
 				D60DED0F12E2701C002F77DD /* SGKeyCodes.plist in Resources */,
-				D6BF690112E2A794008BCC5B /* LIEditApplicationView.xib in Resources */,
+				D6BF690112E2A794008BCC5B /* LIEditGroupView.xib in Resources */,
 				D60B154012E5358500985B33 /* menubar_white.png in Resources */,
 				D661B3FD12E7ED6A0088DFC7 /* btn_delete.png in Resources */,
 			);

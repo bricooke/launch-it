@@ -35,7 +35,7 @@
 {
   [NSManagedObjectContext setDefaultContext:[[AppDelegate sharedAppDelegate] managedObjectContext]];
   
-  self.editGroupController = [[[LIEditGroupViewController alloc] initWithNibName:@"LIEditApplicationView" bundle:nil] autorelease];
+  self.editGroupController = [[[LIEditGroupViewController alloc] initWithNibName:@"LIEditGroupView" bundle:nil] autorelease];
   
   [self.containerView setWantsLayer:YES];
   [[self.containerView layer] setOpaque:YES];
