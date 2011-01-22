@@ -17,7 +17,7 @@
 @implementation Application
 
 
-- (NSImage *) appIcon
+- (NSImage *) largeImage
 {
   if (self.name == nil) {
     return [NSImage imageNamed:@"icon_launchit.png"];
@@ -29,7 +29,7 @@
 }
 
 
-- (NSImage *) smallAppIcon
+- (NSImage *) smallImage
 {
   RSApplicationFileAnalyzer *analyzer = [[RSApplicationFileAnalyzer alloc] initWithApplication:self.path];
   NSImage *icon = [[NSImage alloc] initWithContentsOfFile:[analyzer iconPath]];

@@ -17,14 +17,18 @@
   SRRecorderControl *shortcutRecorderControl;
   NSInteger          shortcutCode;
   NSUInteger         shortcutFlags;
-  NSButton *plusButton;
+  NSButton          *plusButton;
+  NSCollectionView  *collectionView;
+  NSView *containerView;
 }
 
 @property (nonatomic, retain) Group                      *group;
 @property (nonatomic, retain) IBOutlet SRRecorderControl *shortcutRecorderControl;
+@property (nonatomic, retain) IBOutlet NSButton          *plusButton;
+@property (nonatomic, retain) IBOutlet NSCollectionView  *collectionView;
+@property (nonatomic, retain) IBOutlet NSView *containerView;
 @property (nonatomic, assign) NSInteger                   shortcutCode;
 @property (nonatomic, assign) NSUInteger                  shortcutFlags;
-@property (nonatomic, retain) IBOutlet NSButton *plusButton;
 
 - (IBAction)plusButtonPushed:(id)sender;
 

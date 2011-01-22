@@ -10,6 +10,7 @@
 
 + (void)bindAllHotkeys;
 + (void)migrateExistingApplications;
+- (NSArray *)applicationsAndWebsites;
 - (void)bindHotkey;
 - (void)bindHotkeyTo:(id) delegate action:(SEL)selector;
 - (void)unbindHotkey;

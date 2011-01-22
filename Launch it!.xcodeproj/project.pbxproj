@@ -11,6 +11,7 @@
 		D60B154012E5358500985B33 /* menubar_white.png in Resources */ = {isa = PBXBuildFile; fileRef = D60B153F12E5358500985B33 /* menubar_white.png */; };
 		D60DECF512E26E64002F77DD /* LaunchIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6BF680812E26704008BCC5B /* LaunchIt.xcdatamodeld */; };
 		D60DED0F12E2701C002F77DD /* SGKeyCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = D60DED0D12E2701C002F77DD /* SGKeyCodes.plist */; };
+		D6122DB612EB4A9200C9E05E /* btn_resize.png in Resources */ = {isa = PBXBuildFile; fileRef = D6122DB512EB4A9200C9E05E /* btn_resize.png */; };
 		D661B3FD12E7ED6A0088DFC7 /* btn_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = D661B3FC12E7ED6A0088DFC7 /* btn_delete.png */; };
 		D66968D912EA846C000C39E7 /* _Group.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D212EA846C000C39E7 /* _Group.m */; };
 		D66968DA12EA846C000C39E7 /* _Website.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D412EA846C000C39E7 /* _Website.m */; };
@@ -165,6 +166,7 @@
 		D60B153D12E5308700985B33 /* LIMenubarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LIMenubarView.m; path = Classes/Views/LIMenubarView.m; sourceTree = "<group>"; };
 		D60B153F12E5358500985B33 /* menubar_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menubar_white.png; path = Resources/menubar_white.png; sourceTree = "<group>"; };
 		D60DED0E12E2701C002F77DD /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = en; path = LaunchIt/Resources/en.lproj/SGKeyCodes.plist; sourceTree = SOURCE_ROOT; };
+		D6122DB512EB4A9200C9E05E /* btn_resize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_resize.png; path = Resources/btn_resize.png; sourceTree = "<group>"; };
 		D661B3FC12E7ED6A0088DFC7 /* btn_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_delete.png; path = Resources/btn_delete.png; sourceTree = "<group>"; };
 		D66968D112EA846C000C39E7 /* _Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Group.h; path = Classes/Models/LaunchIt/_Group.h; sourceTree = "<group>"; };
 		D66968D212EA846C000C39E7 /* _Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Group.m; path = Classes/Models/LaunchIt/_Group.m; sourceTree = "<group>"; };
@@ -602,6 +604,7 @@
 		D6BF67E512E266E7008BCC5B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D6122DB512EB4A9200C9E05E /* btn_resize.png */,
 				D661B3FC12E7ED6A0088DFC7 /* btn_delete.png */,
 				D6BF67E612E266F3008BCC5B /* about.png */,
 				D6BF67E712E266F3008BCC5B /* bg_bottom.png */,
@@ -890,6 +893,7 @@
 				D6BF690112E2A794008BCC5B /* LIEditGroupView.xib in Resources */,
 				D60B154012E5358500985B33 /* menubar_white.png in Resources */,
 				D661B3FD12E7ED6A0088DFC7 /* btn_delete.png in Resources */,
+				D6122DB612EB4A9200C9E05E /* btn_resize.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

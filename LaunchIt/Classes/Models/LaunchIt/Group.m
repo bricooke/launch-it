@@ -55,6 +55,18 @@
 }
 
 
+//------------------------------------------------------------------------------
+// applicationsAndWebsites
+//------------------------------------------------------------------------------
+- (NSArray *)applicationsAndWebsites
+{
+  NSArray *ret = [[self.applications allObjects] arrayByAddingObjectsFromArray:[self.websites allObjects]];
+  return [ret sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+    return [[obj1 name] compare:[obj2 name]];
+  }];
+}
+
+
 // ------------------------------------------------------------------------------
 // smallImage
 // ------------------------------------------------------------------------------

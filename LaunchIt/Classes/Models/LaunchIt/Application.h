@@ -2,7 +2,7 @@
 #import "SGHotKey.h"
 
 @interface Application : _Application {}
-- (NSImage *)   appIcon;
-- (NSImage *)   smallAppIcon;
+- (NSImage *)   largeImage;
+- (NSImage *)   smallImage;
 - (void)        launch;
 @end
