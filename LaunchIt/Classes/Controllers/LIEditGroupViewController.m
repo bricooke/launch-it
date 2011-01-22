@@ -37,8 +37,10 @@
 
 
 
-- (IBAction)chooseApplication:(id)sender
+- (IBAction)plusButtonPushed:(id)sender
 {
+  NSMenu *plusMenu = [[NSMenu alloc] initWithTitle:@"What to add?"];
+  
   NSMenu *runningAppsMenu = [[NSMenu alloc] initWithTitle:@"Running Applications"];
   
   // create menu items for each .app the workspace knows about
@@ -71,23 +73,33 @@
   
   [appsController release];
   
-  NSRect frame = [self.chooseApplicationButton frame];
-  NSPoint menuOrigin = [[self.chooseApplicationButton superview] convertPoint:NSMakePoint(frame.origin.x, frame.origin.y+frame.size.height+40)
+  NSMenuItem *addApplicationsMenu = [[NSMenuItem alloc] init];
+  [addApplicationsMenu setTitle:@"Add Application"];
+  [addApplicationsMenu setSubmenu:runningAppsMenu];
+  [plusMenu addItem:addApplicationsMenu];
+  [addApplicationsMenu release];
+  
+  [plusMenu addItemWithTitle:@"Add Website" action:@selector(addWebsite:) keyEquivalent:@""];
+  
+  
+  NSRect frame = [self.plusButton frame];
+  NSPoint menuOrigin = [[self.plusButton superview] convertPoint:NSMakePoint(frame.origin.x, frame.origin.y+frame.size.height+40)
                                                                        toView:nil];
   
   NSEvent *event =  [NSEvent mouseEventWithType:NSLeftMouseDown
                                        location:menuOrigin
                                   modifierFlags:NSLeftMouseDownMask // 0x100
                                       timestamp:0
-                                   windowNumber:[[self.chooseApplicationButton window] windowNumber]
-                                        context:[[self.chooseApplicationButton window] graphicsContext]
+                                   windowNumber:[[self.plusButton window] windowNumber]
+                                        context:[[self.plusButton window] graphicsContext]
                                     eventNumber:0
                                      clickCount:1
                                        pressure:1];
   
-  [NSMenu popUpContextMenu:runningAppsMenu withEvent:event forView:self.chooseApplicationButton];
+  [NSMenu popUpContextMenu:plusMenu withEvent:event forView:self.plusButton];
   
   [runningAppsMenu release];
+  [plusMenu release];
 }
 
 
@@ -180,5 +192,5 @@
 
 
 @synthesize group=_group;
-@synthesize shortcutCode, shortcutFlags, shortcutRecorderControl, applicationName, applicationPath, chooseApplicationButton;
+@synthesize shortcutCode, shortcutFlags, shortcutRecorderControl, plusButton;
 @end

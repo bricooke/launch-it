@@ -22,9 +22,7 @@
 }
 
 
-
-
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification 
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
   [NSManagedObjectContext setDefaultContext:[self managedObjectContext]];
   [Group migrateExistingApplications];
@@ -66,19 +64,19 @@
   if (persistentStoreCoordinator) {
     return persistentStoreCoordinator;
   }
-  
+
   NSManagedObjectModel *mom = [self managedObjectModel];
-  
+
   if (!mom) {
     NSAssert(NO, @"Managed object model is nil");
     NSLog(@"%@:psc No model to generate a store from", [self class]);
     return nil;
   }
-  
+
   NSFileManager *fileManager                 = [NSFileManager defaultManager];
   NSString      *applicationSupportDirectory = [self applicationSupportDirectory];
   NSError       *error                       = nil;
-  
+
   if ( ![fileManager fileExistsAtPath:applicationSupportDirectory isDirectory:NULL] ) {
     if (![fileManager createDirectoryAtPath:applicationSupportDirectory withIntermediateDirectories:NO attributes:nil error:&error]) {
       NSAssert(NO, ([NSString stringWithFormat:@"Failed to create App Support directory %@ : %@", applicationSupportDirectory, error]));
@@ -86,14 +84,14 @@
       return nil;
     }
   }
-  
+
   NSURL *url = [NSURL fileURLWithPath:[applicationSupportDirectory stringByAppendingPathComponent:@"launchables.sqlite3"]];
   persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
-  
+
   NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                            [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
                            [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
-  
+
   if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
                                                 configuration:nil
                                                           URL:url
@@ -103,7 +101,7 @@
     [persistentStoreCoordinator release], persistentStoreCoordinator = nil;
     return nil;
   }
-  
+
   return persistentStoreCoordinator;
 }
 

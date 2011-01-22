@@ -10,8 +10,8 @@
 #import "LIWindowController.h"
 
 
-@interface Group(private)
-- (void) launch:(SGHotKey *)aHotKey;
+@interface Group (private)
+- (void)launch:(SGHotKey *)aHotKey;
 @end
 
 
@@ -22,70 +22,75 @@
   return [self findAllSortedBy:@"name" ascending:YES];
 }
 
-+ (void) bindAllHotkeys
+
++ (void)bindAllHotkeys
 {
   for (Group *group in [Group findAll]) {
     [group unbindHotkey];
     [group bindHotkey];
-  }  
+  }
 }
 
 
-//------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 // migrateExistingApplications
-//------------------------------------------------------------------------------
-+ (void) migrateExistingApplications
+// ------------------------------------------------------------------------------
++ (void)migrateExistingApplications
 {
   __block BOOL any = NO;
-  [[Application findAllWithPredicate:[NSPredicate predicateWithFormat:@"group = nil"]] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-    Application *app = obj;
-    Group *group = [Group createEntity];
-    [group addApplicationsObject:app];
-    group.shortcutCodeValue = app.shortcutCodeValue;
-    group.shortcutFlagsValue = app.shortcutFlagsValue;
-    group.name = app.name;
-    any = YES;
-  }];
-  
+
+  [[Application findAllWithPredicate:[NSPredicate predicateWithFormat:@"group = nil"]] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL * stop) {
+     Application *app = obj;
+     Group *group = [Group createEntity];
+     [group addApplicationsObject:app];
+     group.shortcutCodeValue = app.shortcutCodeValue;
+     group.shortcutFlagsValue = app.shortcutFlagsValue;
+     group.name = app.name;
+     any = YES;
+   }
+  ];
+
   if (any)
     [[NSManagedObjectContext defaultContext] save];
 }
 
 
-//------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 // smallImage
-//------------------------------------------------------------------------------
-- (NSImage *) smallImage
+// ------------------------------------------------------------------------------
+- (NSImage *)smallImage
 {
   return [NSImage imageNamed:@"NSApplicationIcon"];
 }
 
 
-//------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 // largeImage
-//------------------------------------------------------------------------------
-- (NSImage *) largeImage
+// ------------------------------------------------------------------------------
+- (NSImage *)largeImage
 {
   return [NSImage imageNamed:@"NSApplicationIcon"];
 }
-
 
 
 // sent via the collection view? :/ better way?
-- (IBAction) edit:(id)sender
+- (IBAction)edit:(id)sender
 {
   [[AppDelegate sharedAppDelegate].windowController editGroup:self];
 }
 
-- (NSString *) shortcutCodeStringForMenus
+
+- (NSString *)shortcutCodeStringForMenus
 {
   SRRecorderControl *shortcutRecorder = [[SRRecorderControl alloc] init];
-  SGKeyCombo *combo = [SGKeyCombo keyComboWithKeyCode:[self shortcutCodeValue] modifiers:[shortcutRecorder cocoaToCarbonFlags:[self shortcutFlagsValue]]];
+  SGKeyCombo        *combo            = [SGKeyCombo keyComboWithKeyCode:[self shortcutCodeValue] modifiers:[shortcutRecorder cocoaToCarbonFlags:[self shortcutFlagsValue]]];
+
   [shortcutRecorder release];
-  
+
   NSString *code = [combo keyCodeString];
-  
-  unichar ch[4];  
+
+  unichar ch[4];
+
   if ([code isEqualToString:@"F1"]) {
     ch[0] = NSF1FunctionKey;
   } else if ([code isEqualToString:@"F2"]) {
@@ -127,73 +132,83 @@
   } else {
     return code;
   }
-  
+
   NSString *ret = [NSString stringWithCharacters:ch length:1];
   NSLog(@"%@", ret);
   return ret;
 }
 
 
-- (NSString *) shortcutCodeString
+- (NSString *)shortcutCodeString
 {
   return SRStringForCocoaModifierFlagsAndKeyCode([self shortcutFlagsValue], [self shortcutCodeValue]);
 }
 
-- (NSUInteger) modifierMask
+
+- (NSUInteger)modifierMask
 {
   SRRecorderControl *shortcutRecorder = [[SRRecorderControl alloc] init];
-  SGKeyCombo *combo = [SGKeyCombo keyComboWithKeyCode:[self shortcutCodeValue] modifiers:[shortcutRecorder cocoaToCarbonFlags:[self shortcutFlagsValue]]];
+  SGKeyCombo        *combo            = [SGKeyCombo keyComboWithKeyCode:[self shortcutCodeValue] modifiers:[shortcutRecorder cocoaToCarbonFlags:[self shortcutFlagsValue]]];
+
   [shortcutRecorder release];
   return [combo modifierMask];
 }
 
 
-- (SGHotKey *) hotkey
+- (SGHotKey *)hotkey
 {
-  if (_hotkey)
+  if (_hotkey) {
     return _hotkey;
-  
+  }
+
   SRRecorderControl *shortcutRecorder = [[SRRecorderControl alloc] init];
   _hotkey = [[SGHotKey alloc] initWithIdentifier:self.objectID keyCombo:[SGKeyCombo keyComboWithKeyCode:[self shortcutCodeValue] modifiers:[shortcutRecorder cocoaToCarbonFlags:[self shortcutFlagsValue]]]];
-  
+
   [shortcutRecorder release];
-  
-  [_hotkey setTarget: self];
-  [_hotkey setAction: @selector(launch:)];
-  
+
+  [_hotkey setTarget:self];
+  [_hotkey setAction:@selector(launch:)];
+
   return _hotkey;
 }
 
-- (void) bindHotkey
+
+- (void)bindHotkey
 {
   [[SGHotKeyCenter sharedCenter] registerHotKey:[self hotkey]];
 }
 
-- (void) bindHotkeyTo:(id)delegate action:(SEL)selector
+
+- (void)bindHotkeyTo:(id)delegate action:(SEL)selector
 {
   SGHotKey *hotkey = [self hotkey];
+
   [hotkey setTarget:delegate];
   [hotkey setAction:selector];
   [[SGHotKeyCenter sharedCenter] registerHotKey:hotkey];
 }
 
-- (void) unbindHotkey
+
+- (void)unbindHotkey
 {
   [[SGHotKeyCenter sharedCenter] unregisterHotKey:[self hotkey]];
   _hotkey = nil;
 }
 
-//-------------------------------------------------
-- (void) launch
+
+// -------------------------------------------------
+- (void)launch
 {
   [self launch:nil];
 }
 
-- (void) launch:(SGHotKey *)aHotKey
+
+- (void)launch:(SGHotKey *)aHotKey
 {
-  [[self applications] enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
-    Application *app = obj;
-    [app launch];
-  }];
+  [[self applications] enumerateObjectsUsingBlock:^(id obj, BOOL * stop) {
+     Application *app = obj;
+     [app launch];
+   }
+  ];
 }
 @end

@@ -11,8 +11,8 @@
 			<string key="net.wafflesoftware.ShortcutRecorder.IB.Leopard">1</string>
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="62"/>
 			<integer value="1"/>
+			<integer value="62"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>net.wafflesoftware.ShortcutRecorder.IB.Leopard</string>
@@ -254,7 +254,6 @@
 				</array>
 				<string key="NSFrameSize">{300, 220}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView"/>
 				<bool key="NSViewIsLayerTreeHost">YES</bool>
 				<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				<string key="NSClassName">NSView</string>
@@ -327,6 +326,22 @@
 						<reference key="destination" ref="713051849"/>
 					</object>
 					<int key="connectionID">64</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">plusButtonPushed:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="1009243363"/>
+					</object>
+					<int key="connectionID">75</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">plusButton</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="1009243363"/>
+					</object>
+					<int key="connectionID">76</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -521,7 +536,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">74</int>
+			<int key="maxID">76</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -545,23 +560,23 @@
 					<string key="className">LIEditGroupViewController</string>
 					<string key="superclassName">NSViewController</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">chooseApplication:</string>
+						<string key="NS.key.0">plusButtonPushed:</string>
 						<string key="NS.object.0">id</string>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">chooseApplication:</string>
+						<string key="NS.key.0">plusButtonPushed:</string>
 						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">chooseApplication:</string>
+							<string key="name">plusButtonPushed:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="chooseApplicationButton">NSButton</string>
+						<string key="plusButton">NSButton</string>
 						<string key="shortcutRecorderControl">SRRecorderControl</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="chooseApplicationButton">
-							<string key="name">chooseApplicationButton</string>
+						<object class="IBToOneOutletInfo" key="plusButton">
+							<string key="name">plusButton</string>
 							<string key="candidateClassName">NSButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="shortcutRecorderControl">
