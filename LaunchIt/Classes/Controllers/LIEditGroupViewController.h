@@ -31,5 +31,6 @@
 @property (nonatomic, assign) NSUInteger                  shortcutFlags;
 
 - (IBAction)plusButtonPushed:(id)sender;
+- (IBAction)remove:(id)sender;
 
 @end

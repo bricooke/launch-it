@@ -13,6 +13,7 @@
 #import "CoreData+ActiveRecordFetching.h"
 #import "AppDelegate.h"
 #import "Group.h"
+#import "Website.h"
 
 @interface LIEditGroupViewController (private)
 - (void)addApplicationAtPath:(NSString *)file;
@@ -130,6 +131,19 @@
 
   [runningAppsMenu release];
   [plusMenu release];
+}
+
+
+- (IBAction)remove:(id)sender
+{
+  id selected = [[self.group applicationsAndWebsites] objectAtIndex:[[self.collectionView selectionIndexes] firstIndex]];
+  if ([selected isKindOfClass:[Application class]]) {
+    [self.group removeApplicationsObject:selected];
+  } else if ([selected isKindOfClass:[Website class]]) {
+    [self.group removeWebsitesObject:selected];
+  }
+  [selected deleteEntity];
+  [self.collectionView setContent:[self.group applicationsAndWebsites]];
 }
 
 

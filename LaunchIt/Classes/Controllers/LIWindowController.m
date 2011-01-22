@@ -114,6 +114,8 @@
   [[self.editGroupController.view animator] setFrame:NSOffsetRect(current, current.size.width * 2, 0)];
 
   [self setSaveAndCancelVisible:NO];
+  
+  self.editGroupController.group = nil;
 }
 
 
