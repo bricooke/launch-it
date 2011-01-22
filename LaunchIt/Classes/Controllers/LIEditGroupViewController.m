@@ -15,7 +15,7 @@
 #import "Group.h"
 
 @interface LIEditGroupViewController(private)
-- (void) setFile:(NSString *)file;
+- (void) addApplicationAtPath:(NSString *)file;
 @end
 
 
@@ -105,7 +105,7 @@
 
 - (void) chooseRunningApplication:(id)sender
 {
-  [self setFile:[[sender representedObject] valueForKey:@"NSApplicationPath"]];
+  [self addApplicationAtPath:[[sender representedObject] valueForKey:@"NSApplicationPath"]];
 }
 
 
@@ -130,24 +130,20 @@
 
 - (void) didChooseApplication:(NSOpenPanel *)panel returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
 {
-  [self setFile:[[panel filenames] objectAtIndex:0]];
+  [self addApplicationAtPath:[[panel filenames] objectAtIndex:0]];
 }
 
 
 
-- (void) setFile:(NSString *)aFile
+- (void) addApplicationAtPath:(NSString *)aFile
 {
-//  RSApplicationFileAnalyzer *analyzer = [[RSApplicationFileAnalyzer alloc] initWithApplication:aFile];
-//
-//  [self.group willChangeValueForKey:@"smallAppIcon"];
-//  [self.group willChangeValueForKey:@"appIcon"];
-//  self.group.renderedImage = nil;
-//  self.group.name = [analyzer name];
-//  self.group.path = [analyzer path];
-//  [self.group didChangeValueForKey:@"appIcon"];
-//  [self.group didChangeValueForKey:@"smallAppIcon"];
-//  
-//  [analyzer release];  
+  RSApplicationFileAnalyzer *analyzer = [[RSApplicationFileAnalyzer alloc] initWithApplication:aFile];
+  Application *app = [Application createEntity];
+  app.name = [analyzer name];
+  app.path = [analyzer path];
+  [analyzer release];
+  
+  [self.group addApplicationsObject:app];
 }
 
 #pragma mark -
