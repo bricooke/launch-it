@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "Application.h"
+#import "Group.h"
 #import "CoreData+ActiveRecordFetching.h"
 
 
@@ -27,7 +27,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification 
 {
   [NSManagedObjectContext setDefaultContext:[self managedObjectContext]];
-  [Application bindAllHotkeys];
+  [Group migrateExistingApplications];
+  [Group bindAllHotkeys];
 }
 
 

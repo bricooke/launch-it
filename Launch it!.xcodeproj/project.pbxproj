@@ -12,6 +12,10 @@
 		D60DECF512E26E64002F77DD /* LaunchIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6BF680812E26704008BCC5B /* LaunchIt.xcdatamodeld */; };
 		D60DED0F12E2701C002F77DD /* SGKeyCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = D60DED0D12E2701C002F77DD /* SGKeyCodes.plist */; };
 		D661B3FD12E7ED6A0088DFC7 /* btn_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = D661B3FC12E7ED6A0088DFC7 /* btn_delete.png */; };
+		D66968D912EA846C000C39E7 /* _Group.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D212EA846C000C39E7 /* _Group.m */; };
+		D66968DA12EA846C000C39E7 /* _Website.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D412EA846C000C39E7 /* _Website.m */; };
+		D66968DB12EA846C000C39E7 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D612EA846C000C39E7 /* Group.m */; };
+		D66968DC12EA846C000C39E7 /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D812EA846C000C39E7 /* Website.m */; };
 		D6BF674712E2562C008BCC5B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF674612E2562C008BCC5B /* Cocoa.framework */; };
 		D6BF675412E2562C008BCC5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF675312E2562C008BCC5B /* main.m */; };
 		D6BF67B912E25E44008BCC5B /* ActiveRecordHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF679712E25E44008BCC5B /* ActiveRecordHelpers.m */; };
@@ -151,7 +155,7 @@
 		D6BF68F112E26821008BCC5B /* LIResizableWindowFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68EE12E26821008BCC5B /* LIResizableWindowFrame.m */; };
 		D6BF68F212E26821008BCC5B /* LIWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68F012E26821008BCC5B /* LIWindow.m */; };
 		D6BF68F512E268BF008BCC5B /* LIWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68F412E268BE008BCC5B /* LIWindowController.m */; };
-		D6BF690012E2A794008BCC5B /* LIEditApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68FE12E2A794008BCC5B /* LIEditApplicationViewController.m */; };
+		D6BF690012E2A794008BCC5B /* LIEditGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68FE12E2A794008BCC5B /* LIEditGroupViewController.m */; };
 		D6BF690112E2A794008BCC5B /* LIEditApplicationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BF68FF12E2A794008BCC5B /* LIEditApplicationView.xib */; };
 		D6BF690412E39B9E008BCC5B /* MACollectionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF690312E39B9E008BCC5B /* MACollectionUtilities.m */; };
 /* End PBXBuildFile section */
@@ -162,6 +166,15 @@
 		D60B153F12E5358500985B33 /* menubar_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menubar_white.png; path = Resources/menubar_white.png; sourceTree = "<group>"; };
 		D60DED0E12E2701C002F77DD /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = en; path = LaunchIt/Resources/en.lproj/SGKeyCodes.plist; sourceTree = SOURCE_ROOT; };
 		D661B3FC12E7ED6A0088DFC7 /* btn_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_delete.png; path = Resources/btn_delete.png; sourceTree = "<group>"; };
+		D66968D112EA846C000C39E7 /* _Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Group.h; path = Classes/Models/LaunchIt/_Group.h; sourceTree = "<group>"; };
+		D66968D212EA846C000C39E7 /* _Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Group.m; path = Classes/Models/LaunchIt/_Group.m; sourceTree = "<group>"; };
+		D66968D312EA846C000C39E7 /* _Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Website.h; path = Classes/Models/LaunchIt/_Website.h; sourceTree = "<group>"; };
+		D66968D412EA846C000C39E7 /* _Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Website.m; path = Classes/Models/LaunchIt/_Website.m; sourceTree = "<group>"; };
+		D66968D512EA846C000C39E7 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = Classes/Models/LaunchIt/Group.h; sourceTree = "<group>"; };
+		D66968D612EA846C000C39E7 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Group.m; path = Classes/Models/LaunchIt/Group.m; sourceTree = "<group>"; };
+		D66968D712EA846C000C39E7 /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Website.h; path = Classes/Models/LaunchIt/Website.h; sourceTree = "<group>"; };
+		D66968D812EA846C000C39E7 /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Website.m; path = Classes/Models/LaunchIt/Website.m; sourceTree = "<group>"; };
+		D696873B12EA8CA10033FAC7 /* v3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v3.xcdatamodel; sourceTree = "<group>"; };
 		D6BF674212E2562C008BCC5B /* Launch it!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Launch it!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BF674612E2562C008BCC5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D6BF674912E2562C008BCC5B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -375,8 +388,8 @@
 		D6BF68F012E26821008BCC5B /* LIWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LIWindow.m; path = Classes/Views/LIWindow.m; sourceTree = "<group>"; };
 		D6BF68F312E268BE008BCC5B /* LIWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIWindowController.h; path = Classes/Controllers/LIWindowController.h; sourceTree = "<group>"; };
 		D6BF68F412E268BE008BCC5B /* LIWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LIWindowController.m; path = Classes/Controllers/LIWindowController.m; sourceTree = "<group>"; };
-		D6BF68FD12E2A794008BCC5B /* LIEditApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIEditApplicationViewController.h; path = Classes/Controllers/LIEditApplicationViewController.h; sourceTree = "<group>"; };
-		D6BF68FE12E2A794008BCC5B /* LIEditApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LIEditApplicationViewController.m; path = Classes/Controllers/LIEditApplicationViewController.m; sourceTree = "<group>"; };
+		D6BF68FD12E2A794008BCC5B /* LIEditGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIEditGroupViewController.h; path = Classes/Controllers/LIEditGroupViewController.h; sourceTree = "<group>"; };
+		D6BF68FE12E2A794008BCC5B /* LIEditGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LIEditGroupViewController.m; path = Classes/Controllers/LIEditGroupViewController.m; sourceTree = "<group>"; };
 		D6BF68FF12E2A794008BCC5B /* LIEditApplicationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LIEditApplicationView.xib; path = Classes/Controllers/LIEditApplicationView.xib; sourceTree = "<group>"; };
 		D6BF690212E39B9E008BCC5B /* MACollectionUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MACollectionUtilities.h; path = Classes/3rdParty/MACollectionUtilities.h; sourceTree = "<group>"; };
 		D6BF690312E39B9E008BCC5B /* MACollectionUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACollectionUtilities.m; path = Classes/3rdParty/MACollectionUtilities.m; sourceTree = "<group>"; };
@@ -508,8 +521,8 @@
 				D6BF68F312E268BE008BCC5B /* LIWindowController.h */,
 				D6BF68F412E268BE008BCC5B /* LIWindowController.m */,
 				D6BF678A12E25D73008BCC5B /* MainMenu.xib */,
-				D6BF68FD12E2A794008BCC5B /* LIEditApplicationViewController.h */,
-				D6BF68FE12E2A794008BCC5B /* LIEditApplicationViewController.m */,
+				D6BF68FD12E2A794008BCC5B /* LIEditGroupViewController.h */,
+				D6BF68FE12E2A794008BCC5B /* LIEditGroupViewController.m */,
 				D6BF68FF12E2A794008BCC5B /* LIEditApplicationView.xib */,
 			);
 			name = Controllers;
@@ -521,8 +534,16 @@
 				D6BF680812E26704008BCC5B /* LaunchIt.xcdatamodeld */,
 				D6BF67CA12E25E67008BCC5B /* _Application.h */,
 				D6BF67CB12E25E67008BCC5B /* _Application.m */,
+				D66968D112EA846C000C39E7 /* _Group.h */,
+				D66968D212EA846C000C39E7 /* _Group.m */,
+				D66968D312EA846C000C39E7 /* _Website.h */,
+				D66968D412EA846C000C39E7 /* _Website.m */,
 				D6BF67CC12E25E67008BCC5B /* Application.h */,
 				D6BF67CD12E25E67008BCC5B /* Application.m */,
+				D66968D512EA846C000C39E7 /* Group.h */,
+				D66968D612EA846C000C39E7 /* Group.m */,
+				D66968D712EA846C000C39E7 /* Website.h */,
+				D66968D812EA846C000C39E7 /* Website.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -767,9 +788,9 @@
 		D6BF673912E2562C008BCC5B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				ORGANIZATIONNAME = "roobasoft, LLC";
+				ORGANIZATIONNAME = "Made By Rocket, Inc.";
 			};
-			buildConfigurationList = D6BF673C12E2562C008BCC5B /* Build configuration list for PBXProject "LaunchIt" */;
+			buildConfigurationList = D6BF673C12E2562C008BCC5B /* Build configuration list for PBXProject "Launch it!" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -940,9 +961,13 @@
 				D6BF68F112E26821008BCC5B /* LIResizableWindowFrame.m in Sources */,
 				D6BF68F212E26821008BCC5B /* LIWindow.m in Sources */,
 				D6BF68F512E268BF008BCC5B /* LIWindowController.m in Sources */,
-				D6BF690012E2A794008BCC5B /* LIEditApplicationViewController.m in Sources */,
+				D6BF690012E2A794008BCC5B /* LIEditGroupViewController.m in Sources */,
 				D6BF690412E39B9E008BCC5B /* MACollectionUtilities.m in Sources */,
 				D60B153E12E5308700985B33 /* LIMenubarView.m in Sources */,
+				D66968D912EA846C000C39E7 /* _Group.m in Sources */,
+				D66968DA12EA846C000C39E7 /* _Website.m in Sources */,
+				D66968DB12EA846C000C39E7 /* Group.m in Sources */,
+				D66968DC12EA846C000C39E7 /* Website.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1066,7 +1091,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D6BF673C12E2562C008BCC5B /* Build configuration list for PBXProject "LaunchIt" */ = {
+		D6BF673C12E2562C008BCC5B /* Build configuration list for PBXProject "Launch it!" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6BF677312E2562C008BCC5B /* Debug */,
@@ -1092,8 +1117,9 @@
 			children = (
 				D6BF680912E26704008BCC5B /* v1.xcdatamodel */,
 				D6BF680A12E26704008BCC5B /* v2.xcdatamodel */,
+				D696873B12EA8CA10033FAC7 /* v3.xcdatamodel */,
 			);
-			currentVersion = D6BF680A12E26704008BCC5B /* v2.xcdatamodel */;
+			currentVersion = D696873B12EA8CA10033FAC7 /* v3.xcdatamodel */;
 			name = LaunchIt.xcdatamodeld;
 			path = Resources/LaunchIt.xcdatamodeld;
 			sourceTree = "<group>";

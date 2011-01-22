@@ -8,11 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class Application;
+@class Group;
 @class SRRecorderControl;
 
-@interface LIEditApplicationViewController : NSViewController {
-  Application *_application;
+@interface LIEditGroupViewController : NSViewController {
+  Group *_group;
   
   SRRecorderControl          *shortcutRecorderControl;
   NSString                   *applicationName;
@@ -22,7 +22,7 @@
   NSButton *chooseApplicationButton;
 }
 
-@property (nonatomic, retain) Application *application;
+@property (nonatomic, retain) Group *group;
 @property (nonatomic, retain) IBOutlet SRRecorderControl *shortcutRecorderControl;
 @property (nonatomic, retain) IBOutlet NSButton *chooseApplicationButton;
 @property (nonatomic, retain) NSString                   *applicationName;

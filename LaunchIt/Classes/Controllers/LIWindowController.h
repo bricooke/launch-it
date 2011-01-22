@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@class Application, LIEditApplicationViewController;
+@class Group, LIEditGroupViewController;
 
 @interface LIWindowController : NSWindowController {
   NSCollectionView                *collectionView;
   NSView                          *containerView;
-  LIEditApplicationViewController *editAppController;
+  LIEditGroupViewController *editGroupController;
   NSButton                        *cancelButton;
   NSButton                        *deleteButton;
   NSButton                        *saveButton;
@@ -24,7 +24,7 @@
 
 @property (nonatomic, retain) IBOutlet NSCollectionView       *collectionView;
 @property (nonatomic, retain) IBOutlet NSView                 *containerView;
-@property (nonatomic, retain) LIEditApplicationViewController *editAppController;
+@property (nonatomic, retain) LIEditGroupViewController *editGroupController;
 @property (nonatomic, retain) IBOutlet NSButton               *cancelButton;
 @property (nonatomic, retain) IBOutlet NSButton               *deleteButton;
 @property (nonatomic, retain) IBOutlet NSButton               *saveButton;
@@ -32,8 +32,8 @@
 @property (nonatomic, retain) IBOutlet NSButton *settingsButton;
 @property (nonatomic, retain) NSStatusItem *statusItem;
 
-- (void)editApplication:(Application *)anApp;
-- (IBAction)addApplication:(id)sender;
+- (void)editGroup:(Group *)anApp;
+- (IBAction)addGroup:(id)sender;
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
 - (IBAction)delete:(id)sender;

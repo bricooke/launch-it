@@ -6,23 +6,23 @@
 //  Copyright 2011 Made By Rocket, Inc.. All rights reserved.
 //
 
-#import "LIEditApplicationViewController.h"
+#import "LIEditGroupViewController.h"
 #import <ShortcutRecorder/ShortcutRecorder.h>
 #import "RSApplicationFileAnalyzer.h"
 #import "Application.h"
 #import "CoreData+ActiveRecordFetching.h"
 #import "AppDelegate.h"
+#import "Group.h"
 
-
-@interface LIEditApplicationViewController(private)
+@interface LIEditGroupViewController(private)
 - (void) setFile:(NSString *)file;
 @end
 
 
-@implementation LIEditApplicationViewController
+@implementation LIEditGroupViewController
 
 - (void)dealloc {
-  self.application = nil;
+  self.group = nil;
   [super dealloc];
 }
 
@@ -30,8 +30,8 @@
 - (void) awakeFromNib
 {
   KeyCombo combo;
-  combo.flags = self.application.shortcutFlagsValue;
-  combo.code = self.application.shortcutCodeValue;
+  combo.flags = self.group.shortcutFlagsValue;
+  combo.code = self.group.shortcutCodeValue;
   [self.shortcutRecorderControl setKeyCombo:combo];
 }
 
@@ -125,33 +125,33 @@
 
 - (void) setFile:(NSString *)aFile
 {
-  RSApplicationFileAnalyzer *analyzer = [[RSApplicationFileAnalyzer alloc] initWithApplication:aFile];
-
-  [self.application willChangeValueForKey:@"smallAppIcon"];
-  [self.application willChangeValueForKey:@"appIcon"];
-  self.application.renderedImage = nil;
-  self.application.name = [analyzer name];
-  self.application.path = [analyzer path];
-  [self.application didChangeValueForKey:@"appIcon"];
-  [self.application didChangeValueForKey:@"smallAppIcon"];
-  
-  [analyzer release];  
+//  RSApplicationFileAnalyzer *analyzer = [[RSApplicationFileAnalyzer alloc] initWithApplication:aFile];
+//
+//  [self.group willChangeValueForKey:@"smallAppIcon"];
+//  [self.group willChangeValueForKey:@"appIcon"];
+//  self.group.renderedImage = nil;
+//  self.group.name = [analyzer name];
+//  self.group.path = [analyzer path];
+//  [self.group didChangeValueForKey:@"appIcon"];
+//  [self.group didChangeValueForKey:@"smallAppIcon"];
+//  
+//  [analyzer release];  
 }
 
 #pragma mark -
 #pragma mark things
-- (void) setApplication:(Application *)application
+- (void) setGroup:(Group *)group
 {
-  if (_application == application)
+  if (_group == group)
     return;
-  [self willChangeValueForKey:@"_application"];
-  [_application release];
-  _application = [application retain];
-  [self didChangeValueForKey:@"_application"];
+  [self willChangeValueForKey:@"_group"];
+  [_group release];
+  _group = [group retain];
+  [self didChangeValueForKey:@"_group"];
   
   KeyCombo combo;
-  combo.flags = self.application.shortcutFlagsValue;
-  combo.code = self.application.shortcutCodeValue;
+  combo.flags = self.group.shortcutFlagsValue;
+  combo.code = self.group.shortcutCodeValue;
   [self.shortcutRecorderControl setKeyCombo:combo];
 }
 
@@ -166,19 +166,19 @@
 - (void)shortcutRecorder:(SRRecorderControl *)aRecorder keyComboDidChange:(KeyCombo)newKeyCombo 
 {
   [self willChangeValueForKey:@"canSave"];
-  [self.application willChangeValueForKey:@"shortcutCodeString"];
-  [self.application willChangeValueForKey:@"shortcutCodeStringForMenus"];
+  [self.group willChangeValueForKey:@"shortcutCodeString"];
+  [self.group willChangeValueForKey:@"shortcutCodeStringForMenus"];
   self.shortcutCode = newKeyCombo.code;
   self.shortcutFlags = newKeyCombo.flags;
-  [self.application setShortcutCodeValue:self.shortcutCode];
-  [self.application setShortcutFlagsValue:self.shortcutFlags];
-  [self.application didChangeValueForKey:@"shortcutCodeString"];
-  [self.application didChangeValueForKey:@"shortcutCodeStringForMenus"];
+  [self.group setShortcutCodeValue:self.shortcutCode];
+  [self.group setShortcutFlagsValue:self.shortcutFlags];
+  [self.group didChangeValueForKey:@"shortcutCodeString"];
+  [self.group didChangeValueForKey:@"shortcutCodeStringForMenus"];
   [self didChangeValueForKey:@"canSave"];
 }
 
 
 
-@synthesize application=_application;
+@synthesize group=_group;
 @synthesize shortcutCode, shortcutFlags, shortcutRecorderControl, applicationName, applicationPath, chooseApplicationButton;
 @end

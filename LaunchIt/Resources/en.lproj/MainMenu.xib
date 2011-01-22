@@ -2236,22 +2236,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: representedObject.smallAppIcon</string>
-						<reference key="source" ref="563289814"/>
-						<reference key="destination" ref="856226392"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="563289814"/>
-							<reference key="NSDestination" ref="856226392"/>
-							<string key="NSLabel">value: representedObject.smallAppIcon</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">representedObject.smallAppIcon</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">538</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
 						<string key="label">target: representedObject</string>
 						<reference key="source" ref="832052757"/>
 						<reference key="destination" ref="856226392"/>
@@ -2357,6 +2341,22 @@
 						<reference key="destination" ref="45526362"/>
 					</object>
 					<int key="connectionID">567</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: representedObject.smallImage</string>
+						<reference key="source" ref="563289814"/>
+						<reference key="destination" ref="856226392"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="563289814"/>
+							<reference key="NSDestination" ref="856226392"/>
+							<string key="NSLabel">value: representedObject.smallImage</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">representedObject.smallImage</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">568</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -4091,7 +4091,7 @@
 				<reference key="dict.values" ref="1049"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">567</int>
+			<int key="maxID">568</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4179,12 +4179,14 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>addApplication:</string>
+							<string>addGroup:</string>
 							<string>cancel:</string>
 							<string>delete:</string>
 							<string>save:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -4196,6 +4198,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>addApplication:</string>
+							<string>addGroup:</string>
 							<string>cancel:</string>
 							<string>delete:</string>
 							<string>save:</string>
@@ -4204,6 +4207,10 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
 								<string key="name">addApplication:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">addGroup:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

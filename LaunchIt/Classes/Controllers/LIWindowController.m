@@ -10,9 +10,11 @@
 #import "Application.h"
 #import "CoreData+ActiveRecordFetching.h"
 #import "AppDelegate.h"
-#import "LIEditApplicationViewController.h"
+#import "LIEditGroupViewController.h"
 #import "MACollectionUtilities.h"
 #import "LIMenubarView.h"
+#import "Group.h"
+
 
 @interface LIWindowController(private)
 - (void) slideInEditView;
@@ -33,7 +35,7 @@
 {
   [NSManagedObjectContext setDefaultContext:[[AppDelegate sharedAppDelegate] managedObjectContext]];
   
-  self.editAppController = [[[LIEditApplicationViewController alloc] initWithNibName:@"LIEditApplicationView" bundle:nil] autorelease];
+  self.editGroupController = [[[LIEditGroupViewController alloc] initWithNibName:@"LIEditApplicationView" bundle:nil] autorelease];
   
   [self.containerView setWantsLayer:YES];
   [[self.containerView layer] setOpaque:YES];
@@ -41,7 +43,7 @@
   
   [self.collectionView setBackgroundColors:[NSArray arrayWithObject:[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg_middle.png"]]]];
   
-  [self.collectionView setContent:[Application findAllSortedBy:@"name" ascending:YES]];
+  [self.collectionView setContent:[Group allSortedByName]];
   
   float width = 22.0;
   float height = [[NSStatusBar systemStatusBar] thickness];
@@ -51,20 +53,20 @@
 }
 
 
-- (IBAction)addApplication:(id)sender
+- (IBAction)addGroup:(id)sender
 {
-  Application *app = [Application createEntity];
+  Group *group = [Group createEntity];
   
-  self.editAppController.application = app;
+  self.editGroupController.group = group;
   
   [self slideInEditView];  
 }
 
 
-- (void) editApplication:(Application *)anApp
+- (void) editGroup:(Group *)aGroup
 {
-  self.editAppController.application = anApp;
-  [self.editAppController.application unbindHotkey];
+  self.editGroupController.group = aGroup;
+  [self.editGroupController.group unbindHotkey];
 
   [self slideInEditView];
 }
@@ -90,12 +92,12 @@
   [[self.containerView animator] setFrame:NSOffsetRect(current, -current.size.width, 0)];
   
   // make sure it's off screen, to the right.
-  [self.editAppController.view setFrame:NSOffsetRect(current, current.size.width, 0)];
+  [self.editGroupController.view setFrame:NSOffsetRect(current, current.size.width, 0)];
   
-  if ([self.editAppController.view superview] == nil)
-    [[[self window] contentView] addSubview:self.editAppController.view];
+  if ([self.editGroupController.view superview] == nil)
+    [[[self window] contentView] addSubview:self.editGroupController.view];
   
-  [[self.editAppController.view animator] setFrame:current];
+  [[self.editGroupController.view animator] setFrame:current];
 
   [self setSaveAndCancelVisible:YES];
 }
@@ -105,7 +107,7 @@
 {
   NSRect current = [self.containerView frame];
   [[self.containerView animator] setFrame:NSOffsetRect(current, current.size.width, 0)];
-  [[self.editAppController.view animator] setFrame:NSOffsetRect(current, current.size.width*2, 0)];
+  [[self.editGroupController.view animator] setFrame:NSOffsetRect(current, current.size.width*2, 0)];
 
   [self setSaveAndCancelVisible:NO];
 }
@@ -115,18 +117,18 @@
 #pragma mark actions
 - (IBAction)cancel:(id)sender
 {
-  [self.editAppController.application willChangeValueForKey:@"shortcutCodeString"];
-  [self.editAppController.application willChangeValueForKey:@"shortcutCodeStringForMenus"];
-  [self.editAppController.application willChangeValueForKey:@"appIcon"];
-  [self.editAppController.application willChangeValueForKey:@"smallAppIcon"];
+  [self.editGroupController.group willChangeValueForKey:@"shortcutCodeString"];
+  [self.editGroupController.group willChangeValueForKey:@"shortcutCodeStringForMenus"];
+  [self.editGroupController.group willChangeValueForKey:@"largeImage"];
+  [self.editGroupController.group willChangeValueForKey:@"smallImage"];
   [[NSManagedObjectContext defaultContext] rollback];
-  self.editAppController.application.renderedImage = nil;
-  [self.editAppController.application didChangeValueForKey:@"appIcon"];
-  [self.editAppController.application didChangeValueForKey:@"smallAppIcon"];
-  [self.editAppController.application didChangeValueForKey:@"shortcutCodeString"];
-  [self.editAppController.application didChangeValueForKey:@"shortcutCodeStringForMenus"];
+  self.editGroupController.group.renderedImage = nil;
+  [self.editGroupController.group didChangeValueForKey:@"smallImage"];
+  [self.editGroupController.group didChangeValueForKey:@"largeImage"];
+  [self.editGroupController.group didChangeValueForKey:@"shortcutCodeString"];
+  [self.editGroupController.group didChangeValueForKey:@"shortcutCodeStringForMenus"];
   
-  [self.editAppController.application bindHotkey];
+  [self.editGroupController.group bindHotkey];
 
   [self slideBackToMainView];
 }
@@ -134,11 +136,11 @@
 
 - (IBAction)save:(id)sender
 {
-  [self.editAppController.application bindHotkey];
+  [self.editGroupController.group bindHotkey];
   
   [[NSManagedObjectContext defaultContext] save];
   
-  [self.collectionView setContent:[Application findAllSortedBy:@"name" ascending:YES]];
+  [self.collectionView setContent:[Group allSortedByName]];
 
   [self slideBackToMainView];  
 }
@@ -146,11 +148,11 @@
 
 - (IBAction)delete:(id)sender
 {
-  NSAlert *alert = [NSAlert alertWithMessageText:@"Are you sure you want to delete this shortcut?" defaultButton:@"Yes, delete it" alternateButton:@"Don't delete" otherButton:nil informativeTextWithFormat:[NSString stringWithFormat:@"Really delete the shortcut for %@?", self.editAppController.application.name]];
+  NSAlert *alert = [NSAlert alertWithMessageText:@"Are you sure you want to delete this shortcut?" defaultButton:@"Yes, delete it" alternateButton:@"Don't delete" otherButton:nil informativeTextWithFormat:[NSString stringWithFormat:@"Really delete the shortcut for %@?", self.editGroupController.group.name]];
   if ([alert runModal] == 1) {
-    [self.editAppController.application deleteEntity];
+    [self.editGroupController.group deleteEntity];
     [[NSManagedObjectContext defaultContext] save];  
-    [self.collectionView setContent:[Application findAllSortedBy:@"name" ascending:YES]];
+    [self.collectionView setContent:[Group allSortedByName]];
     [self slideBackToMainView];
   }
 }
@@ -173,7 +175,7 @@
 
 
 @synthesize collectionView, containerView;
-@synthesize editAppController;
+@synthesize editGroupController;
 @synthesize cancelButton;
 @synthesize deleteButton;
 @synthesize saveButton;

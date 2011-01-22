@@ -122,6 +122,10 @@
 
 
 
+@dynamic group;
+
+	
+
 
 
 @end

@@ -4,6 +4,7 @@
 #import <CoreData/CoreData.h>
 
 
+@class Group;
 
 @interface ApplicationID : NSManagedObjectID {}
 @end
@@ -72,6 +73,11 @@
 
 //- (BOOL)validateShortcutFlags:(id*)value_ error:(NSError**)error_;
 
+
+
+
+@property (nonatomic, retain) Group* group;
+//- (BOOL)validateGroup:(id*)value_ error:(NSError**)error_;
 
 
 
