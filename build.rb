@@ -38,16 +38,16 @@ end
 
 # zip it up
 %x(ditto -ck --sequesterRsrc --keepParent "/Users/bcooke/projects/builds/Release/Launch it!.app" ~/projects/builds/Release/launchit.#{friendly_rev}.zip)
-%x(cp ~/projects/builds/Release/launchit.#{friendly_rev}.zip "/Users/bcooke/Dropbox/[rocket]/Launch it!/builds/launchit.#{friendly_rev}.zip")
+%x(cp ~/projects/builds/Release/launchit.#{friendly_rev}.zip "/Users/bcooke/Dropbox/[rocket]/Launch it!/builds/launchit.#{build_num.to_s.rust(4, '0'}_#{friendly_rev}.zip")
 
-puts "Building trial version..."
+#puts "Building trial version..."
 #clean
-%x(/Developer/usr/bin/xcodebuild -configuration Trial DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/ clean)
-%x(/Developer/usr/bin/xcodebuild -configuration Trial DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/)
+#%x(/Developer/usr/bin/xcodebuild -configuration Trial DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/ clean)
+#%x(/Developer/usr/bin/xcodebuild -configuration Trial DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/)
 
 # zip it up
-%x(ditto -ck --sequesterRsrc --keepParent "/Users/bcooke/projects/builds/Trial/Launch it!.app" ~/projects/builds/Trial/launchit.trial.#{friendly_rev}.zip)
-%x(cp ~/projects/builds/Trial/launchit.trial.#{friendly_rev}.zip "/Users/bcooke/Dropbox/[rocket]/Launch it!/builds/launchit.trial.#{friendly_rev}.zip")
+#%x(ditto -ck --sequesterRsrc --keepParent "/Users/bcooke/projects/builds/Trial/Launch it!.app" ~/projects/builds/Trial/launchit.trial.#{friendly_rev}.zip)
+#%x(cp ~/projects/builds/Trial/launchit.trial.#{friendly_rev}.zip "/Users/bcooke/Dropbox/[rocket]/Launch it!/builds/launchit.trial.#{friendly_rev}.zip")
 
 
 %x(open "/Users/bcooke/Dropbox/[rocket]/Launch\ it\!/builds")
