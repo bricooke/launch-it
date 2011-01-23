@@ -17,4 +17,23 @@
   return self.url;
 }
 
+
+- (void)setName:(NSString *)aNewURL
+{
+  // TODO: handle this?
+}
+
+
+- (BOOL) isWebsite
+{
+  return YES;
+}
+
+
+- (BOOL) isApplication
+{
+  return NO;
+}
+
+
 @end

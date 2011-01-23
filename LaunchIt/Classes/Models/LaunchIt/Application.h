@@ -5,4 +5,7 @@
 - (NSImage *)   largeImage;
 - (NSImage *)   smallImage;
 - (void)        launch;
+- (BOOL) isWebsite;
+- (BOOL) isApplication;
+
 @end

@@ -9,10 +9,12 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface LISelectableView : NSView {
+@interface LISelectableView : NSView<NSTextFieldDelegate> {
   BOOL _selected;
+  NSTextField *_nameField;
 }
 
 @property (nonatomic, readwrite) BOOL selected;
+@property (nonatomic, retain) NSTextField *nameField;
 
 @end

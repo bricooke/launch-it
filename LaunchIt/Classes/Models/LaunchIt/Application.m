@@ -86,4 +86,17 @@
 }
 
 
+- (BOOL) isWebsite
+{
+  return NO;
+}
+
+
+- (BOOL) isApplication
+{
+  return YES;
+}
+
+
+
 @end

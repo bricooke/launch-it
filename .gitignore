@@ -3,3 +3,4 @@
 *.xcodeproj/*.perspectivev3
 build
 xcuserdata
+.DS_Store

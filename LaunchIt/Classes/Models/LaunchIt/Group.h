@@ -10,6 +10,8 @@
 
 + (void)bindAllHotkeys;
 + (void)migrateExistingApplications;
++ (NSArray *)allSortedByName;
+
 - (NSArray *)applicationsAndWebsites;
 - (void)bindHotkey;
 - (void)bindHotkeyTo:(id) delegate action:(SEL)selector;
@@ -19,6 +21,4 @@
 - (NSUInteger)modifierMask;
 - (NSImage *)smallImage;
 - (NSImage *)largeImage;
-
-+ (NSArray *)allSortedByName;
 @end
