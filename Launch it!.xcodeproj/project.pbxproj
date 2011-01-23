@@ -30,6 +30,7 @@
 		D6122DF412EBE87B00C9E05E /* btn_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = D6122DE412EBE87B00C9E05E /* btn_plus.png */; };
 		D6122DF512EBE87B00C9E05E /* btn_save.png in Resources */ = {isa = PBXBuildFile; fileRef = D6122DE512EBE87B00C9E05E /* btn_save.png */; };
 		D6122DF712EBF69E00C9E05E /* btn_arrow_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = D6122DF612EBF69E00C9E05E /* btn_arrow_selected.png */; };
+		D6122DF912EC008E00C9E05E /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6BF67D012E2603E008BCC5B /* ShortcutRecorder.framework */; };
 		D66968D912EA846C000C39E7 /* _Group.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D212EA846C000C39E7 /* _Group.m */; };
 		D66968DA12EA846C000C39E7 /* _Website.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D412EA846C000C39E7 /* _Website.m */; };
 		D66968DB12EA846C000C39E7 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D612EA846C000C39E7 /* Group.m */; };
@@ -160,6 +161,19 @@
 		D6BF690112E2A794008BCC5B /* LIEditGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BF68FF12E2A794008BCC5B /* LIEditGroupView.xib */; };
 		D6BF690412E39B9E008BCC5B /* MACollectionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF690312E39B9E008BCC5B /* MACollectionUtilities.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D6122DF812EC007200C9E05E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D6122DF912EC008E00C9E05E /* ShortcutRecorder.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D60B153C12E5308700985B33 /* LIMenubarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIMenubarView.h; path = Classes/Views/LIMenubarView.h; sourceTree = "<group>"; };
@@ -779,6 +793,7 @@
 				D6BF673E12E2562C008BCC5B /* Sources */,
 				D6BF673F12E2562C008BCC5B /* Frameworks */,
 				D6BF674012E2562C008BCC5B /* Resources */,
+				D6122DF812EC007200C9E05E /* CopyFiles */,
 			);
 			buildRules = (
 			);
