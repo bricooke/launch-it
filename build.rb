@@ -9,7 +9,7 @@ if friendly_rev.nil?
   raise "FRIENDLY_REV and BUILD_NUM environment variables are required"
 end
 
-file = "./Resources/Launchables-Info.plist"
+file = "LaunchIt/LaunchIt-Info.plist"
 
 bnum = File.read("./buildnum.txt").strip.to_i
 bnum = bnum + 1
@@ -38,7 +38,7 @@ end
 
 # zip it up
 %x(ditto -ck --sequesterRsrc --keepParent "/Users/bcooke/projects/builds/Release/Launch it!.app" ~/projects/builds/Release/launchit.#{friendly_rev}.zip)
-%x(cp ~/projects/builds/Release/launchit.#{friendly_rev}.zip "/Users/bcooke/Dropbox/[rocket]/Launch it!/builds/launchit.#{build_num.to_s.rust(4, '0'}_#{friendly_rev}.zip")
+%x(cp ~/projects/builds/Release/launchit.#{friendly_rev}.zip "/Users/bcooke/Dropbox/[rocket]/Launch it!/builds/launchit.#{build_num.to_s.rjust(4, '0')}_#{friendly_rev}.zip")
 
 #puts "Building trial version..."
 #clean

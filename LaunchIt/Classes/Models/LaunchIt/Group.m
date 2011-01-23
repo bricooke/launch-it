@@ -73,6 +73,9 @@
 // ------------------------------------------------------------------------------
 - (NSImage *)smallImage
 {
+  if ([[self applicationsAndWebsites] count] == 1) {
+    return [[[self applicationsAndWebsites] objectAtIndex:0] smallImage];
+  }
   return [NSImage imageNamed:@"NSApplicationIcon"];
 }
 

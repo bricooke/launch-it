@@ -1228,11 +1228,11 @@
 								<reference key="NSControlView" ref="493194557"/>
 								<int key="NSButtonFlags">-2042347265</int>
 								<int key="NSButtonFlags2">2</int>
-								<object class="NSCustomResource" key="NSNormalImage" id="504554488">
+								<object class="NSCustomResource" key="NSNormalImage" id="875006175">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">bg_add</string>
 								</object>
-								<reference key="NSAlternateImage" ref="504554488"/>
+								<reference key="NSAlternateImage" ref="875006175"/>
 								<string key="NSAlternateContents"/>
 								<string key="NSKeyEquivalent"/>
 								<int key="NSPeriodicDelay">200</int>
@@ -1325,7 +1325,7 @@
 							<int key="NSvFlags">289</int>
 							<string key="NSFrame">{{264, 3}, {25, 28}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSNextKeyView" ref="846281044"/>
+							<reference key="NSNextKeyView" ref="471378773"/>
 							<bool key="NSViewIsLayerTreeHost">YES</bool>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSEnabled">YES</bool>
@@ -1442,7 +1442,7 @@
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<string key="NSClassName">NSView</string>
 						</object>
-						<object class="NSImageView" id="846281044">
+						<object class="NSImageView" id="471378773">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">289</int>
 							<object class="NSMutableSet" key="NSDragTypes">
@@ -1461,7 +1461,7 @@
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
-							<object class="NSImageCell" key="NSCell" id="723682959">
+							<object class="NSImageCell" key="NSCell" id="866149760">
 								<int key="NSCellFlags">130560</int>
 								<int key="NSCellFlags2">33554432</int>
 								<object class="NSCustomResource" key="NSContents">
@@ -1508,6 +1508,7 @@
 						<reference key="NSSuperview" ref="61247558"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
+						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="252511325">
 							<int key="NSCellFlags">67239424</int>
@@ -1534,14 +1535,15 @@
 					<object class="NSTextField" id="294470535">
 						<reference key="NSNextResponder" ref="61247558"/>
 						<int key="NSvFlags">265</int>
-						<string key="NSFrame">{{184, 12}, {68, 17}}</string>
+						<string key="NSFrame">{{190, 12}, {62, 17}}</string>
 						<reference key="NSSuperview" ref="61247558"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="832052757"/>
+						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="358268829">
-							<int key="NSCellFlags">68288064</int>
-							<int key="NSCellFlags2">71304192</int>
+							<int key="NSCellFlags">67239488</int>
+							<int key="NSCellFlags2">71305216</int>
 							<string key="NSContents">F1</string>
 							<object class="NSFont" key="NSSupport">
 								<string key="NSName">LucidaGrande-Bold</string>
@@ -1564,10 +1566,19 @@
 					<object class="NSTextField" id="750328373">
 						<reference key="NSNextResponder" ref="61247558"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{49, 10}, {157, 19}}</string>
+						<string key="NSFrame">{{47, 11}, {148, 18}}</string>
 						<reference key="NSSuperview" ref="61247558"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="294470535"/>
+						<bool key="NSViewIsLayerTreeHost">YES</bool>
+						<object class="NSShadow" key="NSViewShadow">
+							<double key="NSShadowVert">-1</double>
+							<object class="NSColor" key="NSShadowColor" id="555745466">
+								<int key="NSColorSpace">3</int>
+								<bytes key="NSWhite">MAA</bytes>
+							</object>
+						</object>
+						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="1056481374">
 							<int key="NSCellFlags">67239488</int>
@@ -1575,7 +1586,7 @@
 							<string key="NSContents">Coda</string>
 							<object class="NSFont" key="NSSupport">
 								<string key="NSName">LucidaGrande-Bold</string>
-								<double key="NSSize">16</double>
+								<double key="NSSize">14</double>
 								<int key="NSfFlags">16</int>
 							</object>
 							<reference key="NSControlView" ref="750328373"/>
@@ -1602,6 +1613,7 @@
 						<reference key="NSSuperview" ref="61247558"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="750328373"/>
+						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSImageCell" key="NSCell" id="301608687">
 							<int key="NSCellFlags">130560</int>
@@ -1632,6 +1644,7 @@
 						<reference key="NSSuperview" ref="61247558"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="563289814"/>
+						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSImageCell" key="NSCell" id="212767566">
 							<int key="NSCellFlags">130560</int>
@@ -1652,6 +1665,7 @@
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="293329927"/>
+				<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				<string key="NSClassName">NSView</string>
 			</object>
 			<object class="NSUserDefaultsController" id="731544935">
@@ -2978,7 +2992,7 @@
 							<reference ref="1034562960"/>
 							<reference ref="506281229"/>
 							<reference ref="45526362"/>
-							<reference ref="846281044"/>
+							<reference ref="471378773"/>
 							<reference ref="606052641"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
@@ -3360,10 +3374,10 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="293329927"/>
-							<reference ref="750328373"/>
 							<reference ref="294470535"/>
 							<reference ref="563289814"/>
 							<reference ref="832052757"/>
+							<reference ref="750328373"/>
 						</object>
 						<reference key="parent" ref="1049"/>
 						<string key="objectName">Collection view item view</string>
@@ -3533,17 +3547,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">570</int>
-						<reference key="object" ref="846281044"/>
+						<reference key="object" ref="471378773"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="723682959"/>
+							<reference ref="866149760"/>
 						</object>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">571</int>
-						<reference key="object" ref="723682959"/>
-						<reference key="parent" ref="846281044"/>
+						<reference key="object" ref="866149760"/>
+						<reference key="parent" ref="471378773"/>
 					</object>
 				</object>
 			</object>
@@ -3770,12 +3784,17 @@
 					<string>5.ImportedFromIB2</string>
 					<string>500.IBPluginDependency</string>
 					<string>500.IBViewBoundsToFrameTransform</string>
+					<string>500.IBViewIntegration.shadowOffsetHeight</string>
 					<string>501.IBPluginDependency</string>
 					<string>512.IBPluginDependency</string>
 					<string>512.IBViewBoundsToFrameTransform</string>
 					<string>513.IBPluginDependency</string>
 					<string>514.IBPluginDependency</string>
 					<string>514.IBViewBoundsToFrameTransform</string>
+					<string>514.IBViewIntegration.shadowBlurRadius</string>
+					<string>514.IBViewIntegration.shadowColor</string>
+					<string>514.IBViewIntegration.shadowOffsetHeight</string>
+					<string>514.IBViewIntegration.shadowOffsetWidth</string>
 					<string>515.IBPluginDependency</string>
 					<string>523.IBPluginDependency</string>
 					<string>524.IBPluginDependency</string>
@@ -4060,6 +4079,7 @@
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABCRAAAwbAAAA</bytes>
 					</object>
+					<real value="-1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
@@ -4070,6 +4090,10 @@
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABCWAAAwYgAAA</bytes>
 					</object>
+					<real value="0.0"/>
+					<reference ref="555745466"/>
+					<real value="-1"/>
+					<real value="0.0"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
