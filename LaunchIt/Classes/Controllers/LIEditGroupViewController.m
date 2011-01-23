@@ -68,6 +68,7 @@
   
   [[NSNotificationCenter defaultCenter] addObserverForName:@"WebsiteUpdated" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif) {
     [self.collectionView setContent:[self.group applicationsAndWebsites]];
+    [self.collectionView setSelectionIndexes:nil];
   }];
 }
 

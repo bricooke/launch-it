@@ -1156,7 +1156,6 @@
 							</object>
 							<string key="NSFrame">{{0, 320}, {300, 26}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1034562960"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSEnabled">YES</bool>
@@ -1191,7 +1190,6 @@
 							</object>
 							<string key="NSFrameSize">{300, 37}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="493194557"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSEnabled">YES</bool>
@@ -1214,7 +1212,6 @@
 							<int key="NSvFlags">292</int>
 							<string key="NSFrame">{{0, 2}, {41, 31}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="506281229"/>
 							<bool key="NSViewIsLayerTreeHost">YES</bool>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
@@ -1231,11 +1228,11 @@
 								<reference key="NSControlView" ref="493194557"/>
 								<int key="NSButtonFlags">-2042347265</int>
 								<int key="NSButtonFlags2">2</int>
-								<object class="NSCustomResource" key="NSNormalImage" id="516843824">
+								<object class="NSCustomResource" key="NSNormalImage" id="504554488">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">bg_add</string>
 								</object>
-								<reference key="NSAlternateImage" ref="516843824"/>
+								<reference key="NSAlternateImage" ref="504554488"/>
 								<string key="NSAlternateContents"/>
 								<string key="NSKeyEquivalent"/>
 								<int key="NSPeriodicDelay">200</int>
@@ -1247,7 +1244,6 @@
 							<int key="NSvFlags">-2147483356</int>
 							<string key="NSFrame">{{5, 6}, {64, 23}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="45526362"/>
 							<bool key="NSViewIsLayerTreeHost">YES</bool>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
@@ -1275,7 +1271,6 @@
 							<int key="NSvFlags">-2147483356</int>
 							<string key="NSFrame">{{76, 6}, {64, 23}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="606052641"/>
 							<bool key="NSViewIsLayerTreeHost">YES</bool>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
@@ -1303,7 +1298,6 @@
 							<int key="NSvFlags">-2147483356</int>
 							<string key="NSFrame">{{225, 6}, {64, 23}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="56661142"/>
 							<bool key="NSViewIsLayerTreeHost">YES</bool>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
@@ -1331,8 +1325,7 @@
 							<int key="NSvFlags">289</int>
 							<string key="NSFrame">{{264, 3}, {25, 28}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="328807901"/>
+							<reference key="NSNextKeyView" ref="846281044"/>
 							<bool key="NSViewIsLayerTreeHost">YES</bool>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSEnabled">YES</bool>
@@ -1374,7 +1367,6 @@
 													<int key="NSvFlags">4370</int>
 													<string key="NSFrameSize">{300, 286}</string>
 													<reference key="NSSuperview" ref="910059448"/>
-													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="763280256"/>
 													<int key="NSViewLayerContentsRedrawPolicy">2</int>
 													<string key="NSMinGridSize">{0, 0}</string>
@@ -1400,7 +1392,6 @@
 											</object>
 											<string key="NSFrameSize">{300, 286}</string>
 											<reference key="NSSuperview" ref="249628636"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="698154325"/>
 											<int key="NSViewLayerContentsRedrawPolicy">2</int>
 											<reference key="NSDocView" ref="698154325"/>
@@ -1415,7 +1406,6 @@
 											<int key="NSvFlags">-2147483392</int>
 											<string key="NSFrame">{{234, 1}, {15, 143}}</string>
 											<reference key="NSSuperview" ref="249628636"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="497867067"/>
 											<int key="NSViewLayerContentsRedrawPolicy">2</int>
 											<reference key="NSTarget" ref="249628636"/>
@@ -1428,7 +1418,6 @@
 											<int key="NSvFlags">-2147483392</int>
 											<string key="NSFrame">{{-100, -100}, {233, 15}}</string>
 											<reference key="NSSuperview" ref="249628636"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="910059448"/>
 											<int key="NSViewLayerContentsRedrawPolicy">2</int>
 											<int key="NSsFlags">1</int>
@@ -1439,7 +1428,6 @@
 									</object>
 									<string key="NSFrame">{{0, 1}, {300, 286}}</string>
 									<reference key="NSSuperview" ref="1034562960"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="708215735"/>
 									<int key="NSViewLayerContentsRedrawPolicy">2</int>
 									<int key="NSsFlags">528</int>
@@ -1450,12 +1438,11 @@
 							</object>
 							<string key="NSFrame">{{0, 35}, {300, 287}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="249628636"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<string key="NSClassName">NSView</string>
 						</object>
-						<object class="NSImageView" id="328807901">
+						<object class="NSImageView" id="846281044">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">289</int>
 							<object class="NSMutableSet" key="NSDragTypes">
@@ -1472,10 +1459,9 @@
 							</object>
 							<string key="NSFrame">{{289, 3}, {8, 9}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
-							<object class="NSImageCell" key="NSCell" id="290766632">
+							<object class="NSImageCell" key="NSCell" id="723682959">
 								<int key="NSCellFlags">130560</int>
 								<int key="NSCellFlags2">33554432</int>
 								<object class="NSCustomResource" key="NSContents">
@@ -1492,7 +1478,6 @@
 					</object>
 					<string key="NSFrame">{{7, 11}, {300, 346}}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="126732566"/>
 					<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				</object>
@@ -1532,11 +1517,14 @@
 							<reference key="NSControlView" ref="832052757"/>
 							<int key="NSButtonFlags">138690815</int>
 							<int key="NSButtonFlags2">1</int>
-							<object class="NSCustomResource" key="NSNormalImage" id="868684039">
+							<object class="NSCustomResource" key="NSNormalImage">
 								<string key="NSClassName">NSImage</string>
 								<string key="NSResourceName">btn_arrow</string>
 							</object>
-							<reference key="NSAlternateImage" ref="868684039"/>
+							<object class="NSCustomResource" key="NSAlternateImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">btn_arrow_selected</string>
+							</object>
 							<string key="NSAlternateContents"/>
 							<string key="NSKeyEquivalent"/>
 							<int key="NSPeriodicDelay">200</int>
@@ -1576,7 +1564,7 @@
 					<object class="NSTextField" id="750328373">
 						<reference key="NSNextResponder" ref="61247558"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{49, 12}, {157, 17}}</string>
+						<string key="NSFrame">{{49, 10}, {157, 19}}</string>
 						<reference key="NSSuperview" ref="61247558"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="294470535"/>
@@ -1585,7 +1573,11 @@
 							<int key="NSCellFlags">67239488</int>
 							<int key="NSCellFlags2">4196352</int>
 							<string key="NSContents">Coda</string>
-							<reference key="NSSupport" ref="39744759"/>
+							<object class="NSFont" key="NSSupport">
+								<string key="NSName">LucidaGrande-Bold</string>
+								<double key="NSSize">16</double>
+								<int key="NSfFlags">16</int>
+							</object>
 							<reference key="NSControlView" ref="750328373"/>
 							<reference key="NSBackgroundColor" ref="257455577"/>
 							<reference key="NSTextColor" ref="698339126"/>
@@ -2986,8 +2978,8 @@
 							<reference ref="1034562960"/>
 							<reference ref="506281229"/>
 							<reference ref="45526362"/>
+							<reference ref="846281044"/>
 							<reference ref="606052641"/>
-							<reference ref="328807901"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -3541,17 +3533,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">570</int>
-						<reference key="object" ref="328807901"/>
+						<reference key="object" ref="846281044"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="290766632"/>
+							<reference ref="723682959"/>
 						</object>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">571</int>
-						<reference key="object" ref="290766632"/>
-						<reference key="parent" ref="328807901"/>
+						<reference key="object" ref="723682959"/>
+						<reference key="parent" ref="846281044"/>
 					</object>
 				</object>
 			</object>
@@ -4444,6 +4436,7 @@
 				<string>bg_settings</string>
 				<string>bg_top</string>
 				<string>btn_arrow</string>
+				<string>btn_arrow_selected</string>
 				<string>btn_cancel</string>
 				<string>btn_delete</string>
 				<string>btn_save</string>
@@ -4458,6 +4451,7 @@
 				<string>{8, 9}</string>
 				<string>{15, 16}</string>
 				<string>{300.083, 25}</string>
+				<string>{20, 19}</string>
 				<string>{20, 19}</string>
 				<string>{64, 23}</string>
 				<string>{64, 23}</string>
