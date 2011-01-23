@@ -20,9 +20,19 @@
 
 - (void)setName:(NSString *)aNewURL
 {
-  // TODO: handle this?
+  self.url = aNewURL;
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"WebsiteUpdated" object:nil];
 }
 
+- (NSImage *)smallImage
+{
+  return [NSImage imageNamed:@"NSApplicationIcon"];
+}
+
+- (NSImage *)largeImage
+{
+  return [NSImage imageNamed:@"NSApplicationIcon"];
+}
 
 - (BOOL) isWebsite
 {

@@ -137,7 +137,7 @@
 - (void)drawRect:(NSRect)rect
 {
   NSRect f = NSInsetRect([self bounds], 0, 20);
-	[[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg_middle.png"]] set];
+	[[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg.png"]] set];
 	NSRectFill(f);
 		
 	[[NSColor blackColor] set];

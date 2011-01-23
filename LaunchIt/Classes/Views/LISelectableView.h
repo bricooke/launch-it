@@ -17,4 +17,6 @@
 @property (nonatomic, readwrite) BOOL selected;
 @property (nonatomic, retain) NSTextField *nameField;
 
+- (void) edit;
+
 @end

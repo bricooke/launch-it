@@ -1,5 +1,6 @@
 #import "Group.h"
 #import "Application.h"
+#import "Website.h"
 #import "CoreData+ActiveRecordFetching.h"
 #import "SGHotKey.h"
 #import "SGHotKeyCenter.h"
@@ -222,5 +223,16 @@
      [app launch];
    }
   ];
+  
+  NSMutableArray *urls = [NSMutableArray array];
+  [[self websites] enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+    Website *w = obj;
+    NSURL *u = [NSURL URLWithString:w.url];
+    if (u) {
+      [urls addObject:u];
+    }
+  }];
+  
+  [[NSWorkspace sharedWorkspace] openURLs:urls withAppBundleIdentifier:nil options:0 additionalEventParamDescriptor:nil launchIdentifiers:NULL];
 }
 @end

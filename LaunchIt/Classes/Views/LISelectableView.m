@@ -14,7 +14,6 @@
 
 - (id)initWithFrame:(NSRect)frame {
   if ((self = [super initWithFrame:frame])) {
-    
   }
   
   return self;
@@ -24,13 +23,7 @@
 - (void) setSelected:(BOOL)selected
 {
   _selected = selected;
-  NSImageView *backgroundImageView;
-  for (NSView *view in [self subviews]) {
-    if ([view isKindOfClass:[NSImageView class]]) {
-      backgroundImageView = (NSImageView *)view;
-      break;
-    }
-  }
+  NSImageView *backgroundImageView = [self viewWithTag:97];
   [backgroundImageView setImage:[NSImage imageNamed:self.selected ? @"bg_list_selected.png" : @"bg_list.png"]];
 }
 
@@ -41,6 +34,16 @@
   _nameField = [self viewWithTag:9];
   [_nameField setDrawsBackground:YES];
   [_nameField setDelegate:self];
+  
+  [[NSNotificationCenter defaultCenter] addObserverForName:NSControlTextDidEndEditingNotification object:_nameField queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif) {
+    [self.nameField setEditable:NO];
+    [self.nameField setSelectable:NO];
+    [self.nameField resignFirstResponder];
+    [self.nameField setDrawsBackground:NO];
+    [self.nameField setTextColor:[NSColor whiteColor]];
+    [self.nameField setBezeled:NO];
+  }];
+  
   return _nameField;
 }
 
@@ -58,11 +61,9 @@
   }
   
   if ([self.nameField isEditable]) {
-    [self.nameField setDrawsBackground:YES];
-    [self.nameField setBackgroundColor:[NSColor whiteColor]];
-    [self.nameField setTextColor:[NSColor blackColor]];
-    [self.nameField becomeFirstResponder];
+    [self edit];
   } else {
+    [self.nameField setBezeled:NO];
     [self.nameField setSelectable:NO];
     [self.nameField resignFirstResponder];
     [self.nameField setDrawsBackground:NO];
@@ -71,15 +72,29 @@
 }
 
 
+- (void) edit
+{
+  [self.nameField setBezelStyle:NSTextFieldSquareBezel];
+  [self.nameField setBezeled:YES];
+  [self.nameField setEditable:YES];
+  [self.nameField setDrawsBackground:YES];
+  [self.nameField setBackgroundColor:[NSColor whiteColor]];
+  [self.nameField setTextColor:[NSColor blackColor]];
+  [self.nameField becomeFirstResponder];  
+}
+
+
 #pragma mark -
 #pragma mark NSTextFieldDelegate
-- (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor
-{
-  [self.nameField setDrawsBackground:NO];
-  [self.nameField setTextColor:[NSColor whiteColor]];
-  [self.nameField setSelectable:NO];
-  return YES;
-}
+//- (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor
+//{
+////  [self setSelected:NO];
+//  [self.nameField setDrawsBackground:NO];
+//  [self.nameField setTextColor:[NSColor whiteColor]];
+//  [self.nameField setSelectable:NO];
+//    
+//  return YES;
+//}
 
 
 

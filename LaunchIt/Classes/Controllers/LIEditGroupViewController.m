@@ -14,6 +14,7 @@
 #import "AppDelegate.h"
 #import "Group.h"
 #import "Website.h"
+#import "LISelectableView.h"
 
 @interface LIEditGroupViewController (private)
 - (void)addApplicationAtPath:(NSString *)file;
@@ -27,7 +28,7 @@
   self.collectionView = nil;
   self.shortcutRecorderControl = nil;
   self.plusButton = nil;
-  
+    
   [super dealloc];
 }
 
@@ -40,7 +41,7 @@
   combo.code  = self.group.shortcutCodeValue;
   [self.shortcutRecorderControl setKeyCombo:combo];
 
-  [self.collectionView setBackgroundColors:[NSArray arrayWithObject:[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg_middle.png"]]]];
+  [self.collectionView setBackgroundColors:[NSArray arrayWithObject:[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg.png"]]]];
 
   
   [self.collectionView setContent:[self.group applicationsAndWebsites]];
@@ -61,9 +62,13 @@
   
   [self.containerView setWantsLayer:YES];
   [[self.containerView layer] setOpaque:YES];
-  [[self.containerView layer] setBackgroundColor:(CGColorRef)[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg_middle.png"]]];
+  [[self.containerView layer] setBackgroundColor:(CGColorRef)[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg.png"]]];
   
   [self.collectionView setContent:[self.group applicationsAndWebsites]];
+  
+  [[NSNotificationCenter defaultCenter] addObserverForName:@"WebsiteUpdated" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif) {
+    [self.collectionView setContent:[self.group applicationsAndWebsites]];
+  }];
 }
 
 
@@ -110,7 +115,8 @@
   [plusMenu addItem:addApplicationsMenu];
   [addApplicationsMenu release];
 
-  [plusMenu addItemWithTitle:@"Add Website" action:@selector(addWebsite:) keyEquivalent:@""];
+  NSMenuItem *item = [plusMenu addItemWithTitle:@"Add Website" action:@selector(addWebsite:) keyEquivalent:@""];
+  [item setTarget:self];
 
 
   NSRect  frame      = [self.plusButton frame];
@@ -131,6 +137,21 @@
 
   [runningAppsMenu release];
   [plusMenu release];
+}
+
+
+- (IBAction) addWebsite:(id)sender
+{
+  Website *w = [Website createEntity];
+  [self.group addWebsitesObject:w];
+  
+  NSInteger index = [[self.group applicationsAndWebsites] indexOfObject:w];
+  
+  [self.collectionView setContent:[self.group applicationsAndWebsites]];
+  [self.collectionView setSelectionIndexes:[NSIndexSet indexSetWithIndex:index]];
+  
+  NSCollectionViewItem *item = [self.collectionView itemAtIndex:index];
+  [(LISelectableView *)[item view] edit];
 }
 
 
