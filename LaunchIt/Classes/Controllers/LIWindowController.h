@@ -38,5 +38,6 @@
 - (IBAction)save:(id)sender;
 - (IBAction)delete:(id)sender;
 - (void)toggleWindowAtPoint:(NSPoint)pt makeVisible:(BOOL)visible;
+- (BOOL)anyEntities;
 
 @end

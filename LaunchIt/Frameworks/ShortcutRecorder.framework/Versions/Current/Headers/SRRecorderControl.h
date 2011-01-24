@@ -65,11 +65,6 @@
 - (NSUInteger)cocoaToCarbonFlags:(NSUInteger)cocoaFlags;
 - (NSUInteger)carbonToCocoaFlags:(NSUInteger)carbonFlags;
 
-#pragma mark *** Binding Methods ***
-
-- (NSDictionary *)objectValue;
-- (void)setObjectValue:(NSDictionary *)shortcut;
-
 @end
 
 // Delegate Methods

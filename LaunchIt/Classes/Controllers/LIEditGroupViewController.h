@@ -20,6 +20,7 @@
   NSButton          *plusButton;
   NSCollectionView  *collectionView;
   NSView *containerView;
+  NSTextField *nameField;
 }
 
 @property (nonatomic, retain) Group                      *group;
@@ -27,6 +28,7 @@
 @property (nonatomic, retain) IBOutlet NSButton          *plusButton;
 @property (nonatomic, retain) IBOutlet NSCollectionView  *collectionView;
 @property (nonatomic, retain) IBOutlet NSView *containerView;
+@property (nonatomic, retain) IBOutlet NSTextField *nameField;
 @property (nonatomic, assign) NSInteger                   shortcutCode;
 @property (nonatomic, assign) NSUInteger                  shortcutFlags;
 

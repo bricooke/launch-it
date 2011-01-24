@@ -87,8 +87,8 @@
 			//
 			// Alter the frame for a drag
 			//
-			newFrame.origin.x += delta.x;
-			newFrame.origin.y += delta.y;
+			//newFrame.origin.x += delta.x;
+			//newFrame.origin.y += delta.y;
 		}
 		else
 		{

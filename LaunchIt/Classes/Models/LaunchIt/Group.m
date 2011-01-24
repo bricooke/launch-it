@@ -76,6 +76,11 @@
   if ([[self applicationsAndWebsites] count] == 1) {
     return [[[self applicationsAndWebsites] objectAtIndex:0] smallImage];
   }
+  
+  if ([[self websites] count] == 0)
+    return [NSImage imageNamed:@"NSDefaultApplicationIcon"];
+  if ([[self applications] count] == 0)
+    return [NSImage imageNamed:@"globe.png"];
   return [NSImage imageNamed:@"NSApplicationIcon"];
 }
 
@@ -86,6 +91,35 @@
 - (NSImage *)largeImage
 {
   return [NSImage imageNamed:@"NSApplicationIcon"];
+}
+
+
+
+- (NSString *)name
+{
+  if ([[self primitiveValueForKey:@"name"] length] > 0)
+    return [self primitiveValueForKey:@"name"];
+  
+  if ([[self applicationsAndWebsites] count] == 1) {
+    return [[[self applicationsAndWebsites] objectAtIndex:0] name];
+  }
+  
+  NSInteger appCount = [self.applications count];
+  NSInteger webCount = [self.websites count];
+  NSString *ret = @"";
+  if (appCount > 0) {
+    ret = [ret stringByAppendingFormat:@"%d app%@", appCount, appCount != 1 ? @"s" : @""];
+  }
+  
+  if (webCount > 0 && appCount > 0) {
+    ret = [ret stringByAppendingFormat:@" and "];
+  }
+  
+  if (webCount > 0) {
+    ret = [ret stringByAppendingFormat:@"%d site%@", webCount, webCount != 1 ? @"s" : @""];
+  }
+  
+  return ret;
 }
 
 

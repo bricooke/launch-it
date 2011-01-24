@@ -37,8 +37,13 @@
 {
   KeyCombo combo;
 
-  combo.flags = self.group.shortcutFlagsValue;
-  combo.code  = self.group.shortcutCodeValue;
+  if (self.group) {
+    combo.flags = self.group.shortcutFlagsValue;
+    combo.code  = self.group.shortcutCodeValue;
+  } else {
+    combo.flags = 0;
+    combo.code = -1;
+  }
   [self.shortcutRecorderControl setKeyCombo:combo];
 
   [self.collectionView setBackgroundColors:[NSArray arrayWithObject:[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg.png"]]]];
@@ -54,6 +59,11 @@
   [_group release];
   _group = [group retain];
   [self didChangeValueForKey:@"_group"];
+ 
+  if (_group) {
+    [self willChangeValueForKey:@"anyEntities"];
+    [self didChangeValueForKey:@"anyEntities"];
+  }
   
   KeyCombo combo;
   combo.flags = self.group.shortcutFlagsValue;
@@ -70,6 +80,18 @@
     [self.collectionView setContent:[self.group applicationsAndWebsites]];
     [self.collectionView setSelectionIndexes:nil];
   }];
+}
+
+
+- (BOOL) anyEntities
+{
+  return [[self.group applicationsAndWebsites] count] > 0;
+}
+
+
+- (BOOL) canSave
+{
+  return [[self.group applicationsAndWebsites] count] > 0 && self.shortcutCode != -1 && self.shortcutFlags != 0;
 }
 
 
@@ -143,6 +165,9 @@
 
 - (IBAction) addWebsite:(id)sender
 {
+  [self willChangeValueForKey:@"anyEntities"];
+  [self willChangeValueForKey:@"canSave"];
+
   Website *w = [Website createEntity];
   [self.group addWebsitesObject:w];
   
@@ -153,6 +178,10 @@
   
   NSCollectionViewItem *item = [self.collectionView itemAtIndex:index];
   [(LISelectableView *)[item view] edit];
+
+
+  [self didChangeValueForKey:@"anyEntities"];  
+  [self didChangeValueForKey:@"canSave"];
 }
 
 
@@ -202,6 +231,8 @@
 
 - (void)addApplicationAtPath:(NSString *)aFile
 {
+  [self willChangeValueForKey:@"anyEntities"];
+  [self willChangeValueForKey:@"canSave"];
   RSApplicationFileAnalyzer *analyzer = [[RSApplicationFileAnalyzer alloc] initWithApplication:aFile];
   Application               *app      = [Application createEntity];
 
@@ -212,6 +243,8 @@
   [self.group addApplicationsObject:app];
   
   [self.collectionView setContent:[self.group applicationsAndWebsites]];
+  [self didChangeValueForKey:@"anyEntities"];
+  [self didChangeValueForKey:@"canSave"];
 }
 
 
@@ -240,5 +273,5 @@
 
 
 @synthesize group = _group;
-@synthesize shortcutCode, shortcutFlags, shortcutRecorderControl, plusButton, collectionView, containerView;
+@synthesize shortcutCode, shortcutFlags, shortcutRecorderControl, plusButton, collectionView, containerView, nameField;
 @end

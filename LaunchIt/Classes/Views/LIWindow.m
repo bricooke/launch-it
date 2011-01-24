@@ -32,6 +32,11 @@
 		styleMask:NSBorderlessWindowMask
 		backing:bufferingType
 		defer:deferCreation];
+  
+  NSString *frame = [[NSUserDefaults standardUserDefaults] valueForKey:@"NSWindow Frame launchit_mainwindow"];
+  NSRect r = NSRectFromString(frame);
+  [self setFrame:r display:YES];
+
 	if (self)
 	{
 		[self setOpaque:NO];

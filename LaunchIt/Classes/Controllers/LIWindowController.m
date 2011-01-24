@@ -119,6 +119,14 @@
 }
 
 
+- (BOOL)anyEntities
+{
+  if ([NSManagedObjectContext defaultContext] == nil) 
+    [NSManagedObjectContext setDefaultContext:[[AppDelegate sharedAppDelegate] managedObjectContext]];
+  return [[Group allSortedByName] count] > 0;
+}
+
+
 #pragma mark -
 #pragma mark actions
 - (IBAction)cancel:(id)sender
@@ -127,24 +135,32 @@
   [self.editGroupController.group willChangeValueForKey:@"shortcutCodeStringForMenus"];
   [self.editGroupController.group willChangeValueForKey:@"largeImage"];
   [self.editGroupController.group willChangeValueForKey:@"smallImage"];
+  [self.editGroupController.group willChangeValueForKey:@"name"];
   [[NSManagedObjectContext defaultContext] rollback];
   self.editGroupController.group.renderedImage = nil;
+  [self.editGroupController.group didChangeValueForKey:@"name"];
   [self.editGroupController.group didChangeValueForKey:@"smallImage"];
   [self.editGroupController.group didChangeValueForKey:@"largeImage"];
   [self.editGroupController.group didChangeValueForKey:@"shortcutCodeString"];
   [self.editGroupController.group didChangeValueForKey:@"shortcutCodeStringForMenus"];
 
   [self.editGroupController.group bindHotkey];
-
+  
   [self slideBackToMainView];
 }
 
 
 - (IBAction)save:(id)sender
 {
+  [self.editGroupController.shortcutRecorderControl resignFirstResponder];
   [self.editGroupController.group bindHotkey];
 
   [[NSManagedObjectContext defaultContext] save];
+
+  [self willChangeValueForKey:@"anyEntities"];
+  [self.editGroupController.group willChangeValueForKey:@"name"];
+  [self.editGroupController.group didChangeValueForKey:@"name"];
+  [self didChangeValueForKey:@"anyEntities"];
 
   [self.collectionView setContent:[Group allSortedByName]];
 
@@ -161,6 +177,9 @@
     [[NSManagedObjectContext defaultContext] save];
     [self.collectionView setContent:[Group allSortedByName]];
     [self slideBackToMainView];
+    
+    [self willChangeValueForKey:@"anyEntities"];
+    [self didChangeValueForKey:@"anyEntities"];
   }
 }
 
@@ -189,5 +208,4 @@
 @synthesize addButton;
 @synthesize settingsButton;
 @synthesize statusItem;
-
 @end
