@@ -14,6 +14,7 @@
 #import "MACollectionUtilities.h"
 #import "LIMenubarView.h"
 #import "Group.h"
+#import "AboutWindowController.h"
 
 
 @interface LIWindowController (private)
@@ -153,13 +154,15 @@
 
 - (IBAction)save:(id)sender
 {
+  [self willChangeValueForKey:@"anyEntities"];
+  [self.editGroupController.group willChangeValueForKey:@"name"];
+  [self.editGroupController.group willChangeValueForKey:@"smallImage"];
   [self.editGroupController.shortcutRecorderControl resignFirstResponder];
   [self.editGroupController.group bindHotkey];
 
   [[NSManagedObjectContext defaultContext] save];
 
-  [self willChangeValueForKey:@"anyEntities"];
-  [self.editGroupController.group willChangeValueForKey:@"name"];
+  [self.editGroupController.group didChangeValueForKey:@"smallImage"];
   [self.editGroupController.group didChangeValueForKey:@"name"];
   [self didChangeValueForKey:@"anyEntities"];
 
@@ -185,6 +188,100 @@
 }
 
 
+- (IBAction)settings:(id)sender
+{
+  NSRect  frame      = [self.settingsButton frame];
+  NSPoint menuOrigin = [[self.settingsButton superview] convertPoint:NSMakePoint(frame.origin.x, frame.origin.y + frame.size.height + 40)
+                                                          toView:nil];
+  
+  NSEvent *event = [NSEvent mouseEventWithType:NSLeftMouseDown
+                                      location:menuOrigin
+                                 modifierFlags:NSLeftMouseDownMask // 0x100
+                                     timestamp:0
+                                  windowNumber:[[self.settingsButton window] windowNumber]
+                                       context:[[self.settingsButton window] graphicsContext]
+                                   eventNumber:0
+                                    clickCount:1
+                                      pressure:1];
+  
+
+  [NSMenu popUpContextMenu:self.settingsMenu withEvent:event forView:self.settingsButton];
+
+}
+
+
+//------------------------------------------------------------------------------
+// about:
+//------------------------------------------------------------------------------
+- (IBAction)about:(id)sender
+{
+  [[[AboutWindowController sharedAboutWindowController] window] makeKeyAndOrderFront:self];
+}
+
+
+
+//------------------------------------------------------------------------------
+// quit:
+//------------------------------------------------------------------------------
+- (IBAction)quit:(id)sender
+{
+  [NSApp terminate:sender];
+}
+
+
+//------------------------------------------------------------------------------
+// loginItems
+//------------------------------------------------------------------------------
+- (NSMutableArray *) loginItems
+{
+  CFPreferencesSynchronize((CFStringRef) @"loginwindow",
+                           kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+  
+	NSMutableArray* loginItems;
+	
+	loginItems = (NSMutableArray*) CFPreferencesCopyValue((CFStringRef)@"AutoLaunchedApplicationDictionary", (CFStringRef)@"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+	loginItems = [[loginItems autorelease] mutableCopy];
+  
+	return [loginItems autorelease];
+}
+
+
+//------------------------------------------------------------------------------
+// setStartOnLogin:
+//------------------------------------------------------------------------------
+- (IBAction)setStartOnLogin:(id)sender
+{
+  [sender setState:([sender state] == NSOnState ? NSOffState : NSOnState)];
+  BOOL startOnLogin = [sender state] == NSOnState;
+  
+  NSMutableArray *loginItems = [self loginItems];
+  NSString *appPath = [[NSBundle mainBundle] bundlePath];
+  
+  NSMutableDictionary *myDict = [[NSMutableDictionary alloc] init];	
+  [myDict setObject:[NSNumber numberWithBool:NO] forKey:@"Hide"];
+  [myDict setObject:appPath forKey:@"Path"];
+  
+  if (startOnLogin == YES) {
+    [loginItems addObject:myDict];
+  } else {
+    for (NSDictionary *curDict in loginItems) {
+      if ([[curDict objectForKey:@"Path"] isEqualToString:appPath]) {
+        [loginItems removeObject:curDict];
+        break;
+      }
+    }
+  }
+  
+  CFPreferencesSetValue((CFStringRef)
+                        @"AutoLaunchedApplicationDictionary", loginItems, (CFStringRef)
+                        @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+  CFPreferencesSynchronize((CFStringRef) @"loginwindow",
+                           kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+  
+  [myDict release];
+}
+
+
 - (void)toggleWindowAtPoint:(NSPoint)pt makeVisible:(BOOL)visible
 {
   pt.x -= [self.window frame].size.width / 2;
@@ -200,6 +297,22 @@
   }
 }
 
+- (BOOL) validateMenuItem:(NSMenuItem *)menuItem
+{
+  if (menuItem == self.startOnLoginMenuItem) {
+    [self.startOnLoginMenuItem setState:NSOffState];
+    NSString *appPath = [[NSBundle mainBundle] bundlePath];
+    
+    for (NSDictionary *curDict in [self loginItems]) {
+      if ([[curDict objectForKey:@"Path"] isEqualToString:appPath]) {
+        [self.startOnLoginMenuItem setState:NSOnState];
+        break;
+      }
+    }
+  } 
+  
+  return YES;
+}
 
 @synthesize collectionView, containerView;
 @synthesize editGroupController;
@@ -208,5 +321,8 @@
 @synthesize saveButton;
 @synthesize addButton;
 @synthesize settingsButton;
+@synthesize settingsMenu;
 @synthesize statusItem;
+@synthesize startOnLoginMenuItem;
+
 @end

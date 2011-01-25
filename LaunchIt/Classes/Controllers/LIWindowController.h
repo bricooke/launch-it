@@ -20,6 +20,8 @@
   NSButton *addButton;
   NSButton *settingsButton;
   NSStatusItem *statusItem;
+  NSMenu *settingsMenu;
+  NSMenuItem *startOnLoginMenuItem;
 }
 
 @property (nonatomic, retain) IBOutlet NSCollectionView       *collectionView;
@@ -30,13 +32,19 @@
 @property (nonatomic, retain) IBOutlet NSButton               *saveButton;
 @property (nonatomic, retain) IBOutlet NSButton *addButton;
 @property (nonatomic, retain) IBOutlet NSButton *settingsButton;
+@property (nonatomic, retain) IBOutlet NSMenu *settingsMenu;
+@property (nonatomic, retain) IBOutlet NSMenuItem *startOnLoginMenuItem;
 @property (nonatomic, retain) NSStatusItem *statusItem;
 
 - (void)editGroup:(Group *)anApp;
 - (IBAction)addGroup:(id)sender;
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
+- (IBAction)settings:(id)sender;
 - (IBAction)delete:(id)sender;
+- (IBAction)about:(id)sender;
+- (IBAction)setStartOnLogin:(id)sender;
+- (IBAction)quit:(id)sender;
 - (void)toggleWindowAtPoint:(NSPoint)pt makeVisible:(BOOL)visible;
 - (BOOL)anyEntities;
 

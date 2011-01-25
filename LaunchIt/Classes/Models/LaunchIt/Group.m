@@ -83,7 +83,7 @@
   if ([[self websites] count] == 0)
     return [NSImage imageNamed:@"NSDefaultApplicationIcon"];
   if ([[self applications] count] == 0)
-    return [NSImage imageNamed:@"globe.png"];
+    return [NSImage imageNamed:@"web.png"];
   return [NSImage imageNamed:@"NSApplicationIcon"];
 }
 
@@ -264,8 +264,27 @@
 }
 
 
+//------------------------------------------------------------------------------
+// launch:
+//------------------------------------------------------------------------------
 - (void)launch:(SGHotKey *)aHotKey
 {
+  if ([[self applicationsAndWebsites] count] == 1 && [[self applications] count] == 1) {
+    Application *app = [self.applications anyObject];
+    NSDictionary *active = [[NSWorkspace sharedWorkspace] activeApplication];
+    
+    NSString *script = nil;
+    if ([[active valueForKey:@"NSApplicationPath"] isEqualToString:[app path]]) {
+      // hide it
+      NSString *appName = [[app.path stringByDeletingPathExtension] lastPathComponent];
+      script = [NSString stringWithFormat:@"tell application \"Finder\" to set visible of process \"%@\" to false", appName];
+      NSDictionary *err = nil;
+      [[[[NSAppleScript alloc] initWithSource:script] autorelease] executeAndReturnError:&err];
+      return;
+    }
+
+  }
+  
   [[self applications] enumerateObjectsUsingBlock:^(id obj, BOOL * stop) {
      Application *app = obj;
      [app launch];
