@@ -11,8 +11,8 @@
 			<string key="net.wafflesoftware.ShortcutRecorder.IB.Leopard">1</string>
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="1"/>
 			<integer value="62"/>
+			<integer value="1"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>net.wafflesoftware.ShortcutRecorder.IB.Leopard</string>
@@ -36,7 +36,7 @@
 					<object class="NSTextField" id="210720603">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{117, 12}, {171, 21}}</string>
+						<string key="NSFrame">{{117, 18}, {171, 21}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
@@ -75,7 +75,7 @@
 					<object class="SRRecorderControl" id="995298997">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{11, 11}, {98, 22}}</string>
+						<string key="NSFrame">{{11, 17}, {98, 22}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
@@ -138,7 +138,7 @@
 											<object class="NSCollectionView" id="364026906">
 												<reference key="NSNextResponder" ref="1033029394"/>
 												<int key="NSvFlags">274</int>
-												<string key="NSFrameSize">{300, 145}</string>
+												<string key="NSFrameSize">{300, 135}</string>
 												<reference key="NSSuperview" ref="1033029394"/>
 												<int key="NSViewLayerContentsRedrawPolicy">2</int>
 												<string key="NSMinGridSize">{0, 0}</string>
@@ -161,7 +161,7 @@
 												<int key="NSDraggingSourceMaskForNonLocal">0</int>
 											</object>
 										</array>
-										<string key="NSFrameSize">{300, 145}</string>
+										<string key="NSFrameSize">{300, 135}</string>
 										<reference key="NSSuperview" ref="315325953"/>
 										<reference key="NSNextKeyView" ref="364026906"/>
 										<int key="NSViewLayerContentsRedrawPolicy">2</int>
@@ -195,7 +195,7 @@
 										<double key="NSPercent">0.63157892227172852</double>
 									</object>
 								</array>
-								<string key="NSFrameSize">{300, 145}</string>
+								<string key="NSFrameSize">{300, 135}</string>
 								<reference key="NSSuperview" ref="858587581"/>
 								<reference key="NSNextKeyView" ref="1033029394"/>
 								<int key="NSViewLayerContentsRedrawPolicy">2</int>
@@ -205,7 +205,7 @@
 								<reference key="NSContentView" ref="1033029394"/>
 							</object>
 						</array>
-						<string key="NSFrame">{{0, 47}, {300, 145}}</string>
+						<string key="NSFrame">{{0, 56}, {300, 135}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<string key="NSClassName">NSView</string>
@@ -213,7 +213,7 @@
 					<object class="NSButton" id="1072218593">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">264</int>
-						<string key="NSFrame">{{34, 193}, {36, 27}}</string>
+						<string key="NSFrame">{{34, 192}, {36, 28}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
@@ -229,6 +229,10 @@
 								<string key="NSClassName">NSImage</string>
 								<string key="NSResourceName">btn_minus</string>
 							</object>
+							<object class="NSCustomResource" key="NSAlternateImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">btn_minus_selected</string>
+							</object>
 							<string key="NSAlternateContents"/>
 							<string key="NSKeyEquivalent"/>
 							<int key="NSPeriodicDelay">400</int>
@@ -238,7 +242,7 @@
 					<object class="NSButton" id="1009243363">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">264</int>
-						<string key="NSFrame">{{0, 193}, {34, 27}}</string>
+						<string key="NSFrame">{{0, 192}, {34, 28}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
@@ -253,6 +257,10 @@
 							<object class="NSCustomResource" key="NSNormalImage">
 								<string key="NSClassName">NSImage</string>
 								<string key="NSResourceName">btn_plus</string>
+							</object>
+							<object class="NSCustomResource" key="NSAlternateImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">btn_plus_selected</string>
 							</object>
 							<string key="NSAlternateContents"/>
 							<string key="NSKeyEquivalent"/>
@@ -271,16 +279,16 @@
 							<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
 							<string>NeXT TIFF v4.0 pasteboard type</string>
 						</set>
-						<string key="NSFrame">{{1, 0}, {300, 47}}</string>
+						<string key="NSFrame">{{1, 0}, {300, 55}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSImageCell" key="NSCell" id="39738854">
 							<int key="NSCellFlags">130560</int>
 							<int key="NSCellFlags2">33554432</int>
-							<object class="NSCustomResource" key="NSContents" id="810668204">
+							<object class="NSCustomResource" key="NSContents">
 								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">bg_plus</string>
+								<string key="NSResourceName">bg_fields</string>
 							</object>
 							<int key="NSAlign">0</int>
 							<int key="NSScale">1</int>
@@ -300,14 +308,17 @@
 							<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
 							<string>NeXT TIFF v4.0 pasteboard type</string>
 						</set>
-						<string key="NSFrame">{{0, 192}, {300, 27}}</string>
+						<string key="NSFrame">{{0, 191}, {300, 28}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSImageCell" key="NSCell" id="193015792">
 							<int key="NSCellFlags">130560</int>
 							<int key="NSCellFlags2">33554432</int>
-							<reference key="NSContents" ref="810668204"/>
+							<object class="NSCustomResource" key="NSContents">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">bg_plus</string>
+							</object>
 							<int key="NSAlign">0</int>
 							<int key="NSScale">2</int>
 							<int key="NSStyle">0</int>
@@ -567,6 +578,22 @@
 						</object>
 					</object>
 					<int key="connectionID">138</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">shortcutRecorderControl</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="995298997"/>
+					</object>
+					<int key="connectionID">139</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">nameField</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="210720603"/>
+					</object>
+					<int key="connectionID">140</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -866,7 +893,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">138</int>
+			<int key="maxID">140</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1423,10 +1450,13 @@
 		<string key="IBDocument.LastKnownRelativeProjectPath">../..</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="bg_fields">{128, 128}</string>
 			<string key="bg_list">{128, 128}</string>
 			<string key="bg_plus">{128, 128}</string>
 			<string key="btn_minus">{128, 128}</string>
+			<string key="btn_minus_selected">{128, 128}</string>
 			<string key="btn_plus">{128, 128}</string>
+			<string key="btn_plus_selected">{128, 128}</string>
 			<string key="directions_add">{128, 128}</string>
 		</dictionary>
 	</data>
