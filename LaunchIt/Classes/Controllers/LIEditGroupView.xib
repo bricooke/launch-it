@@ -168,11 +168,10 @@
 							<reference key="NSControlView" ref="1072218593"/>
 							<int key="NSButtonFlags">139215103</int>
 							<int key="NSButtonFlags2">34</int>
-							<object class="NSCustomResource" key="NSNormalImage" id="170336171">
+							<object class="NSCustomResource" key="NSNormalImage">
 								<string key="NSClassName">NSImage</string>
 								<string key="NSResourceName">btn_minus</string>
 							</object>
-							<reference key="NSAlternateImage" ref="170336171"/>
 							<string key="NSAlternateContents"/>
 							<string key="NSKeyEquivalent"/>
 							<int key="NSPeriodicDelay">400</int>
@@ -194,11 +193,10 @@
 							<reference key="NSControlView" ref="1009243363"/>
 							<int key="NSButtonFlags">139215103</int>
 							<int key="NSButtonFlags2">34</int>
-							<object class="NSCustomResource" key="NSNormalImage" id="149438011">
+							<object class="NSCustomResource" key="NSNormalImage">
 								<string key="NSClassName">NSImage</string>
 								<string key="NSResourceName">btn_plus</string>
 							</object>
-							<reference key="NSAlternateImage" ref="149438011"/>
 							<string key="NSAlternateContents"/>
 							<string key="NSKeyEquivalent"/>
 							<int key="NSPeriodicDelay">400</int>
