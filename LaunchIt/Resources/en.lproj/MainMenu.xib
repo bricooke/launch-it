@@ -1722,7 +1722,7 @@
 								<string>NeXT TIFF v4.0 pasteboard type</string>
 							</object>
 						</object>
-						<string key="NSFrameSize">{300, 40}</string>
+						<string key="NSFrameSize">{287, 40}</string>
 						<reference key="NSSuperview" ref="61247558"/>
 						<reference key="NSNextKeyView" ref="760587747"/>
 						<int key="NSViewLayerContentsRedrawPolicy">2</int>
@@ -5591,7 +5591,7 @@
 			<integer value="3000" key="NS.object.0"/>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<nil key="IBDocument.LastKnownRelativeProjectPath"/>
+		<string key="IBDocument.LastKnownRelativeProjectPath">../../../Launch it!.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<bool key="EncodedWithXMLCoder">YES</bool>
