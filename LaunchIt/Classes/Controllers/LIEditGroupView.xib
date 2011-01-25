@@ -399,7 +399,7 @@
 					<object class="NSTextField" id="298613855">
 						<reference key="NSNextResponder" ref="713051849"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{36, 13}, {247, 18}}</string>
+						<string key="NSFrame">{{36, 8}, {247, 23}}</string>
 						<reference key="NSSuperview" ref="713051849"/>
 						<bool key="NSViewIsLayerTreeHost">YES</bool>
 						<object class="NSShadow" key="NSViewShadow">

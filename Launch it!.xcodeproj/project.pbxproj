@@ -1033,9 +1033,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = (
+					"-DLI_APPSTORE",
 					"-Wall",
-					"-Werror",
 				);
+				OTHER_LDFLAGS = "-lcrypto";
 				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64";
 			};
