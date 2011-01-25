@@ -45,6 +45,8 @@
 - (IBAction)about:(id)sender;
 - (IBAction)setStartOnLogin:(id)sender;
 - (IBAction)quit:(id)sender;
+- (IBAction)faq:(id)sender;
+- (IBAction)contact:(id)sender;
 - (void)toggleWindowAtPoint:(NSPoint)pt makeVisible:(BOOL)visible;
 - (BOOL)anyEntities;
 

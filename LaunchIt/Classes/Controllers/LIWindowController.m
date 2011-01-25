@@ -282,6 +282,27 @@
 }
 
 
+//------------------------------------------------------------------------------
+// faq:
+//------------------------------------------------------------------------------
+- (IBAction)faq:(id)sender
+{
+  [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://launchitapp.com/faq.html"]];
+}
+
+
+
+//------------------------------------------------------------------------------
+// contact:
+//------------------------------------------------------------------------------
+- (IBAction)contact:(id)sender
+{
+  [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://madebyrocket.com/support.html?app=li"]];
+}
+
+
+
+
 - (void)toggleWindowAtPoint:(NSPoint)pt makeVisible:(BOOL)visible
 {
   pt.x -= [self.window frame].size.width / 2;

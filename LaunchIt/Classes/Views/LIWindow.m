@@ -34,8 +34,11 @@
 		defer:deferCreation];
   
   NSString *frame = [[NSUserDefaults standardUserDefaults] valueForKey:@"NSWindow Frame launchit_mainwindow"];
-  NSRect r = NSRectFromString(frame);
-  [self setFrame:r display:YES];
+  if (frame) {
+    NSRect r = NSRectFromString(frame);
+    r.size.width = 300;
+    [self setFrame:r display:YES];
+  }
 
 	if (self)
 	{
