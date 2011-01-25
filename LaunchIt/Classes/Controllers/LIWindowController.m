@@ -57,7 +57,8 @@
 - (IBAction)addGroup:(id)sender
 {
   Group *group = [Group createEntity];
-
+  group.shortcutCodeValue = -1;
+  group.shortcutFlagsValue = 0;
   self.editGroupController.group = group;
 
   [self slideInEditView];

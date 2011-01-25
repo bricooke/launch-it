@@ -91,7 +91,7 @@
 
 - (BOOL) canSave
 {
-  return [[self.group applicationsAndWebsites] count] > 0 && self.shortcutCode != -1 && self.shortcutFlags != 0;
+  return [[self.group applicationsAndWebsites] count] > 0;
 }
 
 

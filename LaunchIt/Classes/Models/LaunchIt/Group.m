@@ -20,7 +20,10 @@
 
 + (NSArray *)allSortedByName
 {
-  return [self findAllSortedBy:@"name" ascending:YES];
+  NSArray *all = [Group findAll];
+  return [all sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+    return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
+  }];
 }
 
 
@@ -130,6 +133,12 @@
 }
 
 
+// sent via the collection view? :/ better way?
+- (IBAction)activate:(id)sender
+{
+  [self launch:nil];
+}
+
 - (NSString *)shortcutCodeStringForMenus
 {
   SRRecorderControl *shortcutRecorder = [[SRRecorderControl alloc] init];
@@ -191,6 +200,8 @@
 
 - (NSString *)shortcutCodeString
 {
+  if ([self shortcutFlagsValue] == 0 && [self shortcutCodeValue] == -1)
+    return @"";
   return SRStringForCocoaModifierFlagsAndKeyCode([self shortcutFlagsValue], [self shortcutCodeValue]);
 }
 
