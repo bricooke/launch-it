@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Group.h"
 #import "CoreData+ActiveRecordFetching.h"
+#import "LIConstants.h"
 
 
 @implementation AppDelegate
@@ -21,6 +22,17 @@
   return (AppDelegate *)[NSApp delegate];
 }
 
+
++ (void) initialize
+{
+  [super initialize];
+  [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [NSNumber numberWithBool:YES],
+                                                           kLISettingFirstLaunch,
+                                                           [NSNumber numberWithBool:YES],
+                                                           kLISettingShowInMenubar,
+                                                           nil]];
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -175,42 +187,42 @@
     return NSTerminateNow;
   }
 
-  NSError *error = nil;
-
-  if (![managedObjectContext save:&error]) {
-    // This error handling simply presents error information in a panel with an
-    // "Ok" button, which does not include any attempt at error recovery (meaning,
-    // attempting to fix the error.)  As a result, this implementation will
-    // present the information to the user and then follow up with a panel asking
-    // if the user wishes to "Quit Anyway", without saving the changes.
-
-    // Typically, this process should be altered to include application-specific
-    // recovery steps.
-
-    BOOL result = [sender presentError:error];
-
-    if (result) {
-      return NSTerminateCancel;
-    }
-
-    NSString *question     = NSLocalizedString(@"Could not save changes while quitting.  Quit anyway?", @"Quit without saves error question message");
-    NSString *info         = NSLocalizedString(@"Quitting now will lose any changes you have made since the last successful save", @"Quit without saves error question info");
-    NSString *quitButton   = NSLocalizedString(@"Quit anyway", @"Quit anyway button title");
-    NSString *cancelButton = NSLocalizedString(@"Cancel", @"Cancel button title");
-    NSAlert  *alert        = [[NSAlert alloc] init];
-    [alert setMessageText:question];
-    [alert setInformativeText:info];
-    [alert addButtonWithTitle:quitButton];
-    [alert addButtonWithTitle:cancelButton];
-
-    NSInteger answer = [alert runModal];
-    [alert release];
-    alert = nil;
-
-    if (answer == NSAlertAlternateReturn) {
-      return NSTerminateCancel;
-    }
-  }
+//  NSError *error = nil;
+//
+//  if (![managedObjectContext save:&error]) {
+//    // This error handling simply presents error information in a panel with an
+//    // "Ok" button, which does not include any attempt at error recovery (meaning,
+//    // attempting to fix the error.)  As a result, this implementation will
+//    // present the information to the user and then follow up with a panel asking
+//    // if the user wishes to "Quit Anyway", without saving the changes.
+//
+//    // Typically, this process should be altered to include application-specific
+//    // recovery steps.
+//
+//    BOOL result = [sender presentError:error];
+//
+//    if (result) {
+//      return NSTerminateCancel;
+//    }
+//
+//    NSString *question     = NSLocalizedString(@"Could not save changes while quitting.  Quit anyway?", @"Quit without saves error question message");
+//    NSString *info         = NSLocalizedString(@"Quitting now will lose any changes you have made since the last successful save", @"Quit without saves error question info");
+//    NSString *quitButton   = NSLocalizedString(@"Quit anyway", @"Quit anyway button title");
+//    NSString *cancelButton = NSLocalizedString(@"Cancel", @"Cancel button title");
+//    NSAlert  *alert        = [[NSAlert alloc] init];
+//    [alert setMessageText:question];
+//    [alert setInformativeText:info];
+//    [alert addButtonWithTitle:quitButton];
+//    [alert addButtonWithTitle:cancelButton];
+//
+//    NSInteger answer = [alert runModal];
+//    [alert release];
+//    alert = nil;
+//
+//    if (answer == NSAlertAlternateReturn) {
+//      return NSTerminateCancel;
+//    }
+//  }
 
   return NSTerminateNow;
 }

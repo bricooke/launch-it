@@ -179,6 +179,7 @@
 		D6122DE412EBE87B00C9E05E /* btn_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_plus.png; path = Resources/btn_plus.png; sourceTree = "<group>"; };
 		D6122DE512EBE87B00C9E05E /* btn_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_save.png; path = Resources/btn_save.png; sourceTree = "<group>"; };
 		D6122DF612EBF69E00C9E05E /* btn_arrow_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_arrow_selected.png; path = Resources/btn_arrow_selected.png; sourceTree = "<group>"; };
+		D616CB1D12EF7A2A0045D801 /* LIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIConstants.h; path = Classes/LIConstants.h; sourceTree = "<group>"; };
 		D63DD49612EE93D00096FEF7 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = Resources/en.lproj/AboutWindow.xib; sourceTree = "<group>"; };
 		D63DD49712EE93F60096FEF7 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = Resources/about.png; sourceTree = "<group>"; };
 		D63DD49912EE94590096FEF7 /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutWindowController.h; path = Classes/Controllers/AboutWindowController.h; sourceTree = "<group>"; };
@@ -443,6 +444,7 @@
 				D6BF674E12E2562C008BCC5B /* LaunchIt-Info.plist */,
 				D6BF675212E2562C008BCC5B /* LaunchIt-Prefix.pch */,
 				D6BF675312E2562C008BCC5B /* main.m */,
+				D616CB1D12EF7A2A0045D801 /* LIConstants.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

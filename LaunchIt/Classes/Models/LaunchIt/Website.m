@@ -32,12 +32,12 @@
 
 - (NSImage *)smallImage
 {
-  return [NSImage imageNamed:@"NSApplicationIcon"];
+  return [NSImage imageNamed:@"icon_web.png"];
 }
 
 - (NSImage *)largeImage
 {
-  return [NSImage imageNamed:@"NSApplicationIcon"];
+  return [NSImage imageNamed:@"icon_web.png"];
 }
 
 - (BOOL) isWebsite

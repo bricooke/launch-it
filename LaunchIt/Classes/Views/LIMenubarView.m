@@ -8,7 +8,7 @@
 
 #import "LIMenubarView.h"
 #import "LIWindowController.h"
-
+#import "LIConstants.h"
 
 @implementation LIMenubarView
 

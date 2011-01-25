@@ -15,7 +15,7 @@
 #import "LIMenubarView.h"
 #import "Group.h"
 #import "AboutWindowController.h"
-
+#import "LIConstants.h"
 
 @interface LIWindowController (private)
 - (void)slideInEditView;
@@ -52,6 +52,13 @@
   NSRect viewFrame = NSMakeRect(0, 0, width, height);
   self.statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
   [self.statusItem setView:[[[LIMenubarView alloc] initWithFrame:viewFrame controller:self] autorelease]];
+  
+  if ([[NSUserDefaults standardUserDefaults] boolForKey:kLISettingFirstLaunch]) {
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kLISettingFirstLaunch];
+    NSRect frame = [[[self.statusItem view] window] frame];
+    NSPoint pt = NSMakePoint(NSMidX(frame), NSMinY(frame)-22);
+    [self toggleWindowAtPoint:pt makeVisible:YES];
+  }
 }
 
 

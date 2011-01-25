@@ -76,14 +76,14 @@
 // ------------------------------------------------------------------------------
 - (NSImage *)smallImage
 {
-  if ([[self applicationsAndWebsites] count] == 1) {
-    return [[[self applicationsAndWebsites] objectAtIndex:0] smallImage];
+  if ([[self applicationsAndWebsites] count] == 1 && [self.applications count] == 1) {
+    return [[[self applications] anyObject] smallImage];
   }
   
   if ([[self websites] count] == 0)
-    return [NSImage imageNamed:@"NSDefaultApplicationIcon"];
+    return [NSImage imageNamed:@"icon_application.png"];
   if ([[self applications] count] == 0)
-    return [NSImage imageNamed:@"web.png"];
+    return [NSImage imageNamed:@"icon_web.png"];
   return [NSImage imageNamed:@"NSApplicationIcon"];
 }
 
