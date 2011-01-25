@@ -33,6 +33,18 @@
 		D63DD49B12EE94590096FEF7 /* AboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63DD49A12EE94590096FEF7 /* AboutWindowController.m */; };
 		D63DD49C12EE94B50096FEF7 /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63DD49512EE93D00096FEF7 /* AboutWindow.xib */; };
 		D63DD49E12EE95050096FEF7 /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = D63DD49D12EE95050096FEF7 /* web.png */; };
+		D63DD4AB12EE96FF0096FEF7 /* TransparentScrollerKnobBottom.tif in Resources */ = {isa = PBXBuildFile; fileRef = D63DD49F12EE96FF0096FEF7 /* TransparentScrollerKnobBottom.tif */; };
+		D63DD4AC12EE96FF0096FEF7 /* TransparentScrollerKnobHorizontalFill.tif in Resources */ = {isa = PBXBuildFile; fileRef = D63DD4A012EE96FF0096FEF7 /* TransparentScrollerKnobHorizontalFill.tif */; };
+		D63DD4AD12EE96FF0096FEF7 /* TransparentScrollerKnobLeft.tif in Resources */ = {isa = PBXBuildFile; fileRef = D63DD4A112EE96FF0096FEF7 /* TransparentScrollerKnobLeft.tif */; };
+		D63DD4AE12EE96FF0096FEF7 /* TransparentScrollerKnobRight.tif in Resources */ = {isa = PBXBuildFile; fileRef = D63DD4A212EE96FF0096FEF7 /* TransparentScrollerKnobRight.tif */; };
+		D63DD4AF12EE96FF0096FEF7 /* TransparentScrollerKnobTop.tif in Resources */ = {isa = PBXBuildFile; fileRef = D63DD4A312EE96FF0096FEF7 /* TransparentScrollerKnobTop.tif */; };
+		D63DD4B012EE96FF0096FEF7 /* TransparentScrollerKnobVerticalFill.tif in Resources */ = {isa = PBXBuildFile; fileRef = D63DD4A412EE96FF0096FEF7 /* TransparentScrollerKnobVerticalFill.tif */; };
+		D63DD4B112EE96FF0096FEF7 /* TransparentScrollerSlotBottom.tif in Resources */ = {isa = PBXBuildFile; fileRef = D63DD4A512EE96FF0096FEF7 /* TransparentScrollerSlotBottom.tif */; };
+		D63DD4B212EE96FF0096FEF7 /* TransparentScrollerSlotHorizontalFill.tif in Resources */ = {isa = PBXBuildFile; fileRef = D63DD4A612EE96FF0096FEF7 /* TransparentScrollerSlotHorizontalFill.tif */; };
+		D63DD4B312EE96FF0096FEF7 /* TransparentScrollerSlotLeft.tif in Resources */ = {isa = PBXBuildFile; fileRef = D63DD4A712EE96FF0096FEF7 /* TransparentScrollerSlotLeft.tif */; };
+		D63DD4B412EE96FF0096FEF7 /* TransparentScrollerSlotRight.tif in Resources */ = {isa = PBXBuildFile; fileRef = D63DD4A812EE96FF0096FEF7 /* TransparentScrollerSlotRight.tif */; };
+		D63DD4B512EE96FF0096FEF7 /* TransparentScrollerSlotTop.tif in Resources */ = {isa = PBXBuildFile; fileRef = D63DD4A912EE96FF0096FEF7 /* TransparentScrollerSlotTop.tif */; };
+		D63DD4B612EE96FF0096FEF7 /* TransparentScrollerSlotVerticalFill.tif in Resources */ = {isa = PBXBuildFile; fileRef = D63DD4AA12EE96FF0096FEF7 /* TransparentScrollerSlotVerticalFill.tif */; };
 		D66968D912EA846C000C39E7 /* _Group.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D212EA846C000C39E7 /* _Group.m */; };
 		D66968DA12EA846C000C39E7 /* _Website.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D412EA846C000C39E7 /* _Website.m */; };
 		D66968DB12EA846C000C39E7 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D612EA846C000C39E7 /* Group.m */; };
@@ -162,6 +174,18 @@
 		D63DD49912EE94590096FEF7 /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutWindowController.h; path = Classes/Controllers/AboutWindowController.h; sourceTree = "<group>"; };
 		D63DD49A12EE94590096FEF7 /* AboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutWindowController.m; path = Classes/Controllers/AboutWindowController.m; sourceTree = "<group>"; };
 		D63DD49D12EE95050096FEF7 /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = web.png; path = Resources/web.png; sourceTree = "<group>"; };
+		D63DD49F12EE96FF0096FEF7 /* TransparentScrollerKnobBottom.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TransparentScrollerKnobBottom.tif; sourceTree = "<group>"; };
+		D63DD4A012EE96FF0096FEF7 /* TransparentScrollerKnobHorizontalFill.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TransparentScrollerKnobHorizontalFill.tif; sourceTree = "<group>"; };
+		D63DD4A112EE96FF0096FEF7 /* TransparentScrollerKnobLeft.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TransparentScrollerKnobLeft.tif; sourceTree = "<group>"; };
+		D63DD4A212EE96FF0096FEF7 /* TransparentScrollerKnobRight.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TransparentScrollerKnobRight.tif; sourceTree = "<group>"; };
+		D63DD4A312EE96FF0096FEF7 /* TransparentScrollerKnobTop.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TransparentScrollerKnobTop.tif; sourceTree = "<group>"; };
+		D63DD4A412EE96FF0096FEF7 /* TransparentScrollerKnobVerticalFill.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TransparentScrollerKnobVerticalFill.tif; sourceTree = "<group>"; };
+		D63DD4A512EE96FF0096FEF7 /* TransparentScrollerSlotBottom.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TransparentScrollerSlotBottom.tif; sourceTree = "<group>"; };
+		D63DD4A612EE96FF0096FEF7 /* TransparentScrollerSlotHorizontalFill.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TransparentScrollerSlotHorizontalFill.tif; sourceTree = "<group>"; };
+		D63DD4A712EE96FF0096FEF7 /* TransparentScrollerSlotLeft.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TransparentScrollerSlotLeft.tif; sourceTree = "<group>"; };
+		D63DD4A812EE96FF0096FEF7 /* TransparentScrollerSlotRight.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TransparentScrollerSlotRight.tif; sourceTree = "<group>"; };
+		D63DD4A912EE96FF0096FEF7 /* TransparentScrollerSlotTop.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TransparentScrollerSlotTop.tif; sourceTree = "<group>"; };
+		D63DD4AA12EE96FF0096FEF7 /* TransparentScrollerSlotVerticalFill.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TransparentScrollerSlotVerticalFill.tif; sourceTree = "<group>"; };
 		D66968D112EA846C000C39E7 /* _Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Group.h; path = Classes/Models/LaunchIt/_Group.h; sourceTree = "<group>"; };
 		D66968D212EA846C000C39E7 /* _Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Group.m; path = Classes/Models/LaunchIt/_Group.m; sourceTree = "<group>"; };
 		D66968D312EA846C000C39E7 /* _Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Website.h; path = Classes/Models/LaunchIt/_Website.h; sourceTree = "<group>"; };
@@ -575,6 +599,18 @@
 		D6BF681012E267F7008BCC5B /* BWToolkit */ = {
 			isa = PBXGroup;
 			children = (
+				D63DD49F12EE96FF0096FEF7 /* TransparentScrollerKnobBottom.tif */,
+				D63DD4A012EE96FF0096FEF7 /* TransparentScrollerKnobHorizontalFill.tif */,
+				D63DD4A112EE96FF0096FEF7 /* TransparentScrollerKnobLeft.tif */,
+				D63DD4A212EE96FF0096FEF7 /* TransparentScrollerKnobRight.tif */,
+				D63DD4A312EE96FF0096FEF7 /* TransparentScrollerKnobTop.tif */,
+				D63DD4A412EE96FF0096FEF7 /* TransparentScrollerKnobVerticalFill.tif */,
+				D63DD4A512EE96FF0096FEF7 /* TransparentScrollerSlotBottom.tif */,
+				D63DD4A612EE96FF0096FEF7 /* TransparentScrollerSlotHorizontalFill.tif */,
+				D63DD4A712EE96FF0096FEF7 /* TransparentScrollerSlotLeft.tif */,
+				D63DD4A812EE96FF0096FEF7 /* TransparentScrollerSlotRight.tif */,
+				D63DD4A912EE96FF0096FEF7 /* TransparentScrollerSlotTop.tif */,
+				D63DD4AA12EE96FF0096FEF7 /* TransparentScrollerSlotVerticalFill.tif */,
 				D6BF681212E267F7008BCC5B /* BWAddMiniBottomBar.h */,
 				D6BF681312E267F7008BCC5B /* BWAddMiniBottomBar.m */,
 				D6BF681412E267F7008BCC5B /* BWAddRegularBottomBar.h */,
@@ -744,6 +780,18 @@
 				D6FBA61612EE398F003B328F /* btn_settings.png in Resources */,
 				D63DD49812EE93F60096FEF7 /* about.png in Resources */,
 				D63DD49E12EE95050096FEF7 /* web.png in Resources */,
+				D63DD4AB12EE96FF0096FEF7 /* TransparentScrollerKnobBottom.tif in Resources */,
+				D63DD4AC12EE96FF0096FEF7 /* TransparentScrollerKnobHorizontalFill.tif in Resources */,
+				D63DD4AD12EE96FF0096FEF7 /* TransparentScrollerKnobLeft.tif in Resources */,
+				D63DD4AE12EE96FF0096FEF7 /* TransparentScrollerKnobRight.tif in Resources */,
+				D63DD4AF12EE96FF0096FEF7 /* TransparentScrollerKnobTop.tif in Resources */,
+				D63DD4B012EE96FF0096FEF7 /* TransparentScrollerKnobVerticalFill.tif in Resources */,
+				D63DD4B112EE96FF0096FEF7 /* TransparentScrollerSlotBottom.tif in Resources */,
+				D63DD4B212EE96FF0096FEF7 /* TransparentScrollerSlotHorizontalFill.tif in Resources */,
+				D63DD4B312EE96FF0096FEF7 /* TransparentScrollerSlotLeft.tif in Resources */,
+				D63DD4B412EE96FF0096FEF7 /* TransparentScrollerSlotRight.tif in Resources */,
+				D63DD4B512EE96FF0096FEF7 /* TransparentScrollerSlotTop.tif in Resources */,
+				D63DD4B612EE96FF0096FEF7 /* TransparentScrollerSlotVerticalFill.tif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
