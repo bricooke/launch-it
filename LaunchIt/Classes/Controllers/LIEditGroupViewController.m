@@ -187,6 +187,8 @@
 
 - (IBAction)remove:(id)sender
 {
+  [self willChangeValueForKey:@"anyEntities"];  
+  [self willChangeValueForKey:@"canSave"];
   id selected = [[self.group applicationsAndWebsites] objectAtIndex:[[self.collectionView selectionIndexes] firstIndex]];
   if ([selected isKindOfClass:[Application class]]) {
     [self.group removeApplicationsObject:selected];
@@ -195,6 +197,8 @@
   }
   [selected deleteEntity];
   [self.collectionView setContent:[self.group applicationsAndWebsites]];
+  [self didChangeValueForKey:@"anyEntities"];  
+  [self didChangeValueForKey:@"canSave"];
 }
 
 
