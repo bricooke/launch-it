@@ -11,8 +11,8 @@
 			<string key="net.wafflesoftware.ShortcutRecorder.IB.Leopard">1</string>
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="1"/>
 			<integer value="62"/>
+			<integer value="1"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>net.wafflesoftware.ShortcutRecorder.IB.Leopard</string>
@@ -65,7 +65,7 @@
 								<int key="NSColorSpace">6</int>
 								<string key="NSCatalogName">System</string>
 								<string key="NSColorName">textColor</string>
-								<object class="NSColor" key="NSColor">
+								<object class="NSColor" key="NSColor" id="885067356">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MAA</bytes>
 								</object>
@@ -354,6 +354,7 @@
 						</set>
 						<string key="NSFrameSize">{300, 40}</string>
 						<reference key="NSSuperview" ref="713051849"/>
+						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<int key="NSTag">97</int>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSImageCell" key="NSCell" id="958071976">
@@ -383,6 +384,7 @@
 						</set>
 						<string key="NSFrame">{{11, 10}, {20, 20}}</string>
 						<reference key="NSSuperview" ref="713051849"/>
+						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSImageCell" key="NSCell" id="831623409">
 							<int key="NSCellFlags">130560</int>
@@ -397,8 +399,14 @@
 					<object class="NSTextField" id="298613855">
 						<reference key="NSNextResponder" ref="713051849"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{36, 8}, {247, 23}}</string>
+						<string key="NSFrame">{{36, 13}, {247, 18}}</string>
 						<reference key="NSSuperview" ref="713051849"/>
+						<bool key="NSViewIsLayerTreeHost">YES</bool>
+						<object class="NSShadow" key="NSViewShadow">
+							<double key="NSShadowVert">-1</double>
+							<reference key="NSShadowColor" ref="885067356"/>
+						</object>
+						<int key="NSViewLayerContentsRedrawPolicy">2</int>
 						<int key="NSTag">9</int>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="140107251">
@@ -407,7 +415,7 @@
 							<string key="NSContents">NAME GOES HERE</string>
 							<object class="NSFont" key="NSSupport">
 								<string key="NSName">LucidaGrande-Bold</string>
-								<double key="NSSize">13</double>
+								<double key="NSSize">14</double>
 								<int key="NSfFlags">16</int>
 							</object>
 							<reference key="NSControlView" ref="298613855"/>
@@ -427,6 +435,7 @@
 				</array>
 				<string key="NSFrameSize">{287, 40}</string>
 				<reference key="NSSuperview"/>
+				<int key="NSViewLayerContentsRedrawPolicy">2</int>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -651,8 +660,8 @@
 						<reference key="object" ref="713051849"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="758887420"/>
-							<reference ref="719475545"/>
 							<reference ref="298613855"/>
+							<reference ref="719475545"/>
 						</array>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">collection view view</string>
@@ -833,6 +842,7 @@
 				<string key="1.WindowOrigin">{628, 654}</string>
 				<string key="1.editorWindowContentRectSynchronizationRect">{{357, 416}, {480, 272}}</string>
 				<string key="113.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<real value="-1" key="113.IBViewIntegration.shadowOffsetHeight"/>
 				<string key="114.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="120.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<object class="NSAffineTransform" key="120.IBViewBoundsToFrameTransform">
@@ -885,7 +895,7 @@
 				<string key="90.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="91.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<object class="NSAffineTransform" key="91.IBViewBoundsToFrameTransform">
-					<bytes key="NSTransformStruct">AUEwAABAoAAAA</bytes>
+					<bytes key="NSTransformStruct">AUEwAABBIAAAA</bytes>
 				</object>
 				<string key="92.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
