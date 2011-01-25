@@ -61,8 +61,8 @@
   [self didChangeValueForKey:@"_group"];
  
   if (_group) {
-    [self willChangeValueForKey:@"anyEntities"];
-    [self didChangeValueForKey:@"anyEntities"];
+    [self willChangeValueForKey:@"hideHelp"];
+    [self didChangeValueForKey:@"hideHelp"];
   }
   
   KeyCombo combo;
@@ -83,9 +83,9 @@
 }
 
 
-- (BOOL) anyEntities
+- (BOOL) hideHelp
 {
-  return [[self.group applicationsAndWebsites] count] > 0;
+  return [[Group numberOfEntities] integerValue] > 1 || [[self.group applicationsAndWebsites] count] > 0;
 }
 
 
@@ -165,7 +165,7 @@
 
 - (IBAction) addWebsite:(id)sender
 {
-  [self willChangeValueForKey:@"anyEntities"];
+  [self willChangeValueForKey:@"hideHelp"];
   [self willChangeValueForKey:@"canSave"];
 
   Website *w = [Website createEntity];
@@ -180,14 +180,14 @@
   [(LISelectableView *)[item view] edit];
 
 
-  [self didChangeValueForKey:@"anyEntities"];  
+  [self didChangeValueForKey:@"hideHelp"];  
   [self didChangeValueForKey:@"canSave"];
 }
 
 
 - (IBAction)remove:(id)sender
 {
-  [self willChangeValueForKey:@"anyEntities"];  
+  [self willChangeValueForKey:@"hideHelp"];  
   [self willChangeValueForKey:@"canSave"];
   id selected = [[self.group applicationsAndWebsites] objectAtIndex:[[self.collectionView selectionIndexes] firstIndex]];
   if ([selected isKindOfClass:[Application class]]) {
@@ -197,7 +197,7 @@
   }
   [selected deleteEntity];
   [self.collectionView setContent:[self.group applicationsAndWebsites]];
-  [self didChangeValueForKey:@"anyEntities"];  
+  [self didChangeValueForKey:@"hideHelp"];  
   [self didChangeValueForKey:@"canSave"];
 }
 
@@ -235,7 +235,7 @@
 
 - (void)addApplicationAtPath:(NSString *)aFile
 {
-  [self willChangeValueForKey:@"anyEntities"];
+  [self willChangeValueForKey:@"hideHelp"];
   [self willChangeValueForKey:@"canSave"];
   RSApplicationFileAnalyzer *analyzer = [[RSApplicationFileAnalyzer alloc] initWithApplication:aFile];
   Application               *app      = [Application createEntity];
@@ -247,7 +247,7 @@
   [self.group addApplicationsObject:app];
   
   [self.collectionView setContent:[self.group applicationsAndWebsites]];
-  [self didChangeValueForKey:@"anyEntities"];
+  [self didChangeValueForKey:@"hideHelp"];
   [self didChangeValueForKey:@"canSave"];
 }
 
