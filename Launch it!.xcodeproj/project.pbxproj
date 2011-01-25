@@ -1023,6 +1023,44 @@
 			};
 			name = Release;
 		};
+		D6E23B3112EF7DD300BB0ACB /* Appstore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Werror",
+				);
+				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Appstore;
+		};
+		D6E23B3212EF7DD300BB0ACB /* Appstore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/LaunchIt/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LaunchIt/LaunchIt-Prefix.pch";
+				INFOPLIST_FILE = "LaunchIt/LaunchIt-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Appstore;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1031,6 +1069,7 @@
 			buildConfigurations = (
 				D6BF677312E2562C008BCC5B /* Debug */,
 				D6BF677412E2562C008BCC5B /* Release */,
+				D6E23B3112EF7DD300BB0ACB /* Appstore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1040,6 +1079,7 @@
 			buildConfigurations = (
 				D6BF677612E2562C008BCC5B /* Debug */,
 				D6BF677712E2562C008BCC5B /* Release */,
+				D6E23B3212EF7DD300BB0ACB /* Appstore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
