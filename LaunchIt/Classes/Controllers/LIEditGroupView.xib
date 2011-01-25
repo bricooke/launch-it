@@ -48,7 +48,7 @@
 									<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
 									<string>NeXT TIFF v4.0 pasteboard type</string>
 								</set>
-								<string key="NSFrame">{{-1, 5}, {296, 55}}</string>
+								<string key="NSFrame">{{1, 5}, {296, 55}}</string>
 								<reference key="NSSuperview" ref="858587581"/>
 								<int key="NSViewLayerContentsRedrawPolicy">2</int>
 								<bool key="NSEnabled">YES</bool>
