@@ -229,7 +229,8 @@
 
 - (void)didChooseApplication:(NSOpenPanel *)panel returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
 {
-  [self addApplicationAtPath:[[panel filenames] objectAtIndex:0]];
+  if (returnCode != 0)
+    [self addApplicationAtPath:[[panel filenames] objectAtIndex:0]];
 }
 
 

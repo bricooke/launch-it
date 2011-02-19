@@ -321,7 +321,7 @@
   if (visible) {
     [NSApp activateIgnoringOtherApps:YES];
     [self.window makeKeyAndOrderFront:self];
-  } else {
+  } else if ([self.window attachedSheet] == nil) {
     [self.window orderOut:self];
   }
 }
