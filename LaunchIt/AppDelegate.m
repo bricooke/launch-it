@@ -39,6 +39,8 @@
   [NSManagedObjectContext setDefaultContext:[self managedObjectContext]];
   [Group migrateExistingApplications];
   [Group bindAllHotkeys];
+  
+  [self.window setCollectionBehavior: NSWindowCollectionBehaviorCanJoinAllSpaces];
 }
 
 
