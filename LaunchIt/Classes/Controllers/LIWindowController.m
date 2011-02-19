@@ -59,6 +59,9 @@
     NSPoint pt = NSMakePoint(NSMidX(frame), NSMinY(frame)-22);
     [self toggleWindowAtPoint:pt makeVisible:YES];
   }
+  
+  [self.editGroupController.view setFrame:NSOffsetRect([self.containerView frame], 300, 0)];
+  [[[self window] contentView] addSubview:self.editGroupController.view];
 }
 
 
@@ -104,11 +107,6 @@
 
   // make sure it's off screen, to the right.
   [self.editGroupController.view setFrame:NSOffsetRect(current, current.size.width, 0)];
-
-  if ([self.editGroupController.view superview] == nil) {
-    [[[self window] contentView] addSubview:self.editGroupController.view];
-  }
-
   [[self.editGroupController.view animator] setFrame:current];
 
   [self setSaveAndCancelVisible:YES];
@@ -140,6 +138,9 @@
 #pragma mark actions
 - (IBAction)cancel:(id)sender
 {
+  if ([self.editGroupController.view frame].origin.x > 0)
+    return;
+  
   [self.editGroupController.group willChangeValueForKey:@"shortcutCodeString"];
   [self.editGroupController.group willChangeValueForKey:@"shortcutCodeStringForMenus"];
   [self.editGroupController.group willChangeValueForKey:@"largeImage"];
