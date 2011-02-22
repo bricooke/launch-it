@@ -1,16 +1,17 @@
 //
-//  SRKeyCodeTransformer.h
-//  ShortcutRecorder
+// SRKeyCodeTransformer.h
+// ShortcutRecorder
 //
-//  Copyright 2006-2007 Contributors. All rights reserved.
+// Copyright 2006-2007 Contributors. All rights reserved.
 //
-//  License: BSD
+// License: BSD
 //
-//  Contributors:
-//      David Dauer
-//      Jesper
-//      Jamie Kirkpatrick
+// Contributors:
+// David Dauer
+// Jesper
+// Jamie Kirkpatrick
 
 #import <Cocoa/Cocoa.h>
 
-@interface SRKeyCodeTransformer : NSValueTransformer {} @end
+@interface SRKeyCodeTransformer : NSValueTransformer { }
+@end

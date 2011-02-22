@@ -1,22 +1,24 @@
 //
-//  SRRecorderControl.h
-//  ShortcutRecorder
+// SRRecorderControl.h
+// ShortcutRecorder
 //
-//  Copyright 2006-2007 Contributors. All rights reserved.
+// Copyright 2006-2007 Contributors. All rights reserved.
 //
-//  License: BSD
+// License: BSD
 //
-//  Contributors:
-//      David Dauer
-//      Jesper
-//      Jamie Kirkpatrick
+// Contributors:
+// David Dauer
+// Jesper
+// Jamie Kirkpatrick
 
 #import <Cocoa/Cocoa.h>
 #import "SRRecorderCell.h"
 
 @interface SRRecorderControl : NSControl
 {
-	IBOutlet id delegate;
+    IBOutlet id delegate;
+    NSString* shortcut;
+    NSInteger menuTag;
 }
 
 #pragma mark *** Aesthetics ***
@@ -35,7 +37,7 @@
 - (void)setAllowedFlags:(NSUInteger)flags;
 
 - (BOOL)allowsKeyOnly;
-- (void)setAllowsKeyOnly:(BOOL)nAllowsKeyOnly escapeKeysRecord:(BOOL)nEscapeKeysRecord;
+- (void)setAllowsKeyOnly:(BOOL) nAllowsKeyOnly escapeKeysRecord:(BOOL)nEscapeKeysRecord;
 - (BOOL)escapeKeysRecord;
 
 - (BOOL)canCaptureGlobalHotKeys;
@@ -47,33 +49,31 @@
 - (KeyCombo)keyCombo;
 - (void)setKeyCombo:(KeyCombo)aKeyCombo;
 
-- (NSString *)keyChars;
-- (NSString *)keyCharsIgnoringModifiers;
+- (NSString*)keyChars;
+- (NSString*)keyCharsIgnoringModifiers;
 
 #pragma mark *** Autosave Control ***
 
-- (NSString *)autosaveName;
-- (void)setAutosaveName:(NSString *)aName;
+- (NSString*)autosaveName;
+- (void)setAutosaveName:(NSString*)aName;
 
 #pragma mark -
 
 // Returns the displayed key combination if set
-- (NSString *)keyComboString;
+- (NSString*)keyComboString;
 
 #pragma mark *** Conversion Methods ***
 
 - (NSUInteger)cocoaToCarbonFlags:(NSUInteger)cocoaFlags;
 - (NSUInteger)carbonToCocoaFlags:(NSUInteger)carbonFlags;
 
-#pragma mark *** Binding Methods ***
-
-- (NSDictionary *)objectValue;
-- (void)setObjectValue:(NSDictionary *)shortcut;
+@property (retain) NSString* shortcut;
+@property NSInteger menuTag;
 
 @end
 
 // Delegate Methods
 @interface NSObject (SRRecorderDelegate)
-- (BOOL)shortcutRecorder:(SRRecorderControl *)aRecorder isKeyCode:(NSInteger)keyCode andFlagsTaken:(NSUInteger)flags reason:(NSString **)aReason;
-- (void)shortcutRecorder:(SRRecorderControl *)aRecorder keyComboDidChange:(KeyCombo)newKeyCombo;
+- (BOOL)shortcutRecorder:(SRRecorderControl*)aRecorder isKeyCode:(NSInteger) keyCode andFlagsTaken:(NSUInteger) flags reason:(NSString**)aReason;
+- (void)shortcutRecorder:(SRRecorderControl*)aRecorder keyComboDidChange:(KeyCombo)newKeyCombo;
 @end
