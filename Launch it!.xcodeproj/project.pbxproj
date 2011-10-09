@@ -33,7 +33,11 @@
 		D6122DF412EBE87B00C9E05E /* btn_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = D6122DE412EBE87B00C9E05E /* btn_plus.png */; };
 		D6122DF512EBE87B00C9E05E /* btn_save.png in Resources */ = {isa = PBXBuildFile; fileRef = D6122DE512EBE87B00C9E05E /* btn_save.png */; };
 		D6122DF712EBF69E00C9E05E /* btn_arrow_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = D6122DF612EBF69E00C9E05E /* btn_arrow_selected.png */; };
-		D6122DF912EC008E00C9E05E /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6BF67D012E2603E008BCC5B /* ShortcutRecorder.framework */; };
+		D61A61F914414AF900A283BA /* SRCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F014414AF900A283BA /* SRCommon.m */; };
+		D61A61FA14414AF900A283BA /* SRKeyCodeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F214414AF900A283BA /* SRKeyCodeTransformer.m */; };
+		D61A61FB14414AF900A283BA /* SRRecorderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F414414AF900A283BA /* SRRecorderCell.m */; };
+		D61A61FC14414AF900A283BA /* SRRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F614414AF900A283BA /* SRRecorderControl.m */; };
+		D61A61FD14414AF900A283BA /* SRValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F814414AF900A283BA /* SRValidator.m */; };
 		D63DD49812EE93F60096FEF7 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = D63DD49712EE93F60096FEF7 /* about.png */; };
 		D63DD49B12EE94590096FEF7 /* AboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63DD49A12EE94590096FEF7 /* AboutWindowController.m */; };
 		D63DD49C12EE94B50096FEF7 /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63DD49512EE93D00096FEF7 /* AboutWindow.xib */; };
@@ -74,7 +78,6 @@
 		D6BF67C812E25E44008BCC5B /* validatereceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67B812E25E44008BCC5B /* validatereceipt.m */; };
 		D6BF67CE12E25E67008BCC5B /* _Application.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67CB12E25E67008BCC5B /* _Application.m */; };
 		D6BF67CF12E25E67008BCC5B /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67CD12E25E67008BCC5B /* Application.m */; };
-		D6BF67D112E2603E008BCC5B /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF67D012E2603E008BCC5B /* ShortcutRecorder.framework */; };
 		D6BF67D312E26063008BCC5B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF67D212E26063008BCC5B /* Security.framework */; };
 		D6BF67D512E2606A008BCC5B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF67D412E2606A008BCC5B /* IOKit.framework */; };
 		D6BF67D812E26119008BCC5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67D712E26119008BCC5B /* AppDelegate.m */; };
@@ -144,7 +147,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D6122DF912EC008E00C9E05E /* ShortcutRecorder.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +182,17 @@
 		D6122DE512EBE87B00C9E05E /* btn_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_save.png; path = Resources/btn_save.png; sourceTree = "<group>"; };
 		D6122DF612EBF69E00C9E05E /* btn_arrow_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_arrow_selected.png; path = Resources/btn_arrow_selected.png; sourceTree = "<group>"; };
 		D616CB1D12EF7A2A0045D801 /* LIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIConstants.h; path = Classes/LIConstants.h; sourceTree = "<group>"; };
+		D61A61ED1441440D00A283BA /* Launch it!.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Launch it!.entitlements"; sourceTree = "<group>"; };
+		D61A61EF14414AF900A283BA /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCommon.h; sourceTree = "<group>"; };
+		D61A61F014414AF900A283BA /* SRCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRCommon.m; sourceTree = "<group>"; };
+		D61A61F114414AF900A283BA /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRKeyCodeTransformer.h; sourceTree = "<group>"; };
+		D61A61F214414AF900A283BA /* SRKeyCodeTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRKeyCodeTransformer.m; sourceTree = "<group>"; };
+		D61A61F314414AF900A283BA /* SRRecorderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRecorderCell.h; sourceTree = "<group>"; };
+		D61A61F414414AF900A283BA /* SRRecorderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderCell.m; sourceTree = "<group>"; };
+		D61A61F514414AF900A283BA /* SRRecorderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRecorderControl.h; sourceTree = "<group>"; };
+		D61A61F614414AF900A283BA /* SRRecorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderControl.m; sourceTree = "<group>"; };
+		D61A61F714414AF900A283BA /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRValidator.h; sourceTree = "<group>"; };
+		D61A61F814414AF900A283BA /* SRValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRValidator.m; sourceTree = "<group>"; };
 		D63DD49612EE93D00096FEF7 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = Resources/en.lproj/AboutWindow.xib; sourceTree = "<group>"; };
 		D63DD49712EE93F60096FEF7 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = Resources/about.png; sourceTree = "<group>"; };
 		D63DD49912EE94590096FEF7 /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutWindowController.h; path = Classes/Controllers/AboutWindowController.h; sourceTree = "<group>"; };
@@ -255,7 +268,6 @@
 		D6BF67CB12E25E67008BCC5B /* _Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Application.m; path = Classes/Models/LaunchIt/_Application.m; sourceTree = "<group>"; };
 		D6BF67CC12E25E67008BCC5B /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Application.h; path = Classes/Models/LaunchIt/Application.h; sourceTree = "<group>"; };
 		D6BF67CD12E25E67008BCC5B /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Application.m; path = Classes/Models/LaunchIt/Application.m; sourceTree = "<group>"; };
-		D6BF67D012E2603E008BCC5B /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = LaunchIt/Frameworks/ShortcutRecorder.framework; sourceTree = "<group>"; };
 		D6BF67D212E26063008BCC5B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D6BF67D412E2606A008BCC5B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		D6BF67D612E26119008BCC5B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -373,7 +385,6 @@
 				D6BF67DA12E261E6008BCC5B /* Carbon.framework in Frameworks */,
 				D6BF67D512E2606A008BCC5B /* IOKit.framework in Frameworks */,
 				D6BF67D312E26063008BCC5B /* Security.framework in Frameworks */,
-				D6BF67D112E2603E008BCC5B /* ShortcutRecorder.framework in Frameworks */,
 				D6BF674712E2562C008BCC5B /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,9 +392,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D61A61EE14414AF900A283BA /* ShortcutRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				D61A61EF14414AF900A283BA /* SRCommon.h */,
+				D61A61F014414AF900A283BA /* SRCommon.m */,
+				D61A61F114414AF900A283BA /* SRKeyCodeTransformer.h */,
+				D61A61F214414AF900A283BA /* SRKeyCodeTransformer.m */,
+				D61A61F314414AF900A283BA /* SRRecorderCell.h */,
+				D61A61F414414AF900A283BA /* SRRecorderCell.m */,
+				D61A61F514414AF900A283BA /* SRRecorderControl.h */,
+				D61A61F614414AF900A283BA /* SRRecorderControl.m */,
+				D61A61F714414AF900A283BA /* SRValidator.h */,
+				D61A61F814414AF900A283BA /* SRValidator.m */,
+			);
+			name = ShortcutRecorder;
+			path = Classes/3rdParty/ShortcutRecorder;
+			sourceTree = "<group>";
+		};
 		D6BF673712E2562C008BCC5B = {
 			isa = PBXGroup;
 			children = (
+				D61A61ED1441440D00A283BA /* Launch it!.entitlements */,
 				D6BF674C12E2562C008BCC5B /* LaunchIt */,
 				D6BF674512E2562C008BCC5B /* Frameworks */,
 				D6BF674312E2562C008BCC5B /* Products */,
@@ -413,7 +443,6 @@
 				D6BF67D912E261E6008BCC5B /* Carbon.framework */,
 				D6BF67D412E2606A008BCC5B /* IOKit.framework */,
 				D6BF67D212E26063008BCC5B /* Security.framework */,
-				D6BF67D012E2603E008BCC5B /* ShortcutRecorder.framework */,
 				D6BF674912E2562C008BCC5B /* AppKit.framework */,
 				D6BF674A12E2562C008BCC5B /* CoreData.framework */,
 				D6BF674B12E2562C008BCC5B /* Foundation.framework */,
@@ -452,6 +481,7 @@
 		D6BF678512E25CC7008BCC5B /* 3rdParty */ = {
 			isa = PBXGroup;
 			children = (
+				D61A61EE14414AF900A283BA /* ShortcutRecorder */,
 				D6BF681012E267F7008BCC5B /* BWToolkit */,
 				D6BF679512E25E44008BCC5B /* activerecord-fetching-for-core-data */,
 				D6BF67AD12E25E44008BCC5B /* SGHotKeysLib */,
@@ -739,6 +769,7 @@
 		D6BF673912E2562C008BCC5B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Made By Rocket, Inc.";
 			};
 			buildConfigurationList = D6BF673C12E2562C008BCC5B /* Build configuration list for PBXProject "Launch it!" */;
@@ -895,6 +926,11 @@
 				D6122DB912EB4E3200C9E05E /* LISelectableView.m in Sources */,
 				D6122DBC12EB4EA600C9E05E /* LISelectableCollectionViewItem.m in Sources */,
 				D63DD49B12EE94590096FEF7 /* AboutWindowController.m in Sources */,
+				D61A61F914414AF900A283BA /* SRCommon.m in Sources */,
+				D61A61FA14414AF900A283BA /* SRKeyCodeTransformer.m in Sources */,
+				D61A61FB14414AF900A283BA /* SRRecorderCell.m in Sources */,
+				D61A61FC14414AF900A283BA /* SRRecorderControl.m in Sources */,
+				D61A61FD14414AF900A283BA /* SRValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -987,6 +1023,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Launch it!.entitlements";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1007,6 +1045,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Launch it!.entitlements";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1047,6 +1087,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Launch it!.entitlements";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
