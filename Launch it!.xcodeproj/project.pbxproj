@@ -38,6 +38,7 @@
 		D61A61FB14414AF900A283BA /* SRRecorderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F414414AF900A283BA /* SRRecorderCell.m */; };
 		D61A61FC14414AF900A283BA /* SRRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F614414AF900A283BA /* SRRecorderControl.m */; };
 		D61A61FD14414AF900A283BA /* SRValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F814414AF900A283BA /* SRValidator.m */; };
+		D61A61FF14414C9D00A283BA /* container-migration.plist in Resources */ = {isa = PBXBuildFile; fileRef = D61A61FE14414C9D00A283BA /* container-migration.plist */; };
 		D63DD49812EE93F60096FEF7 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = D63DD49712EE93F60096FEF7 /* about.png */; };
 		D63DD49B12EE94590096FEF7 /* AboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63DD49A12EE94590096FEF7 /* AboutWindowController.m */; };
 		D63DD49C12EE94B50096FEF7 /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63DD49512EE93D00096FEF7 /* AboutWindow.xib */; };
@@ -193,6 +194,7 @@
 		D61A61F614414AF900A283BA /* SRRecorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderControl.m; sourceTree = "<group>"; };
 		D61A61F714414AF900A283BA /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRValidator.h; sourceTree = "<group>"; };
 		D61A61F814414AF900A283BA /* SRValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRValidator.m; sourceTree = "<group>"; };
+		D61A61FE14414C9D00A283BA /* container-migration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "container-migration.plist"; sourceTree = SOURCE_ROOT; };
 		D63DD49612EE93D00096FEF7 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = Resources/en.lproj/AboutWindow.xib; sourceTree = "<group>"; };
 		D63DD49712EE93F60096FEF7 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = Resources/about.png; sourceTree = "<group>"; };
 		D63DD49912EE94590096FEF7 /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutWindowController.h; path = Classes/Controllers/AboutWindowController.h; sourceTree = "<group>"; };
@@ -414,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				D61A61ED1441440D00A283BA /* Launch it!.entitlements */,
+				D61A61FE14414C9D00A283BA /* container-migration.plist */,
 				D6BF674C12E2562C008BCC5B /* LaunchIt */,
 				D6BF674512E2562C008BCC5B /* Frameworks */,
 				D6BF674312E2562C008BCC5B /* Products */,
@@ -845,6 +848,7 @@
 				D60FE72912EF72C9006A540C /* btn_plus_selected.png in Resources */,
 				D60FE72A12EF72C9006A540C /* icon_application.png in Resources */,
 				D60FE72B12EF72C9006A540C /* icon_web.png in Resources */,
+				D61A61FF14414C9D00A283BA /* container-migration.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
