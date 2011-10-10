@@ -4,8 +4,10 @@
 <dict>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>
-	<key>com.apple.security.temporary-exception.apple-events
-</key>
-	<string>com.apple.finder</string>
+	<key>com.apple.security.temporary-exception.apple-events</key>
+	<array>
+		<string>com.apple.finder</string>
+		<string>com.apple.systemevents</string>
+	</array>
 </dict>
 </plist>

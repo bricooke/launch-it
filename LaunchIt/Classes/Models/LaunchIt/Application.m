@@ -75,7 +75,7 @@
   if (self.toggleValue && [[active valueForKey:@"NSApplicationPath"] isEqualToString:self.path]) {
     // hide it
     NSString *appName = [[self.path stringByDeletingPathExtension] lastPathComponent];
-    script = [NSString stringWithFormat:@"tell application \"Finder\" to set visible of process \"%@\" to false", appName];
+    script = [NSString stringWithFormat:@"tell application id \"com.apple.finder\" to set visible of process \"%@\" to false", appName];
     NSDictionary *err = nil;
     [[[[NSAppleScript alloc] initWithSource:script] autorelease] executeAndReturnError:&err];  
   } else {

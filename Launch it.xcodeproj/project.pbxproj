@@ -39,6 +39,7 @@
 		D61A61FC14414AF900A283BA /* SRRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F614414AF900A283BA /* SRRecorderControl.m */; };
 		D61A61FD14414AF900A283BA /* SRValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F814414AF900A283BA /* SRValidator.m */; };
 		D61A61FF14414C9D00A283BA /* container-migration.plist in Resources */ = {isa = PBXBuildFile; fileRef = D61A61FE14414C9D00A283BA /* container-migration.plist */; };
+		D61A6201144153CE00A283BA /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61A6200144153CE00A283BA /* ServiceManagement.framework */; };
 		D63DD49812EE93F60096FEF7 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = D63DD49712EE93F60096FEF7 /* about.png */; };
 		D63DD49B12EE94590096FEF7 /* AboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63DD49A12EE94590096FEF7 /* AboutWindowController.m */; };
 		D63DD49C12EE94B50096FEF7 /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63DD49512EE93D00096FEF7 /* AboutWindow.xib */; };
@@ -132,6 +133,7 @@
 		D6BF690012E2A794008BCC5B /* LIEditGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68FE12E2A794008BCC5B /* LIEditGroupViewController.m */; };
 		D6BF690112E2A794008BCC5B /* LIEditGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BF68FF12E2A794008BCC5B /* LIEditGroupView.xib */; };
 		D6BF690412E39B9E008BCC5B /* MACollectionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF690312E39B9E008BCC5B /* MACollectionUtilities.m */; };
+		D6D0A35714425B800028B550 /* Launch it.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D61A61ED1441440D00A283BA /* Launch it.entitlements */; };
 		D6F5177712EE30620078E774 /* directions_menubar.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5177512EE30620078E774 /* directions_menubar.png */; };
 		D6F5177812EE30620078E774 /* directions_start.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5177612EE30620078E774 /* directions_start.png */; };
 		D6FBA60E12EE3684003B328F /* directions_add.png in Resources */ = {isa = PBXBuildFile; fileRef = D6FBA60D12EE3684003B328F /* directions_add.png */; };
@@ -183,7 +185,7 @@
 		D6122DE512EBE87B00C9E05E /* btn_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_save.png; path = Resources/btn_save.png; sourceTree = "<group>"; };
 		D6122DF612EBF69E00C9E05E /* btn_arrow_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_arrow_selected.png; path = Resources/btn_arrow_selected.png; sourceTree = "<group>"; };
 		D616CB1D12EF7A2A0045D801 /* LIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIConstants.h; path = Classes/LIConstants.h; sourceTree = "<group>"; };
-		D61A61ED1441440D00A283BA /* Launch it!.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Launch it!.entitlements"; sourceTree = "<group>"; };
+		D61A61ED1441440D00A283BA /* Launch it.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Launch it.entitlements"; sourceTree = "<group>"; };
 		D61A61EF14414AF900A283BA /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCommon.h; sourceTree = "<group>"; };
 		D61A61F014414AF900A283BA /* SRCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRCommon.m; sourceTree = "<group>"; };
 		D61A61F114414AF900A283BA /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRKeyCodeTransformer.h; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		D61A61F714414AF900A283BA /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRValidator.h; sourceTree = "<group>"; };
 		D61A61F814414AF900A283BA /* SRValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRValidator.m; sourceTree = "<group>"; };
 		D61A61FE14414C9D00A283BA /* container-migration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "container-migration.plist"; sourceTree = SOURCE_ROOT; };
+		D61A6200144153CE00A283BA /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		D63DD49612EE93D00096FEF7 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = Resources/en.lproj/AboutWindow.xib; sourceTree = "<group>"; };
 		D63DD49712EE93F60096FEF7 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = Resources/about.png; sourceTree = "<group>"; };
 		D63DD49912EE94590096FEF7 /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutWindowController.h; path = Classes/Controllers/AboutWindowController.h; sourceTree = "<group>"; };
@@ -221,7 +224,7 @@
 		D66968D712EA846C000C39E7 /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Website.h; path = Classes/Models/LaunchIt/Website.h; sourceTree = "<group>"; };
 		D66968D812EA846C000C39E7 /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Website.m; path = Classes/Models/LaunchIt/Website.m; sourceTree = "<group>"; };
 		D696873B12EA8CA10033FAC7 /* v3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v3.xcdatamodel; sourceTree = "<group>"; };
-		D6BF674212E2562C008BCC5B /* Launch it!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Launch it!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6BF674212E2562C008BCC5B /* Launch it.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Launch it.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BF674612E2562C008BCC5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D6BF674912E2562C008BCC5B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D6BF674A12E2562C008BCC5B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -384,6 +387,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D61A6201144153CE00A283BA /* ServiceManagement.framework in Frameworks */,
 				D6BF67DA12E261E6008BCC5B /* Carbon.framework in Frameworks */,
 				D6BF67D512E2606A008BCC5B /* IOKit.framework in Frameworks */,
 				D6BF67D312E26063008BCC5B /* Security.framework in Frameworks */,
@@ -415,7 +419,7 @@
 		D6BF673712E2562C008BCC5B = {
 			isa = PBXGroup;
 			children = (
-				D61A61ED1441440D00A283BA /* Launch it!.entitlements */,
+				D61A61ED1441440D00A283BA /* Launch it.entitlements */,
 				D61A61FE14414C9D00A283BA /* container-migration.plist */,
 				D6BF674C12E2562C008BCC5B /* LaunchIt */,
 				D6BF674512E2562C008BCC5B /* Frameworks */,
@@ -426,7 +430,7 @@
 		D6BF674312E2562C008BCC5B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6BF674212E2562C008BCC5B /* Launch it!.app */,
+				D6BF674212E2562C008BCC5B /* Launch it.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -443,6 +447,7 @@
 		D6BF674812E2562C008BCC5B /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D61A6200144153CE00A283BA /* ServiceManagement.framework */,
 				D6BF67D912E261E6008BCC5B /* Carbon.framework */,
 				D6BF67D412E2606A008BCC5B /* IOKit.framework */,
 				D6BF67D212E26063008BCC5B /* Security.framework */,
@@ -748,9 +753,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D6BF674112E2562C008BCC5B /* Launch it! */ = {
+		D6BF674112E2562C008BCC5B /* Launch it */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "Launch it!" */;
+			buildConfigurationList = D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "Launch it" */;
 			buildPhases = (
 				D6BF673E12E2562C008BCC5B /* Sources */,
 				D6BF673F12E2562C008BCC5B /* Frameworks */,
@@ -761,9 +766,9 @@
 			);
 			dependencies = (
 			);
-			name = "Launch it!";
+			name = "Launch it";
 			productName = LaunchIt;
-			productReference = D6BF674212E2562C008BCC5B /* Launch it!.app */;
+			productReference = D6BF674212E2562C008BCC5B /* Launch it.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -775,7 +780,7 @@
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Made By Rocket, Inc.";
 			};
-			buildConfigurationList = D6BF673C12E2562C008BCC5B /* Build configuration list for PBXProject "Launch it!" */;
+			buildConfigurationList = D6BF673C12E2562C008BCC5B /* Build configuration list for PBXProject "Launch it" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -787,7 +792,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6BF674112E2562C008BCC5B /* Launch it! */,
+				D6BF674112E2562C008BCC5B /* Launch it */,
 			);
 		};
 /* End PBXProject section */
@@ -849,6 +854,7 @@
 				D60FE72A12EF72C9006A540C /* icon_application.png in Resources */,
 				D60FE72B12EF72C9006A540C /* icon_web.png in Resources */,
 				D61A61FF14414C9D00A283BA /* container-migration.plist in Resources */,
+				D6D0A35714425B800028B550 /* Launch it.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -988,6 +994,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Mac Developer: Brian Cooke (YDGH36M7CZ)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -1000,6 +1007,7 @@
 					"-Wall",
 					"-Werror",
 				);
+				PROVISIONING_PROFILE = "58178837-B8F9-4622-8EFF-DCD6CD7BB606";
 				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64";
 			};
@@ -1009,6 +1017,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Mac Developer: Brian Cooke (YDGH36M7CZ)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1018,6 +1027,7 @@
 					"-Wall",
 					"-Werror",
 				);
+				PROVISIONING_PROFILE = "58178837-B8F9-4622-8EFF-DCD6CD7BB606";
 				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64";
 			};
@@ -1027,8 +1037,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "Launch it!.entitlements";
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_ENTITLEMENTS = "Launch it.entitlements";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Made By Rocket, Inc.";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1041,6 +1051,7 @@
 				INFOPLIST_FILE = "LaunchIt/LaunchIt-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1049,7 +1060,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "Launch it!.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Launch it.entitlements";
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1063,6 +1074,7 @@
 				INFOPLIST_FILE = "LaunchIt/LaunchIt-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1071,7 +1083,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Made By Rocket, Inc.";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1082,6 +1094,7 @@
 					"-Wall",
 				);
 				OTHER_LDFLAGS = "-lcrypto";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64";
 			};
@@ -1091,7 +1104,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "Launch it!.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Launch it.entitlements";
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1112,7 +1125,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D6BF673C12E2562C008BCC5B /* Build configuration list for PBXProject "Launch it!" */ = {
+		D6BF673C12E2562C008BCC5B /* Build configuration list for PBXProject "Launch it" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6BF677312E2562C008BCC5B /* Debug */,
@@ -1122,7 +1135,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "Launch it!" */ = {
+		D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "Launch it" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6BF677612E2562C008BCC5B /* Debug */,

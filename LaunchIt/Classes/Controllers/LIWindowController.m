@@ -16,6 +16,8 @@
 #import "Group.h"
 #import "AboutWindowController.h"
 #import "LIConstants.h"
+#import <ServiceManagement/SMLoginItem.h>
+
 
 @interface LIWindowController (private)
 - (void)slideInEditView;
@@ -260,33 +262,49 @@
 - (IBAction)setStartOnLogin:(id)sender
 {
   [sender setState:([sender state] == NSOnState ? NSOffState : NSOnState)];
-  BOOL startOnLogin = [sender state] == NSOnState;
+  //BOOL startOnLogin = [sender state] == NSOnState;
+
+	NSBundle* b=[NSBundle mainBundle];
+	NSString* p=[b bundlePath];
+	NSURL* url=[NSURL fileURLWithPath:p];  
   
-  NSMutableArray *loginItems = [self loginItems];
-  NSString *appPath = [[NSBundle mainBundle] bundlePath];
-  
-  NSMutableDictionary *myDict = [[NSMutableDictionary alloc] init];	
-  [myDict setObject:[NSNumber numberWithBool:NO] forKey:@"Hide"];
-  [myDict setObject:appPath forKey:@"Path"];
-  
-  if (startOnLogin == YES) {
-    [loginItems addObject:myDict];
-  } else {
-    for (NSDictionary *curDict in loginItems) {
-      if ([[curDict objectForKey:@"Path"] isEqualToString:appPath]) {
-        [loginItems removeObject:curDict];
-        break;
-      }
-    }
-  }
-  
-  CFPreferencesSetValue((CFStringRef)
-                        @"AutoLaunchedApplicationDictionary", loginItems, (CFStringRef)
-                        @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
-  CFPreferencesSynchronize((CFStringRef) @"loginwindow",
-                           kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
-  
-  [myDict release];
+  OSStatus status = LSRegisterURL((CFURLRef)url,true);
+	if(status!=noErr)
+	{
+		//NSLog(@"LSRegisterURL failed! %ld", (NSInteger)status);
+	}
+	
+	BOOL ok=SMLoginItemSetEnabled((CFStringRef)@"com.madebyrocket.launchables",false/*startOnLogin*/);
+	if(!ok)
+	{
+		NSLog(@"SMLoginItemSetEnabled failed!");
+	}
+                
+//  NSMutableArray *loginItems = [self loginItems];
+//  NSString *appPath = [[NSBundle mainBundle] bundlePath];
+//  
+//  NSMutableDictionary *myDict = [[NSMutableDictionary alloc] init];	
+//  [myDict setObject:[NSNumber numberWithBool:NO] forKey:@"Hide"];
+//  [myDict setObject:appPath forKey:@"Path"];
+//  
+//  if (startOnLogin == YES) {
+//    [loginItems addObject:myDict];
+//  } else {
+//    for (NSDictionary *curDict in loginItems) {
+//      if ([[curDict objectForKey:@"Path"] isEqualToString:appPath]) {
+//        [loginItems removeObject:curDict];
+//        break;
+//      }
+//    }
+//  }
+//  
+//  CFPreferencesSetValue((CFStringRef)
+//                        @"AutoLaunchedApplicationDictionary", loginItems, (CFStringRef)
+//                        @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+//  CFPreferencesSynchronize((CFStringRef) @"loginwindow",
+//                           kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+//  
+//  [myDict release];
 }
 
 

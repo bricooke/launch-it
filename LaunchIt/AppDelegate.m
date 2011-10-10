@@ -10,7 +10,7 @@
 #import "Group.h"
 #import "CoreData+ActiveRecordFetching.h"
 #import "LIConstants.h"
-
+#import <ServiceManagement/SMLoginItem.h>
 
 @implementation AppDelegate
 
@@ -36,6 +36,24 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+  NSBundle* b=[NSBundle mainBundle];
+	NSString* p=[b bundlePath];
+	NSURL* url=[NSURL fileURLWithPath:p];  
+  
+  OSStatus status = LSRegisterURL((CFURLRef)url,true);
+  
+	if(status!=noErr)
+	{
+		NSLog(@"LSRegisterURL failed! %ld", (NSInteger)status);
+	}
+	
+	BOOL ok=SMLoginItemSetEnabled((CFStringRef)@"com.madebyrocket.launchables",false/*startOnLogin*/);
+	if(!ok)
+	{
+		NSLog(@"SMLoginItemSetEnabled failed!");
+	}
+
+  
   [NSManagedObjectContext setDefaultContext:[self managedObjectContext]];
   [Group migrateExistingApplications];
   [Group bindAllHotkeys];
