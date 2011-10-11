@@ -24,6 +24,30 @@
     [NSNumber numberWithBool:NO], @"LaunchItWrapperStartOnLogin", nil]];
 }
 
+
+- (BOOL) helperIsRunning
+{
+  for (NSRunningApplication *app in [[NSWorkspace sharedWorkspace] runningApplications]) {    
+    if ([[app bundleIdentifier] isEqualToString:@"com.madebyrocket.launchables-helper"]) {
+      return YES;
+    }
+  }
+  return NO;
+}
+
+
+- (void) killIfHelperIsntRunning:(NSTimer *)aTimer
+{
+  if ([self helperIsRunning] == NO)
+    [NSApp terminate:self];
+}
+
+
+- (void) startWatchDog
+{
+  [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(killIfHelperIsntRunning:) userInfo:nil repeats:YES];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
   NSBundle* b=[NSBundle mainBundle];
@@ -44,27 +68,22 @@
   // 
   // toggling it like this does.
   //
-	SMLoginItemSetEnabled(kLIHelperBundle,false); 
-	BOOL launched=SMLoginItemSetEnabled(kLIHelperBundle,true);
-	if(!launched)
-	{
-		NSLog(@"FATAL ERROR: Unable to open LaunchItHelper, please report to launchit@madebyrocket.com");
-	}
+  if ([self helperIsRunning] == NO) {
+    SMLoginItemSetEnabled(kLIHelperBundle,false); 
+    BOOL launched=SMLoginItemSetEnabled(kLIHelperBundle,true);
+    if(!launched)
+    {
+      NSLog(@"FATAL ERROR: Unable to open LaunchItHelper, please report to launchit@madebyrocket.com");
+    }
+  }
     
   if ([[NSUserDefaults standardUserDefaults] boolForKey:@"LaunchItWrapperFirstLaunch"] == YES) {
     [self.window makeKeyAndOrderFront:self];
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"LaunchItWrapperFirstLaunch"];
   }
   
-  [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceDidTerminateApplicationNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-    NSString *bundleID = [[note userInfo] valueForKey:@"NSApplicationBundleIdentifier"];
-    
-    NSLog(@"TERMINATED: %@", bundleID);
-    
-    if ([bundleID isEqualToString:@"com.madebyrocket.launchables-helper"]) {
-      [NSApp terminate:self];
-    }
-  }];
+  // don't do this till at least 5 seconds have passed...to hopefully avoid a race condition.
+  [self performSelector:@selector(startWatchDog) withObject:nil afterDelay:5];
 }
 
 
