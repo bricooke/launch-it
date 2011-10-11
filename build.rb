@@ -9,8 +9,6 @@ if friendly_rev.nil?
   raise "FRIENDLY_REV and BUILD_NUM environment variables are required"
 end
 
-file = "LaunchIt/LaunchIt-Info.plist"
-
 bnum = File.read("./buildnum.txt").strip.to_i
 bnum = bnum + 1
 File.open("./buildnum.txt", "w") do |f|
@@ -20,16 +18,19 @@ build_num = bnum
 
 puts "Build #{friendly_rev}(#{build_num})"
 
+files = ["LaunchIt/LaunchItHelper-Info.plist", "LaunchIt/LaunchIt-Info.plist"]
 
-File.open(file, 'r+') do |f|
-  lines = f.readlines
-  lines = lines.join("")
-  lines.gsub!(/CFBundleShortVersionString<\/key>$\s*<string>.*<\/string>/, "CFBundleShortVersionString</key>\n        <string>#{friendly_rev}</string>")
-  lines.gsub!(/CFBundleVersion<\/key>$\s*<string>.*<\/string>/, "CFBundleVersion</key>\n        <string>#{build_num}</string>")
+for file in files
+  File.open(file, 'r+') do |f|
+    lines = f.readlines
+    lines = lines.join("")
+    lines.gsub!(/CFBundleShortVersionString<\/key>$\s*<string>.*<\/string>/, "CFBundleShortVersionString</key>\n        <string>#{friendly_rev}</string>")
+    lines.gsub!(/CFBundleVersion<\/key>$\s*<string>.*<\/string>/, "CFBundleVersion</key>\n        <string>#{build_num}</string>")
 
-  f.pos = 0
-  f.print lines
-  f.truncate(f.pos)
+    f.pos = 0
+    f.print lines
+    f.truncate(f.pos)
+  end
 end
 
 #clean
