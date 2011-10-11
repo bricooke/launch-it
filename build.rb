@@ -18,7 +18,7 @@ build_num = bnum
 
 puts "Build #{friendly_rev}(#{build_num})"
 
-files = ["LaunchIt/LaunchItHelper-Info.plist", "LaunchIt/LaunchIt-Info.plist"]
+files = ["LaunchIt/LaunchItHelper-Info.plist", "LaunchItWrapper/LaunchItWrapper-Info.plist"]
 
 for file in files
   File.open(file, 'r+') do |f|
@@ -34,8 +34,8 @@ for file in files
 end
 
 #clean
-%x(/Developer/usr/bin/xcodebuild -configuration Release DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/ clean)
-%x(/Developer/usr/bin/xcodebuild -configuration Release DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/)
+foo = %x(/Developer/usr/bin/xcodebuild -scheme "Launch it\!" -configuration Release DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/ clean)
+%x(/Developer/usr/bin/xcodebuild -scheme "Launch it\!" -configuration Release DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/)
 
 # zip it up
 %x(ditto -ck --sequesterRsrc --keepParent "/Users/bcooke/projects/builds/Release/Launch it!.app" ~/projects/builds/Release/launchit.#{friendly_rev}.zip)
@@ -43,8 +43,8 @@ end
 
 #puts "Building trial version..."
 #clean
-#%x(/Developer/usr/bin/xcodebuild -configuration Trial DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/ clean)
-#%x(/Developer/usr/bin/xcodebuild -configuration Trial DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/)
+#%x(/Developer/usr/bin/xcodebuild -scheme "Launch it!" -configuration Trial DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/ clean)
+#%x(/Developer/usr/bin/xcodebuild -scheme "Launch it!" -configuration Trial DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/)
 
 # zip it up
 #%x(ditto -ck --sequesterRsrc --keepParent "/Users/bcooke/projects/builds/Trial/Launch it!.app" ~/projects/builds/Trial/launchit.trial.#{friendly_rev}.zip)
