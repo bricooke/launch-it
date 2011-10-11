@@ -132,7 +132,7 @@
 		D6BF68F512E268BF008BCC5B /* LIWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68F412E268BE008BCC5B /* LIWindowController.m */; };
 		D6BF690012E2A794008BCC5B /* LIEditGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68FE12E2A794008BCC5B /* LIEditGroupViewController.m */; };
 		D6BF690112E2A794008BCC5B /* LIEditGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BF68FF12E2A794008BCC5B /* LIEditGroupView.xib */; };
-		D6D0A35714425B800028B550 /* Launch it.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D61A61ED1441440D00A283BA /* Launch it.entitlements */; };
+		D6D0A35714425B800028B550 /* LaunchItHelper.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D61A61ED1441440D00A283BA /* LaunchItHelper.entitlements */; };
 		D6F5177712EE30620078E774 /* directions_menubar.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5177512EE30620078E774 /* directions_menubar.png */; };
 		D6F5177812EE30620078E774 /* directions_start.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5177612EE30620078E774 /* directions_start.png */; };
 		D6FBA60E12EE3684003B328F /* directions_add.png in Resources */ = {isa = PBXBuildFile; fileRef = D6FBA60D12EE3684003B328F /* directions_add.png */; };
@@ -184,7 +184,7 @@
 		D6122DE512EBE87B00C9E05E /* btn_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_save.png; path = Resources/btn_save.png; sourceTree = "<group>"; };
 		D6122DF612EBF69E00C9E05E /* btn_arrow_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_arrow_selected.png; path = Resources/btn_arrow_selected.png; sourceTree = "<group>"; };
 		D616CB1D12EF7A2A0045D801 /* LIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIConstants.h; path = Classes/LIConstants.h; sourceTree = "<group>"; };
-		D61A61ED1441440D00A283BA /* Launch it.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Launch it.entitlements"; sourceTree = "<group>"; };
+		D61A61ED1441440D00A283BA /* LaunchItHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LaunchItHelper.entitlements; sourceTree = "<group>"; };
 		D61A61EF14414AF900A283BA /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCommon.h; sourceTree = "<group>"; };
 		D61A61F014414AF900A283BA /* SRCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRCommon.m; sourceTree = "<group>"; };
 		D61A61F114414AF900A283BA /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRKeyCodeTransformer.h; sourceTree = "<group>"; };
@@ -223,13 +223,13 @@
 		D66968D712EA846C000C39E7 /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Website.h; path = Classes/Models/LaunchIt/Website.h; sourceTree = "<group>"; };
 		D66968D812EA846C000C39E7 /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Website.m; path = Classes/Models/LaunchIt/Website.m; sourceTree = "<group>"; };
 		D696873B12EA8CA10033FAC7 /* v3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v3.xcdatamodel; sourceTree = "<group>"; };
-		D6BF674212E2562C008BCC5B /* Launch it!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Launch it!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6BF674212E2562C008BCC5B /* LaunchItHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchItHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BF674612E2562C008BCC5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D6BF674912E2562C008BCC5B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D6BF674A12E2562C008BCC5B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D6BF674B12E2562C008BCC5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D6BF674E12E2562C008BCC5B /* LaunchIt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LaunchIt-Info.plist"; sourceTree = "<group>"; };
-		D6BF675212E2562C008BCC5B /* LaunchIt-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LaunchIt-Prefix.pch"; sourceTree = "<group>"; };
+		D6BF674E12E2562C008BCC5B /* LaunchItHelper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LaunchItHelper-Info.plist"; sourceTree = "<group>"; };
+		D6BF675212E2562C008BCC5B /* LaunchItHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LaunchItHelper-Prefix.pch"; sourceTree = "<group>"; };
 		D6BF675312E2562C008BCC5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6BF678B12E25D73008BCC5B /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = Resources/en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D6BF678D12E25D81008BCC5B /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = en; path = Resources/en.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -425,7 +425,7 @@
 		D6BF674312E2562C008BCC5B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6BF674212E2562C008BCC5B /* Launch it!.app */,
+				D6BF674212E2562C008BCC5B /* LaunchItHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -471,12 +471,12 @@
 		D6BF674D12E2562C008BCC5B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D61A61ED1441440D00A283BA /* Launch it.entitlements */,
+				D61A61ED1441440D00A283BA /* LaunchItHelper.entitlements */,
 				D61A61FE14414C9D00A283BA /* container-migration.plist */,
 				D6BF678C12E25D81008BCC5B /* Credits.rtf */,
 				D6BF678E12E25D81008BCC5B /* InfoPlist.strings */,
-				D6BF674E12E2562C008BCC5B /* LaunchIt-Info.plist */,
-				D6BF675212E2562C008BCC5B /* LaunchIt-Prefix.pch */,
+				D6BF674E12E2562C008BCC5B /* LaunchItHelper-Info.plist */,
+				D6BF675212E2562C008BCC5B /* LaunchItHelper-Prefix.pch */,
 				D6BF675312E2562C008BCC5B /* main.m */,
 				D616CB1D12EF7A2A0045D801 /* LIConstants.h */,
 			);
@@ -748,9 +748,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D6BF674112E2562C008BCC5B /* Launch it! */ = {
+		D6BF674112E2562C008BCC5B /* LaunchItHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "Launch it!" */;
+			buildConfigurationList = D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "LaunchItHelper" */;
 			buildPhases = (
 				D6BF673E12E2562C008BCC5B /* Sources */,
 				D6BF673F12E2562C008BCC5B /* Frameworks */,
@@ -761,9 +761,9 @@
 			);
 			dependencies = (
 			);
-			name = "Launch it!";
+			name = LaunchItHelper;
 			productName = LaunchIt;
-			productReference = D6BF674212E2562C008BCC5B /* Launch it!.app */;
+			productReference = D6BF674212E2562C008BCC5B /* LaunchItHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -787,7 +787,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6BF674112E2562C008BCC5B /* Launch it! */,
+				D6BF674112E2562C008BCC5B /* LaunchItHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -849,7 +849,7 @@
 				D60FE72A12EF72C9006A540C /* icon_application.png in Resources */,
 				D60FE72B12EF72C9006A540C /* icon_web.png in Resources */,
 				D61A61FF14414C9D00A283BA /* container-migration.plist in Resources */,
-				D6D0A35714425B800028B550 /* Launch it.entitlements in Resources */,
+				D6D0A35714425B800028B550 /* LaunchItHelper.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1036,7 +1036,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = "LaunchIt/Launch it.entitlements";
+				CODE_SIGN_ENTITLEMENTS = LaunchIt/LaunchItHelper.entitlements;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Made By Rocket, Inc.";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1046,9 +1046,9 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LaunchIt/LaunchIt-Prefix.pch";
+				GCC_PREFIX_HEADER = "LaunchIt/LaunchItHelper-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "LaunchIt/LaunchIt-Info.plist";
+				INFOPLIST_FILE = "LaunchIt/LaunchItHelper-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1061,7 +1061,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = "LaunchIt/Launch it.entitlements";
+				CODE_SIGN_ENTITLEMENTS = LaunchIt/LaunchItHelper.entitlements;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1071,9 +1071,9 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LaunchIt/LaunchIt-Prefix.pch";
+				GCC_PREFIX_HEADER = "LaunchIt/LaunchItHelper-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "LaunchIt/LaunchIt-Info.plist";
+				INFOPLIST_FILE = "LaunchIt/LaunchItHelper-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1109,7 +1109,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = "LaunchIt/Launch it.entitlements";
+				CODE_SIGN_ENTITLEMENTS = LaunchIt/LaunchItHelper.entitlements;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1119,9 +1119,9 @@
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LaunchIt/LaunchIt-Prefix.pch";
+				GCC_PREFIX_HEADER = "LaunchIt/LaunchItHelper-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "LaunchIt/LaunchIt-Info.plist";
+				INFOPLIST_FILE = "LaunchIt/LaunchItHelper-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1141,7 +1141,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "Launch it!" */ = {
+		D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "LaunchItHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6BF677612E2562C008BCC5B /* Debug */,
