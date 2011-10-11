@@ -60,6 +60,14 @@
 		D66968DA12EA846C000C39E7 /* _Website.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D412EA846C000C39E7 /* _Website.m */; };
 		D66968DB12EA846C000C39E7 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D612EA846C000C39E7 /* Group.m */; };
 		D66968DC12EA846C000C39E7 /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D812EA846C000C39E7 /* Website.m */; };
+		D6B8F8D11444606E00373312 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF674612E2562C008BCC5B /* Cocoa.framework */; };
+		D6B8F8D71444606E00373312 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6B8F8D51444606E00373312 /* InfoPlist.strings */; };
+		D6B8F8D91444606E00373312 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B8F8D81444606E00373312 /* main.m */; };
+		D6B8F8E01444606E00373312 /* LaunchItWrapperAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B8F8DF1444606E00373312 /* LaunchItWrapperAppDelegate.m */; };
+		D6B8F8E31444606E00373312 /* LaunchItWrapper.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B8F8E11444606E00373312 /* LaunchItWrapper.xib */; };
+		D6B8F8E81444614800373312 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D6BF67DC12E26259008BCC5B /* Icon.icns */; };
+		D6B8F8EE1444626900373312 /* LaunchItHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = D6BF674212E2562C008BCC5B /* LaunchItHelper.app */; };
+		D6B8F8F41444637400373312 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61A6200144153CE00A283BA /* ServiceManagement.framework */; };
 		D6BF674712E2562C008BCC5B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF674612E2562C008BCC5B /* Cocoa.framework */; };
 		D6BF675412E2562C008BCC5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF675312E2562C008BCC5B /* main.m */; };
 		D6BF67B912E25E44008BCC5B /* ActiveRecordHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF679712E25E44008BCC5B /* ActiveRecordHelpers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -142,6 +150,16 @@
 		D6FBA61612EE398F003B328F /* btn_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D6FBA61212EE398F003B328F /* btn_settings.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D6B8F8EC1444625500373312 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6BF673912E2562C008BCC5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6BF674112E2562C008BCC5B;
+			remoteInfo = LaunchItHelper;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		D6122DF812EC007200C9E05E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -149,6 +167,16 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6B8F8EB1444624E00373312 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				D6B8F8EE1444626900373312 /* LaunchItHelper.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +251,15 @@
 		D66968D712EA846C000C39E7 /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Website.h; path = Classes/Models/LaunchIt/Website.h; sourceTree = "<group>"; };
 		D66968D812EA846C000C39E7 /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Website.m; path = Classes/Models/LaunchIt/Website.m; sourceTree = "<group>"; };
 		D696873B12EA8CA10033FAC7 /* v3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v3.xcdatamodel; sourceTree = "<group>"; };
+		D6B8F8CF1444606E00373312 /* Launch it!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Launch it!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6B8F8D41444606E00373312 /* LaunchItWrapper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LaunchItWrapper-Info.plist"; sourceTree = "<group>"; };
+		D6B8F8D61444606E00373312 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D6B8F8D81444606E00373312 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D6B8F8DA1444606E00373312 /* LaunchItWrapper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LaunchItWrapper-Prefix.pch"; sourceTree = "<group>"; };
+		D6B8F8DE1444606E00373312 /* LaunchItWrapperAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LaunchItWrapperAppDelegate.h; path = ../LaunchItWrapper/LaunchItWrapperAppDelegate.h; sourceTree = "<group>"; };
+		D6B8F8DF1444606E00373312 /* LaunchItWrapperAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchItWrapperAppDelegate.m; sourceTree = "<group>"; };
+		D6B8F8E21444606E00373312 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LaunchItWrapper.xib; sourceTree = "<group>"; };
+		D6B8F8EA1444620000373312 /* LaunchItWrapper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = LaunchItWrapper.entitlements; path = LaunchItWrapper/LaunchItWrapper.entitlements; sourceTree = SOURCE_ROOT; };
 		D6BF674212E2562C008BCC5B /* LaunchItHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchItHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BF674612E2562C008BCC5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D6BF674912E2562C008BCC5B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -380,6 +417,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D6B8F8CC1444606E00373312 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6B8F8F41444637400373312 /* ServiceManagement.framework in Frameworks */,
+				D6B8F8D11444606E00373312 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6BF673F12E2562C008BCC5B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,10 +459,34 @@
 			path = Classes/3rdParty/ShortcutRecorder;
 			sourceTree = "<group>";
 		};
+		D6B8F8D21444606E00373312 /* LaunchItWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				D6B8F8DE1444606E00373312 /* LaunchItWrapperAppDelegate.h */,
+				D6B8F8DF1444606E00373312 /* LaunchItWrapperAppDelegate.m */,
+				D6B8F8E11444606E00373312 /* LaunchItWrapper.xib */,
+				D6B8F8D31444606E00373312 /* Supporting Files */,
+			);
+			path = LaunchItWrapper;
+			sourceTree = "<group>";
+		};
+		D6B8F8D31444606E00373312 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6B8F8EA1444620000373312 /* LaunchItWrapper.entitlements */,
+				D6B8F8D41444606E00373312 /* LaunchItWrapper-Info.plist */,
+				D6B8F8D51444606E00373312 /* InfoPlist.strings */,
+				D6B8F8D81444606E00373312 /* main.m */,
+				D6B8F8DA1444606E00373312 /* LaunchItWrapper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D6BF673712E2562C008BCC5B = {
 			isa = PBXGroup;
 			children = (
 				D6BF674C12E2562C008BCC5B /* LaunchIt */,
+				D6B8F8D21444606E00373312 /* LaunchItWrapper */,
 				D6BF674512E2562C008BCC5B /* Frameworks */,
 				D6BF674312E2562C008BCC5B /* Products */,
 			);
@@ -426,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				D6BF674212E2562C008BCC5B /* LaunchItHelper.app */,
+				D6B8F8CF1444606E00373312 /* Launch it!.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -748,6 +819,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D6B8F8CE1444606E00373312 /* Launch it! */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6B8F8E41444606E00373312 /* Build configuration list for PBXNativeTarget "Launch it!" */;
+			buildPhases = (
+				D6B8F8CB1444606E00373312 /* Sources */,
+				D6B8F8CC1444606E00373312 /* Frameworks */,
+				D6B8F8CD1444606E00373312 /* Resources */,
+				D6B8F8EB1444624E00373312 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6B8F8ED1444625500373312 /* PBXTargetDependency */,
+			);
+			name = "Launch it!";
+			productName = "Launch it!";
+			productReference = D6B8F8CF1444606E00373312 /* Launch it!.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D6BF674112E2562C008BCC5B /* LaunchItHelper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "LaunchItHelper" */;
@@ -788,11 +878,22 @@
 			projectRoot = "";
 			targets = (
 				D6BF674112E2562C008BCC5B /* LaunchItHelper */,
+				D6B8F8CE1444606E00373312 /* Launch it! */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D6B8F8CD1444606E00373312 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6B8F8D71444606E00373312 /* InfoPlist.strings in Resources */,
+				D6B8F8E31444606E00373312 /* LaunchItWrapper.xib in Resources */,
+				D6B8F8E81444614800373312 /* Icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6BF674012E2562C008BCC5B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -856,6 +957,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D6B8F8CB1444606E00373312 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6B8F8D91444606E00373312 /* main.m in Sources */,
+				D6B8F8E01444606E00373312 /* LaunchItWrapperAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6BF673E12E2562C008BCC5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -940,6 +1050,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D6B8F8ED1444625500373312 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6BF674112E2562C008BCC5B /* LaunchItHelper */;
+			targetProxy = D6B8F8EC1444625500373312 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		D60DED0D12E2701C002F77DD /* SGKeyCodes.plist */ = {
 			isa = PBXVariantGroup;
@@ -955,6 +1073,22 @@
 				D63DD49612EE93D00096FEF7 /* en */,
 			);
 			name = AboutWindow.xib;
+			sourceTree = "<group>";
+		};
+		D6B8F8D51444606E00373312 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6B8F8D61444606E00373312 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D6B8F8E11444606E00373312 /* LaunchItWrapper.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6B8F8E21444606E00373312 /* en */,
+			);
+			name = LaunchItWrapper.xib;
 			sourceTree = "<group>";
 		};
 		D6BF678A12E25D73008BCC5B /* MainMenu.xib */ = {
@@ -984,6 +1118,83 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D6B8F8E51444606E00373312 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = LaunchItWrapper/LaunchItWrapper.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LaunchItWrapper/LaunchItWrapper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "LaunchItWrapper/LaunchItWrapper-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VERSION_INFO_FILE = LaunchItWrapper_vers.c;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D6B8F8E61444606E00373312 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = LaunchItWrapper/LaunchItWrapper.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LaunchItWrapper/LaunchItWrapper-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "LaunchItWrapper/LaunchItWrapper-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VERSION_INFO_FILE = LaunchItWrapper_vers.c;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D6B8F8E71444606E00373312 /* Appstore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = LaunchItWrapper/LaunchItWrapper.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LaunchItWrapper/LaunchItWrapper-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "LaunchItWrapper/LaunchItWrapper-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VERSION_INFO_FILE = LaunchItWrapper_vers.c;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Appstore;
+		};
 		D6BF677312E2562C008BCC5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1131,6 +1342,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D6B8F8E41444606E00373312 /* Build configuration list for PBXNativeTarget "Launch it!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6B8F8E51444606E00373312 /* Debug */,
+				D6B8F8E61444606E00373312 /* Release */,
+				D6B8F8E71444606E00373312 /* Appstore */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D6BF673C12E2562C008BCC5B /* Build configuration list for PBXProject "Launch it" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
