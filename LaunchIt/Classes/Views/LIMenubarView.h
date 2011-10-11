@@ -11,11 +11,11 @@
 @class LIWindowController;
 
 @interface LIMenubarView : NSView {
-  LIWindowController *controller;
+  LIWindowController *__unsafe_unretained controller;
   BOOL clicked;
 }
 
-@property (nonatomic, assign) LIWindowController *controller;
+@property (nonatomic, unsafe_unretained) LIWindowController *controller;
 
 - (id)initWithFrame:(NSRect)frame controller:(LIWindowController *)ctrlr;
 

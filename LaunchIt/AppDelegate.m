@@ -36,24 +36,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  NSBundle* b=[NSBundle mainBundle];
-	NSString* p=[b bundlePath];
-	NSURL* url=[NSURL fileURLWithPath:p];  
-  
-  OSStatus status = LSRegisterURL((CFURLRef)url,true);
-  
-	if(status!=noErr)
-	{
-		NSLog(@"LSRegisterURL failed! %ld", (NSInteger)status);
-	}
-	
-	BOOL ok=SMLoginItemSetEnabled((CFStringRef)@"com.madebyrocket.launchables",false/*startOnLogin*/);
-	if(!ok)
-	{
-		NSLog(@"SMLoginItemSetEnabled failed!");
-	}
-
-  
   [NSManagedObjectContext setDefaultContext:[self managedObjectContext]];
   [Group migrateExistingApplications];
   [Group bindAllHotkeys];
@@ -130,7 +112,7 @@
                                                       options:options
                                                         error:&error]) {
     [[NSApplication sharedApplication] presentError:error];
-    [persistentStoreCoordinator release], persistentStoreCoordinator = nil;
+    persistentStoreCoordinator = nil;
     return nil;
   }
 
@@ -248,12 +230,6 @@
 }
 
 
-- (void)dealloc {
-  [managedObjectContext release];
-  [persistentStoreCoordinator release];
-  [managedObjectModel release];
-  [super dealloc];
-}
 
 
 @end

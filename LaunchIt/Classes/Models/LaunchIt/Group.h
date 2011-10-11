@@ -6,7 +6,7 @@
   SGHotKey *_hotkey;
 }
 
-@property (readonly) SGHotKey *hotkey;
+@property (unsafe_unretained, readonly) SGHotKey *hotkey;
 
 + (void)bindAllHotkeys;
 + (void)migrateExistingApplications;

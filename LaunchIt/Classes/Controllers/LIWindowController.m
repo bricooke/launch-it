@@ -11,11 +11,11 @@
 #import "CoreData+ActiveRecordFetching.h"
 #import "AppDelegate.h"
 #import "LIEditGroupViewController.h"
-#import "MACollectionUtilities.h"
 #import "LIMenubarView.h"
 #import "Group.h"
 #import "AboutWindowController.h"
 #import "LIConstants.h"
+#import "SRRecorderControl.h"
 #import <ServiceManagement/SMLoginItem.h>
 
 
@@ -27,23 +27,17 @@
 
 @implementation LIWindowController
 
-- (void)dealloc {
-  self.collectionView = nil;
-  self.containerView  = nil;
-
-  [super dealloc];
-}
 
 
 - (void)awakeFromNib
 {
   [NSManagedObjectContext setDefaultContext:[[AppDelegate sharedAppDelegate] managedObjectContext]];
 
-  self.editGroupController = [[[LIEditGroupViewController alloc] initWithNibName:@"LIEditGroupView" bundle:nil] autorelease];
+  self.editGroupController = [[LIEditGroupViewController alloc] initWithNibName:@"LIEditGroupView" bundle:nil];
 
   [self.containerView setWantsLayer:YES];
   [[self.containerView layer] setOpaque:YES];
-  [[self.containerView layer] setBackgroundColor:(CGColorRef)[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg.png"]]];
+  [[self.containerView layer] setBackgroundColor:(__bridge CGColorRef)[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg.png"]]];
 
   [self.collectionView setBackgroundColors:[NSArray arrayWithObject:[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg.png"]]]];
 
@@ -52,8 +46,8 @@
   float  width     = 22.0;
   float  height    = [[NSStatusBar systemStatusBar] thickness];
   NSRect viewFrame = NSMakeRect(0, 0, width, height);
-  self.statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:width] retain];
-  [self.statusItem setView:[[[LIMenubarView alloc] initWithFrame:viewFrame controller:self] autorelease]];
+  self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:width];
+  [self.statusItem setView:[[LIMenubarView alloc] initWithFrame:viewFrame controller:self]];
   
   if ([[NSUserDefaults standardUserDefaults] boolForKey:kLISettingFirstLaunch]) {
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kLISettingFirstLaunch];
@@ -91,11 +85,11 @@
 #pragma mark animations
 - (void)setSaveAndCancelVisible:(BOOL)visible
 {
-  for (NSButton *but in ARRAY(self.cancelButton, self.saveButton, self.deleteButton)) {
+  for (NSButton *but in [NSArray arrayWithObjects:self.cancelButton, self.saveButton, self.deleteButton, nil]) {
     [[but animator] setHidden:!visible];
   }
 
-  for (NSButton *but in ARRAY(self.addButton, self.settingsButton)) {
+  for (NSButton *but in [NSArray arrayWithObjects:self.addButton, self.settingsButton, nil]) {
     [[but animator] setHidden:visible];
   }
 }
@@ -249,10 +243,10 @@
   
 	NSMutableArray* loginItems;
 	
-	loginItems = (NSMutableArray*) CFPreferencesCopyValue((CFStringRef)@"AutoLaunchedApplicationDictionary", (CFStringRef)@"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
-	loginItems = [[loginItems autorelease] mutableCopy];
+	loginItems = (__bridge_transfer NSMutableArray*) CFPreferencesCopyValue((CFStringRef)@"AutoLaunchedApplicationDictionary", (CFStringRef)@"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+	loginItems = [loginItems mutableCopy];
   
-	return [loginItems autorelease];
+	return loginItems;
 }
 
 
@@ -264,21 +258,21 @@
   [sender setState:([sender state] == NSOnState ? NSOffState : NSOnState)];
   //BOOL startOnLogin = [sender state] == NSOnState;
 
-	NSBundle* b=[NSBundle mainBundle];
-	NSString* p=[b bundlePath];
-	NSURL* url=[NSURL fileURLWithPath:p];  
-  
-  OSStatus status = LSRegisterURL((CFURLRef)url,true);
-	if(status!=noErr)
-	{
-		//NSLog(@"LSRegisterURL failed! %ld", (NSInteger)status);
-	}
-	
-	BOOL ok=SMLoginItemSetEnabled((CFStringRef)@"com.madebyrocket.launchables",false/*startOnLogin*/);
-	if(!ok)
-	{
-		NSLog(@"SMLoginItemSetEnabled failed!");
-	}
+//	NSBundle* b=[NSBundle mainBundle];
+//	NSString* p=[b bundlePath];
+//	NSURL* url=[NSURL fileURLWithPath:p];  
+//  
+//  OSStatus status = LSRegisterURL((CFURLRef)url,true);
+//	if(status!=noErr)
+//	{
+//		//NSLog(@"LSRegisterURL failed! %ld", (NSInteger)status);
+//	}
+//	
+//	BOOL ok=SMLoginItemSetEnabled((CFStringRef)@"com.madebyrocket.launchables",false/*startOnLogin*/);
+//	if(!ok)
+//	{
+//		NSLog(@"SMLoginItemSetEnabled failed!");
+//	}
                 
 //  NSMutableArray *loginItems = [self loginItems];
 //  NSString *appPath = [[NSBundle mainBundle] bundlePath];

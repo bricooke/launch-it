@@ -17,7 +17,7 @@
 
 
 
-@property (nonatomic, retain) NSNumber *isEnabled;
+@property (nonatomic, strong) NSNumber *isEnabled;
 
 @property BOOL isEnabledValue;
 - (BOOL)isEnabledValue;
@@ -27,25 +27,25 @@
 
 
 
-@property (nonatomic, retain) NSString *path;
+@property (nonatomic, strong) NSString *path;
 
 //- (BOOL)validatePath:(id*)value_ error:(NSError**)error_;
 
 
 
-@property (nonatomic, retain) NSData *renderedImage;
+@property (nonatomic, strong) NSData *renderedImage;
 
 //- (BOOL)validateRenderedImage:(id*)value_ error:(NSError**)error_;
 
 
 
-@property (nonatomic, retain) NSString *name;
+@property (nonatomic, strong) NSString *name;
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
 
 
-@property (nonatomic, retain) NSNumber *shortcutCode;
+@property (nonatomic, strong) NSNumber *shortcutCode;
 
 @property int shortcutCodeValue;
 - (int)shortcutCodeValue;
@@ -55,7 +55,7 @@
 
 
 
-@property (nonatomic, retain) NSNumber *toggle;
+@property (nonatomic, strong) NSNumber *toggle;
 
 @property BOOL toggleValue;
 - (BOOL)toggleValue;
@@ -65,7 +65,7 @@
 
 
 
-@property (nonatomic, retain) NSNumber *shortcutFlags;
+@property (nonatomic, strong) NSNumber *shortcutFlags;
 
 @property int shortcutFlagsValue;
 - (int)shortcutFlagsValue;
@@ -76,7 +76,7 @@
 
 
 
-@property (nonatomic, retain) Group* group;
+@property (nonatomic, strong) Group* group;
 //- (BOOL)validateGroup:(id*)value_ error:(NSError**)error_;
 
 

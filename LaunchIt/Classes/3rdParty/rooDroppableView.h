@@ -13,7 +13,7 @@
     NSPoint _dropPoint;
 }
 
-@property (nonatomic, retain)   id delegate;
+@property (nonatomic, strong)   id delegate;
 @property (assign)              NSPoint dropPoint;
 
 @end

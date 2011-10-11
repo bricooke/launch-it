@@ -38,7 +38,7 @@
     return self;
   }
 
-  application = [app retain];
+  application = app;
 
   return self;
 }
@@ -230,7 +230,7 @@
     xmlDoc = [[NSXMLDocument alloc] initWithContentsOfURL:furl options:NSXMLDocumentTidyXML error:&err];
   }
 
-  return [xmlDoc autorelease];
+  return xmlDoc;
 }
 
 
@@ -252,7 +252,6 @@
 
   if (!plist) {
     NSLog(@"%@", error);
-    [error release];
   }
 
   return plist;

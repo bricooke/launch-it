@@ -13,7 +13,7 @@
   NSTextField *_versionLabel;
 }
 
-@property (nonatomic, retain) IBOutlet NSTextField *versionLabel;
+@property (nonatomic, strong) IBOutlet NSTextField *versionLabel;
 
 + (AboutWindowController *) sharedAboutWindowController;
 - (IBAction) mbr:(id)sender;

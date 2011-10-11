@@ -33,11 +33,11 @@
 		D6122DF412EBE87B00C9E05E /* btn_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = D6122DE412EBE87B00C9E05E /* btn_plus.png */; };
 		D6122DF512EBE87B00C9E05E /* btn_save.png in Resources */ = {isa = PBXBuildFile; fileRef = D6122DE512EBE87B00C9E05E /* btn_save.png */; };
 		D6122DF712EBF69E00C9E05E /* btn_arrow_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = D6122DF612EBF69E00C9E05E /* btn_arrow_selected.png */; };
-		D61A61F914414AF900A283BA /* SRCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F014414AF900A283BA /* SRCommon.m */; };
-		D61A61FA14414AF900A283BA /* SRKeyCodeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F214414AF900A283BA /* SRKeyCodeTransformer.m */; };
-		D61A61FB14414AF900A283BA /* SRRecorderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F414414AF900A283BA /* SRRecorderCell.m */; };
-		D61A61FC14414AF900A283BA /* SRRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F614414AF900A283BA /* SRRecorderControl.m */; };
-		D61A61FD14414AF900A283BA /* SRValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F814414AF900A283BA /* SRValidator.m */; };
+		D61A61F914414AF900A283BA /* SRCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F014414AF900A283BA /* SRCommon.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D61A61FA14414AF900A283BA /* SRKeyCodeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F214414AF900A283BA /* SRKeyCodeTransformer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D61A61FB14414AF900A283BA /* SRRecorderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F414414AF900A283BA /* SRRecorderCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D61A61FC14414AF900A283BA /* SRRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F614414AF900A283BA /* SRRecorderControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D61A61FD14414AF900A283BA /* SRValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D61A61F814414AF900A283BA /* SRValidator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D61A61FF14414C9D00A283BA /* container-migration.plist in Resources */ = {isa = PBXBuildFile; fileRef = D61A61FE14414C9D00A283BA /* container-migration.plist */; };
 		D61A6201144153CE00A283BA /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61A6200144153CE00A283BA /* ServiceManagement.framework */; };
 		D63DD49812EE93F60096FEF7 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = D63DD49712EE93F60096FEF7 /* about.png */; };
@@ -62,19 +62,19 @@
 		D66968DC12EA846C000C39E7 /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = D66968D812EA846C000C39E7 /* Website.m */; };
 		D6BF674712E2562C008BCC5B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF674612E2562C008BCC5B /* Cocoa.framework */; };
 		D6BF675412E2562C008BCC5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF675312E2562C008BCC5B /* main.m */; };
-		D6BF67B912E25E44008BCC5B /* ActiveRecordHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF679712E25E44008BCC5B /* ActiveRecordHelpers.m */; };
-		D6BF67BA12E25E44008BCC5B /* NSManagedObject+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF679A12E25E44008BCC5B /* NSManagedObject+ActiveRecord.m */; };
-		D6BF67BB12E25E44008BCC5B /* NSManagedObjectContext+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF679C12E25E44008BCC5B /* NSManagedObjectContext+ActiveRecord.m */; };
-		D6BF67BC12E25E44008BCC5B /* NSManagedObjectModel+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF679E12E25E44008BCC5B /* NSManagedObjectModel+ActiveRecord.m */; };
-		D6BF67BD12E25E44008BCC5B /* NSPersistentStore+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67A012E25E44008BCC5B /* NSPersistentStore+ActiveRecord.m */; };
-		D6BF67BE12E25E44008BCC5B /* NSPersistentStoreCoordinator+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67A212E25E44008BCC5B /* NSPersistentStoreCoordinator+ActiveRecord.m */; };
-		D6BF67BF12E25E44008BCC5B /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67A412E25E44008BCC5B /* MAAttachedWindow.m */; };
+		D6BF67B912E25E44008BCC5B /* ActiveRecordHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF679712E25E44008BCC5B /* ActiveRecordHelpers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF67BA12E25E44008BCC5B /* NSManagedObject+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF679A12E25E44008BCC5B /* NSManagedObject+ActiveRecord.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF67BB12E25E44008BCC5B /* NSManagedObjectContext+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF679C12E25E44008BCC5B /* NSManagedObjectContext+ActiveRecord.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF67BC12E25E44008BCC5B /* NSManagedObjectModel+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF679E12E25E44008BCC5B /* NSManagedObjectModel+ActiveRecord.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF67BD12E25E44008BCC5B /* NSPersistentStore+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67A012E25E44008BCC5B /* NSPersistentStore+ActiveRecord.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF67BE12E25E44008BCC5B /* NSPersistentStoreCoordinator+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67A212E25E44008BCC5B /* NSPersistentStoreCoordinator+ActiveRecord.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF67BF12E25E44008BCC5B /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67A412E25E44008BCC5B /* MAAttachedWindow.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D6BF67C012E25E44008BCC5B /* MLog.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67A612E25E44008BCC5B /* MLog.m */; };
 		D6BF67C112E25E44008BCC5B /* rooDroppableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67A812E25E44008BCC5B /* rooDroppableView.m */; };
 		D6BF67C212E25E44008BCC5B /* rooSmoothImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67AA12E25E44008BCC5B /* rooSmoothImageView.m */; };
 		D6BF67C312E25E44008BCC5B /* RSApplicationFileAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67AC12E25E44008BCC5B /* RSApplicationFileAnalyzer.m */; };
-		D6BF67C412E25E44008BCC5B /* SGHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67AF12E25E44008BCC5B /* SGHotKey.m */; };
-		D6BF67C512E25E44008BCC5B /* SGHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67B112E25E44008BCC5B /* SGHotKeyCenter.m */; };
+		D6BF67C412E25E44008BCC5B /* SGHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67AF12E25E44008BCC5B /* SGHotKey.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF67C512E25E44008BCC5B /* SGHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67B112E25E44008BCC5B /* SGHotKeyCenter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D6BF67C612E25E44008BCC5B /* SGKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67B312E25E44008BCC5B /* SGKeyCodeTranslator.m */; };
 		D6BF67C712E25E44008BCC5B /* SGKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67B512E25E44008BCC5B /* SGKeyCombo.m */; };
 		D6BF67C812E25E44008BCC5B /* validatereceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF67B812E25E44008BCC5B /* validatereceipt.m */; };
@@ -88,51 +88,50 @@
 		D6BF67DF12E26259008BCC5B /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D6BF67DC12E26259008BCC5B /* Icon.icns */; };
 		D6BF67E012E26259008BCC5B /* menubar_bw.png in Resources */ = {isa = PBXBuildFile; fileRef = D6BF67DD12E26259008BCC5B /* menubar_bw.png */; };
 		D6BF67E112E26259008BCC5B /* menubar_flames.png in Resources */ = {isa = PBXBuildFile; fileRef = D6BF67DE12E26259008BCC5B /* menubar_flames.png */; };
-		D6BF689412E267F7008BCC5B /* BWAddMiniBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681312E267F7008BCC5B /* BWAddMiniBottomBar.m */; };
-		D6BF689512E267F7008BCC5B /* BWAddRegularBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681512E267F7008BCC5B /* BWAddRegularBottomBar.m */; };
-		D6BF689612E267F7008BCC5B /* BWAddSheetBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681712E267F7008BCC5B /* BWAddSheetBottomBar.m */; };
-		D6BF689712E267F7008BCC5B /* BWAddSmallBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681912E267F7008BCC5B /* BWAddSmallBottomBar.m */; };
-		D6BF689812E267F7008BCC5B /* BWAnchoredButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681B12E267F7008BCC5B /* BWAnchoredButton.m */; };
-		D6BF689912E267F7008BCC5B /* BWAnchoredButtonBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681D12E267F7008BCC5B /* BWAnchoredButtonBar.m */; };
-		D6BF689A12E267F7008BCC5B /* BWAnchoredButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681F12E267F7008BCC5B /* BWAnchoredButtonCell.m */; };
-		D6BF689B12E267F7008BCC5B /* BWAnchoredPopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682112E267F7008BCC5B /* BWAnchoredPopUpButton.m */; };
-		D6BF689C12E267F7008BCC5B /* BWAnchoredPopUpButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682312E267F7008BCC5B /* BWAnchoredPopUpButtonCell.m */; };
-		D6BF689D12E267F7008BCC5B /* BWCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682512E267F7008BCC5B /* BWCustomView.m */; };
-		D6BF689E12E267F7008BCC5B /* BWRemoveBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682712E267F7008BCC5B /* BWRemoveBottomBar.m */; };
-		D6BF689F12E267F7008BCC5B /* BWSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682912E267F7008BCC5B /* BWSplitView.m */; };
+		D6BF689412E267F7008BCC5B /* BWAddMiniBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681312E267F7008BCC5B /* BWAddMiniBottomBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF689512E267F7008BCC5B /* BWAddRegularBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681512E267F7008BCC5B /* BWAddRegularBottomBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF689612E267F7008BCC5B /* BWAddSheetBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681712E267F7008BCC5B /* BWAddSheetBottomBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF689712E267F7008BCC5B /* BWAddSmallBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681912E267F7008BCC5B /* BWAddSmallBottomBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF689812E267F7008BCC5B /* BWAnchoredButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681B12E267F7008BCC5B /* BWAnchoredButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF689912E267F7008BCC5B /* BWAnchoredButtonBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681D12E267F7008BCC5B /* BWAnchoredButtonBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF689A12E267F7008BCC5B /* BWAnchoredButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF681F12E267F7008BCC5B /* BWAnchoredButtonCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF689B12E267F7008BCC5B /* BWAnchoredPopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682112E267F7008BCC5B /* BWAnchoredPopUpButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF689C12E267F7008BCC5B /* BWAnchoredPopUpButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682312E267F7008BCC5B /* BWAnchoredPopUpButtonCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF689D12E267F7008BCC5B /* BWCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682512E267F7008BCC5B /* BWCustomView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF689E12E267F7008BCC5B /* BWRemoveBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682712E267F7008BCC5B /* BWRemoveBottomBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF689F12E267F7008BCC5B /* BWSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682912E267F7008BCC5B /* BWSplitView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D6BF68A012E267F7008BCC5B /* BWStyledTextField.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = D6BF682A12E267F7008BCC5B /* BWStyledTextField.classdescription */; };
-		D6BF68A112E267F7008BCC5B /* BWStyledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682C12E267F7008BCC5B /* BWStyledTextField.m */; };
+		D6BF68A112E267F7008BCC5B /* BWStyledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682C12E267F7008BCC5B /* BWStyledTextField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D6BF68A212E267F7008BCC5B /* BWStyledTextFieldCell.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = D6BF682D12E267F7008BCC5B /* BWStyledTextFieldCell.classdescription */; };
-		D6BF68A312E267F7008BCC5B /* BWStyledTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682F12E267F7008BCC5B /* BWStyledTextFieldCell.m */; };
-		D6BF68A412E267F7008BCC5B /* BWTransparentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683212E267F7008BCC5B /* BWTransparentButton.m */; };
-		D6BF68A512E267F7008BCC5B /* BWTransparentButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683412E267F7008BCC5B /* BWTransparentButtonCell.m */; };
-		D6BF68A612E267F7008BCC5B /* BWTransparentCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683612E267F7008BCC5B /* BWTransparentCheckbox.m */; };
-		D6BF68A712E267F7008BCC5B /* BWTransparentCheckboxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683812E267F7008BCC5B /* BWTransparentCheckboxCell.m */; };
-		D6BF68A812E267F7008BCC5B /* BWTransparentPopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683A12E267F7008BCC5B /* BWTransparentPopUpButton.m */; };
-		D6BF68A912E267F7008BCC5B /* BWTransparentPopUpButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683C12E267F7008BCC5B /* BWTransparentPopUpButtonCell.m */; };
-		D6BF68AA12E267F7008BCC5B /* BWTransparentScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683E12E267F7008BCC5B /* BWTransparentScroller.m */; };
-		D6BF68AB12E267F7008BCC5B /* BWTransparentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684012E267F7008BCC5B /* BWTransparentScrollView.m */; };
-		D6BF68AC12E267F7008BCC5B /* BWTransparentSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684212E267F7008BCC5B /* BWTransparentSlider.m */; };
-		D6BF68AD12E267F7008BCC5B /* BWTransparentSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684412E267F7008BCC5B /* BWTransparentSliderCell.m */; };
-		D6BF68AE12E267F7008BCC5B /* BWTransparentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684612E267F7008BCC5B /* BWTransparentTableView.m */; };
-		D6BF68AF12E267F7008BCC5B /* BWTransparentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684812E267F7008BCC5B /* BWTransparentTableViewCell.m */; };
-		D6BF68B012E267F7008BCC5B /* BWTransparentTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684A12E267F7008BCC5B /* BWTransparentTextFieldCell.m */; };
-		D6BF68B112E267F7008BCC5B /* BWUnanchoredButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684C12E267F7008BCC5B /* BWUnanchoredButton.m */; };
-		D6BF68B212E267F7008BCC5B /* BWUnanchoredButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684E12E267F7008BCC5B /* BWUnanchoredButtonCell.m */; };
-		D6BF68B312E267F7008BCC5B /* BWUnanchoredButtonContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF685012E267F7008BCC5B /* BWUnanchoredButtonContainer.m */; };
-		D6BF68B612E267F7008BCC5B /* NSApplication+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF685512E267F7008BCC5B /* NSApplication+BWAdditions.m */; };
-		D6BF68B712E267F7008BCC5B /* NSColor+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF685712E267F7008BCC5B /* NSColor+BWAdditions.m */; };
-		D6BF68B812E267F7008BCC5B /* NSEvent+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF685A12E267F7008BCC5B /* NSEvent+BWAdditions.m */; };
-		D6BF68B912E267F7008BCC5B /* NSImage+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF685C12E267F7008BCC5B /* NSImage+BWAdditions.m */; };
-		D6BF68BA12E267F7008BCC5B /* NSString+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF685E12E267F7008BCC5B /* NSString+BWAdditions.m */; };
-		D6BF68BB12E267F7008BCC5B /* NSView+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF686012E267F7008BCC5B /* NSView+BWAdditions.m */; };
-		D6BF68BC12E267F7008BCC5B /* NSWindow+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF686212E267F7008BCC5B /* NSWindow+BWAdditions.m */; };
+		D6BF68A312E267F7008BCC5B /* BWStyledTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF682F12E267F7008BCC5B /* BWStyledTextFieldCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68A412E267F7008BCC5B /* BWTransparentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683212E267F7008BCC5B /* BWTransparentButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68A512E267F7008BCC5B /* BWTransparentButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683412E267F7008BCC5B /* BWTransparentButtonCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68A612E267F7008BCC5B /* BWTransparentCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683612E267F7008BCC5B /* BWTransparentCheckbox.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68A712E267F7008BCC5B /* BWTransparentCheckboxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683812E267F7008BCC5B /* BWTransparentCheckboxCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68A812E267F7008BCC5B /* BWTransparentPopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683A12E267F7008BCC5B /* BWTransparentPopUpButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68A912E267F7008BCC5B /* BWTransparentPopUpButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683C12E267F7008BCC5B /* BWTransparentPopUpButtonCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68AA12E267F7008BCC5B /* BWTransparentScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF683E12E267F7008BCC5B /* BWTransparentScroller.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68AB12E267F7008BCC5B /* BWTransparentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684012E267F7008BCC5B /* BWTransparentScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68AC12E267F7008BCC5B /* BWTransparentSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684212E267F7008BCC5B /* BWTransparentSlider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68AD12E267F7008BCC5B /* BWTransparentSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684412E267F7008BCC5B /* BWTransparentSliderCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68AE12E267F7008BCC5B /* BWTransparentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684612E267F7008BCC5B /* BWTransparentTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68AF12E267F7008BCC5B /* BWTransparentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684812E267F7008BCC5B /* BWTransparentTableViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68B012E267F7008BCC5B /* BWTransparentTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684A12E267F7008BCC5B /* BWTransparentTextFieldCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68B112E267F7008BCC5B /* BWUnanchoredButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684C12E267F7008BCC5B /* BWUnanchoredButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68B212E267F7008BCC5B /* BWUnanchoredButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF684E12E267F7008BCC5B /* BWUnanchoredButtonCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68B312E267F7008BCC5B /* BWUnanchoredButtonContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF685012E267F7008BCC5B /* BWUnanchoredButtonContainer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68B612E267F7008BCC5B /* NSApplication+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF685512E267F7008BCC5B /* NSApplication+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68B712E267F7008BCC5B /* NSColor+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF685712E267F7008BCC5B /* NSColor+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68B812E267F7008BCC5B /* NSEvent+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF685A12E267F7008BCC5B /* NSEvent+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68B912E267F7008BCC5B /* NSImage+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF685C12E267F7008BCC5B /* NSImage+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68BA12E267F7008BCC5B /* NSString+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF685E12E267F7008BCC5B /* NSString+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68BB12E267F7008BCC5B /* NSView+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF686012E267F7008BCC5B /* NSView+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6BF68BC12E267F7008BCC5B /* NSWindow+BWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF686212E267F7008BCC5B /* NSWindow+BWAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D6BF68F112E26821008BCC5B /* LIResizableWindowFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68EE12E26821008BCC5B /* LIResizableWindowFrame.m */; };
 		D6BF68F212E26821008BCC5B /* LIWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68F012E26821008BCC5B /* LIWindow.m */; };
 		D6BF68F512E268BF008BCC5B /* LIWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68F412E268BE008BCC5B /* LIWindowController.m */; };
 		D6BF690012E2A794008BCC5B /* LIEditGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF68FE12E2A794008BCC5B /* LIEditGroupViewController.m */; };
 		D6BF690112E2A794008BCC5B /* LIEditGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BF68FF12E2A794008BCC5B /* LIEditGroupView.xib */; };
-		D6BF690412E39B9E008BCC5B /* MACollectionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF690312E39B9E008BCC5B /* MACollectionUtilities.m */; };
 		D6D0A35714425B800028B550 /* Launch it.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D61A61ED1441440D00A283BA /* Launch it.entitlements */; };
 		D6F5177712EE30620078E774 /* directions_menubar.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5177512EE30620078E774 /* directions_menubar.png */; };
 		D6F5177812EE30620078E774 /* directions_start.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F5177612EE30620078E774 /* directions_start.png */; };
@@ -371,8 +370,6 @@
 		D6BF68FD12E2A794008BCC5B /* LIEditGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LIEditGroupViewController.h; path = Classes/Controllers/LIEditGroupViewController.h; sourceTree = "<group>"; };
 		D6BF68FE12E2A794008BCC5B /* LIEditGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LIEditGroupViewController.m; path = Classes/Controllers/LIEditGroupViewController.m; sourceTree = "<group>"; };
 		D6BF68FF12E2A794008BCC5B /* LIEditGroupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LIEditGroupView.xib; path = Classes/Controllers/LIEditGroupView.xib; sourceTree = "<group>"; };
-		D6BF690212E39B9E008BCC5B /* MACollectionUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MACollectionUtilities.h; path = Classes/3rdParty/MACollectionUtilities.h; sourceTree = "<group>"; };
-		D6BF690312E39B9E008BCC5B /* MACollectionUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACollectionUtilities.m; path = Classes/3rdParty/MACollectionUtilities.m; sourceTree = "<group>"; };
 		D6F5177512EE30620078E774 /* directions_menubar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = directions_menubar.png; path = Resources/directions_menubar.png; sourceTree = "<group>"; };
 		D6F5177612EE30620078E774 /* directions_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = directions_start.png; path = Resources/directions_start.png; sourceTree = "<group>"; };
 		D6FBA60D12EE3684003B328F /* directions_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = directions_add.png; path = Resources/directions_add.png; sourceTree = "<group>"; };
@@ -506,8 +503,6 @@
 				D6BF67B612E25E44008BCC5B /* SynthesizeSingleton.h */,
 				D6BF67B712E25E44008BCC5B /* validatereceipt.h */,
 				D6BF67B812E25E44008BCC5B /* validatereceipt.m */,
-				D6BF690212E39B9E008BCC5B /* MACollectionUtilities.h */,
-				D6BF690312E39B9E008BCC5B /* MACollectionUtilities.m */,
 			);
 			name = 3rdParty;
 			sourceTree = "<group>";
@@ -927,7 +922,6 @@
 				D6BF68F212E26821008BCC5B /* LIWindow.m in Sources */,
 				D6BF68F512E268BF008BCC5B /* LIWindowController.m in Sources */,
 				D6BF690012E2A794008BCC5B /* LIEditGroupViewController.m in Sources */,
-				D6BF690412E39B9E008BCC5B /* MACollectionUtilities.m in Sources */,
 				D60B153E12E5308700985B33 /* LIMenubarView.m in Sources */,
 				D66968D912EA846C000C39E7 /* _Group.m in Sources */,
 				D66968DA12EA846C000C39E7 /* _Website.m in Sources */,
@@ -994,6 +988,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer: Brian Cooke (YDGH36M7CZ)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1017,6 +1013,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer: Brian Cooke (YDGH36M7CZ)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
@@ -1037,6 +1035,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = "LaunchIt/Launch it.entitlements";
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Made By Rocket, Inc.";
 				COPY_PHASE_STRIP = NO;
@@ -1048,6 +1047,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LaunchIt/LaunchIt-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "LaunchIt/LaunchIt-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1060,6 +1060,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = "LaunchIt/Launch it.entitlements";
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = YES;
@@ -1071,6 +1072,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LaunchIt/LaunchIt-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "LaunchIt/LaunchIt-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1083,6 +1085,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
@@ -1104,6 +1108,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = "LaunchIt/Launch it.entitlements";
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = YES;
@@ -1115,6 +1120,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LaunchIt/LaunchIt-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "LaunchIt/LaunchIt-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "$(TARGET_NAME)";

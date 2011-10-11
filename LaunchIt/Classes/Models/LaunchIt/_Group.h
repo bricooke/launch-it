@@ -18,7 +18,7 @@
 
 
 
-@property (nonatomic, retain) NSNumber *shortcutCode;
+@property (nonatomic, strong) NSNumber *shortcutCode;
 
 @property int shortcutCodeValue;
 - (int)shortcutCodeValue;
@@ -28,19 +28,19 @@
 
 
 
-@property (nonatomic, retain) NSString *name;
+@property (nonatomic, strong) NSString *name;
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
 
 
-@property (nonatomic, retain) NSData *renderedImage;
+@property (nonatomic, strong) NSData *renderedImage;
 
 //- (BOOL)validateRenderedImage:(id*)value_ error:(NSError**)error_;
 
 
 
-@property (nonatomic, retain) NSNumber *shortcutFlags;
+@property (nonatomic, strong) NSNumber *shortcutFlags;
 
 @property int shortcutFlagsValue;
 - (int)shortcutFlagsValue;
@@ -51,12 +51,12 @@
 
 
 
-@property (nonatomic, retain) NSSet* websites;
+@property (nonatomic, strong) NSSet* websites;
 - (NSMutableSet*)websitesSet;
 
 
 
-@property (nonatomic, retain) NSSet* applications;
+@property (nonatomic, strong) NSSet* applications;
 - (NSMutableSet*)applicationsSet;
 
 

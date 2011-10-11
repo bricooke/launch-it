@@ -25,7 +25,7 @@
   if (self.renderedImage == nil) {
     self.renderedImage = [[self appIconForSize:NSMakeSize(48, 48)] TIFFRepresentation];
   }
-  return [[[NSImage alloc] initWithData:self.renderedImage] autorelease];
+  return [[NSImage alloc] initWithData:self.renderedImage];
 }
 
 
@@ -34,8 +34,7 @@
   RSApplicationFileAnalyzer *analyzer = [[RSApplicationFileAnalyzer alloc] initWithApplication:self.path];
   NSImage *icon = [[NSImage alloc] initWithContentsOfFile:[analyzer iconPath]];
   [icon setSize:NSMakeSize(20,20)];
-  [analyzer release];
-  return [icon autorelease];
+  return icon;
 }
 
 
@@ -55,10 +54,8 @@
   }
   [newImage unlockFocus];
   
-  [icon release];
-  [analyzer release];  
   
-  return [newImage autorelease];
+  return newImage;
 }
 
 
@@ -77,12 +74,10 @@
     NSString *appName = [[self.path stringByDeletingPathExtension] lastPathComponent];
     script = [NSString stringWithFormat:@"tell application id \"com.apple.finder\" to set visible of process \"%@\" to false", appName];
     NSDictionary *err = nil;
-    [[[[NSAppleScript alloc] initWithSource:script] autorelease] executeAndReturnError:&err];  
+    [[[NSAppleScript alloc] initWithSource:script] executeAndReturnError:&err];  
   } else {
     [[NSWorkspace sharedWorkspace] launchApplication:self.path];
   }
-
-  [self performSelector:@selector(backToBlackStatusItem) withObject:nil afterDelay:0.25];
 }
 
 

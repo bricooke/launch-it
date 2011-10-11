@@ -25,11 +25,7 @@
 
 - (void)dealloc {
   self.group = nil;
-  self.collectionView = nil;
-  self.shortcutRecorderControl = nil;
-  self.plusButton = nil;
     
-  [super dealloc];
 }
 
 
@@ -56,8 +52,7 @@
 - (void)setGroup:(Group *)group
 {
   [self willChangeValueForKey:@"_group"];
-  [_group release];
-  _group = [group retain];
+  _group = group;
   [self didChangeValueForKey:@"_group"];
  
   if (_group) {
@@ -72,7 +67,7 @@
   
   [self.containerView setWantsLayer:YES];
   [[self.containerView layer] setOpaque:YES];
-  [[self.containerView layer] setBackgroundColor:(CGColorRef)[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg.png"]]];
+  [[self.containerView layer] setBackgroundColor:(__bridge CGColorRef)[NSColor colorWithPatternImage:[NSImage imageNamed:@"bg.png"]]];
   
   [self.collectionView setContent:[self.group applicationsAndWebsites]];
   
@@ -105,12 +100,11 @@
   NSArray           *apps           = [[NSWorkspace sharedWorkspace] launchedApplications];
   NSArrayController *appsController = [[NSArrayController alloc] initWithContent:apps];
 
-  [appsController setSortDescriptors:[NSArray arrayWithObject:[[[NSSortDescriptor alloc] initWithKey:@"NSApplicationName" ascending:YES selector:@selector(caseInsensitiveCompare:)] autorelease]]];
+  [appsController setSortDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"NSApplicationName" ascending:YES selector:@selector(caseInsensitiveCompare:)]]];
 
   NSMenuItem *newMenu = [[NSMenuItem alloc] initWithTitle:@"Choose Application..." action:@selector(chooseApplicationFromFilesystem:) keyEquivalent:@""];
   [newMenu setTarget:self];
   [runningAppsMenu addItem:newMenu];
-  [newMenu release];
 
   [runningAppsMenu addItem:[NSMenuItem separatorItem]];
 
@@ -127,16 +121,13 @@
 
     [runningAppsMenu addItem:newMenu];
 
-    [newMenu release];
   }
 
-  [appsController release];
 
   NSMenuItem *addApplicationsMenu = [[NSMenuItem alloc] init];
   [addApplicationsMenu setTitle:@"Add Application"];
   [addApplicationsMenu setSubmenu:runningAppsMenu];
   [plusMenu addItem:addApplicationsMenu];
-  [addApplicationsMenu release];
 
   NSMenuItem *item = [plusMenu addItemWithTitle:@"Add Website" action:@selector(addWebsite:) keyEquivalent:@""];
   [item setTarget:self];
@@ -158,8 +149,6 @@
 
   [NSMenu popUpContextMenu:plusMenu withEvent:event forView:self.plusButton];
 
-  [runningAppsMenu release];
-  [plusMenu release];
 }
 
 
@@ -235,7 +224,6 @@
 
   app.name = [analyzer name];
   app.path = [analyzer path];
-  [analyzer release];
 
   [self.group addApplicationsObject:app];
   

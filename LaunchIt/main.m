@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-  NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+  @autoreleasepool {
   
 	// put the example receipt on the desktop (or change that path)
 #ifdef LI_APPSTORE
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 #endif
 #endif
   
-  int ret = NSApplicationMain(argc,  (const char **) argv);
-  [pool drain];
-  return ret;
+    int ret = NSApplicationMain(argc,  (const char **) argv);
+    return ret;
+  }
 }

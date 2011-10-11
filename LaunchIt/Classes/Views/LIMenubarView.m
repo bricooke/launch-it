@@ -30,7 +30,6 @@
 - (void)dealloc
 {
   controller = nil;
-  [super dealloc];
 }
 
 

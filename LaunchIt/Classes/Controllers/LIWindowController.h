@@ -24,17 +24,17 @@
   NSMenuItem *startOnLoginMenuItem;
 }
 
-@property (nonatomic, retain) IBOutlet NSCollectionView       *collectionView;
-@property (nonatomic, retain) IBOutlet NSView                 *containerView;
-@property (nonatomic, retain) LIEditGroupViewController *editGroupController;
-@property (nonatomic, retain) IBOutlet NSButton               *cancelButton;
-@property (nonatomic, retain) IBOutlet NSButton               *deleteButton;
-@property (nonatomic, retain) IBOutlet NSButton               *saveButton;
-@property (nonatomic, retain) IBOutlet NSButton *addButton;
-@property (nonatomic, retain) IBOutlet NSButton *settingsButton;
-@property (nonatomic, retain) IBOutlet NSMenu *settingsMenu;
-@property (nonatomic, retain) IBOutlet NSMenuItem *startOnLoginMenuItem;
-@property (nonatomic, retain) NSStatusItem *statusItem;
+@property (nonatomic, strong) IBOutlet NSCollectionView       *collectionView;
+@property (nonatomic, strong) IBOutlet NSView                 *containerView;
+@property (nonatomic, strong) LIEditGroupViewController *editGroupController;
+@property (nonatomic, strong) IBOutlet NSButton               *cancelButton;
+@property (nonatomic, strong) IBOutlet NSButton               *deleteButton;
+@property (nonatomic, strong) IBOutlet NSButton               *saveButton;
+@property (nonatomic, strong) IBOutlet NSButton *addButton;
+@property (nonatomic, strong) IBOutlet NSButton *settingsButton;
+@property (nonatomic, strong) IBOutlet NSMenu *settingsMenu;
+@property (nonatomic, strong) IBOutlet NSMenuItem *startOnLoginMenuItem;
+@property (nonatomic, strong) NSStatusItem *statusItem;
 
 - (void)editGroup:(Group *)anApp;
 - (IBAction)addGroup:(id)sender;

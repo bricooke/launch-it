@@ -17,20 +17,20 @@
 
 
 
-@property (nonatomic, retain) NSString *url;
+@property (nonatomic, strong) NSString *url;
 
 //- (BOOL)validateUrl:(id*)value_ error:(NSError**)error_;
 
 
 
-@property (nonatomic, retain) NSData *favicon;
+@property (nonatomic, strong) NSData *favicon;
 
 //- (BOOL)validateFavicon:(id*)value_ error:(NSError**)error_;
 
 
 
 
-@property (nonatomic, retain) Group* group;
+@property (nonatomic, strong) Group* group;
 //- (BOOL)validateGroup:(id*)value_ error:(NSError**)error_;
 
 

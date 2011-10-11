@@ -146,7 +146,7 @@
 	titleRect.origin.y = titleRect.size.height - (WINDOW_FRAME_PADDING - 7);
 	titleRect.size.height = (WINDOW_FRAME_PADDING - 7);
 	NSMutableParagraphStyle *paragraphStyle =
-		[[[NSMutableParagraphStyle alloc] init] autorelease];
+		[[NSMutableParagraphStyle alloc] init];
 	[paragraphStyle setAlignment:NSCenterTextAlignment];
 	[windowTitle
 		drawWithRect:titleRect

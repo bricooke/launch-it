@@ -69,7 +69,6 @@
 {
 	[[NSNotificationCenter defaultCenter]
 		removeObserver:self];
-	[super dealloc];
 }
 
 
@@ -122,7 +121,7 @@
 	LIResizableWindowFrame *frameView = [super contentView];
 	if (!frameView)
 	{
-		frameView = [[[LIResizableWindowFrame alloc] initWithFrame:bounds] autorelease];
+		frameView = [[LIResizableWindowFrame alloc] initWithFrame:bounds];
 		
 		[super setContentView:frameView];
 

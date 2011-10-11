@@ -144,7 +144,6 @@
   SRRecorderControl *shortcutRecorder = [[SRRecorderControl alloc] init];
   SGKeyCombo        *combo            = [SGKeyCombo keyComboWithKeyCode:[self shortcutCodeValue] modifiers:[shortcutRecorder cocoaToCarbonFlags:[self shortcutFlagsValue]]];
 
-  [shortcutRecorder release];
 
   NSString *code = [combo keyCodeString];
 
@@ -211,7 +210,6 @@
   SRRecorderControl *shortcutRecorder = [[SRRecorderControl alloc] init];
   SGKeyCombo        *combo            = [SGKeyCombo keyComboWithKeyCode:[self shortcutCodeValue] modifiers:[shortcutRecorder cocoaToCarbonFlags:[self shortcutFlagsValue]]];
 
-  [shortcutRecorder release];
   return [combo modifierMask];
 }
 
@@ -225,7 +223,6 @@
   SRRecorderControl *shortcutRecorder = [[SRRecorderControl alloc] init];
   _hotkey = [[SGHotKey alloc] initWithIdentifier:self.objectID keyCombo:[SGKeyCombo keyComboWithKeyCode:[self shortcutCodeValue] modifiers:[shortcutRecorder cocoaToCarbonFlags:[self shortcutFlagsValue]]]];
 
-  [shortcutRecorder release];
 
   [_hotkey setTarget:self];
   [_hotkey setAction:@selector(launch:)];
@@ -279,7 +276,7 @@
       NSString *appName = [[app.path stringByDeletingPathExtension] lastPathComponent];
       script = [NSString stringWithFormat:@"tell application id \"com.apple.finder\" to set visible of process \"%@\" to false", appName];
       NSDictionary *err = nil;
-      [[[[NSAppleScript alloc] initWithSource:script] autorelease] executeAndReturnError:&err];
+      [[[NSAppleScript alloc] initWithSource:script] executeAndReturnError:&err];
       return;
     }
 
