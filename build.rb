@@ -34,7 +34,7 @@ for file in files
 end
 
 #clean
-foo = %x(/Developer/usr/bin/xcodebuild -scheme "Launch it\!" -configuration Release DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/ clean)
+%x(/Developer/usr/bin/xcodebuild -scheme "Launch it\!" -configuration Release DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/ clean)
 %x(/Developer/usr/bin/xcodebuild -scheme "Launch it\!" -configuration Release DSTROOT=~/projects/builds DEPLOYMENT_LOCATION=~/projects/builds SYMROOT=~/projects/builds/)
 
 # zip it up
@@ -53,4 +53,4 @@ foo = %x(/Developer/usr/bin/xcodebuild -scheme "Launch it\!" -configuration Rele
 
 %x(open "/Users/bcooke/Dropbox/[rocket]/Launch\ it\!/builds")
 
-# %x(git commit -v -a -m 'new build')
+%x(git commit -v -a -m 'new build')
