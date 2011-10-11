@@ -26,21 +26,45 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  if ([[NSUserDefaults standardUserDefaults] boolForKey:@"LaunchItWrapperFirstLaunch"] == YES) {
-    [self.window makeKeyAndOrderFront:self];
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"LaunchItWrapperFirstLaunch"];
-  }
   NSBundle* b=[NSBundle mainBundle];
-	NSString* p=[[b bundlePath] stringByAppendingString:@"/Contents/Library/LoginItems/LaunchItHelper.app"];
+	NSString* p=[b bundlePath];
 	NSURL* url=[NSURL fileURLWithPath:p];
-  
   LSRegisterURL((__bridge CFURLRef)url,true); // this always fails...but it doesn't seem to matter.
+  // now the helper
+  p=[p stringByAppendingString:@"/Contents/Library/LoginItems/LaunchItHelper.app"];
+	url=[NSURL fileURLWithPath:p];
+  LSRegisterURL((__bridge CFURLRef)url,true);
+
 	
+  //
+  // there's a problem:
+  // if the helper was running on it's own, 
+  // and the user quit it or it crashed
+  // if we say SMLoginItemSetEnabled(true) it doesn't start it
+  // 
+  // toggling it like this does.
+  //
+	SMLoginItemSetEnabled(kLIHelperBundle,false); 
 	BOOL launched=SMLoginItemSetEnabled(kLIHelperBundle,true);
 	if(!launched)
 	{
 		NSLog(@"FATAL ERROR: Unable to open LaunchItHelper, please report to launchit@madebyrocket.com");
 	}
+    
+  if ([[NSUserDefaults standardUserDefaults] boolForKey:@"LaunchItWrapperFirstLaunch"] == YES) {
+    [self.window makeKeyAndOrderFront:self];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"LaunchItWrapperFirstLaunch"];
+  }
+  
+  [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceDidTerminateApplicationNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+    NSString *bundleID = [[note userInfo] valueForKey:@"NSApplicationBundleIdentifier"];
+    
+    NSLog(@"TERMINATED: %@", bundleID);
+    
+    if ([bundleID isEqualToString:@"com.madebyrocket.launchables-helper"]) {
+      [NSApp terminate:self];
+    }
+  }];
 }
 
 
