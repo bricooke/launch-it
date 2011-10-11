@@ -196,7 +196,7 @@
 		D61A61F614414AF900A283BA /* SRRecorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderControl.m; sourceTree = "<group>"; };
 		D61A61F714414AF900A283BA /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRValidator.h; sourceTree = "<group>"; };
 		D61A61F814414AF900A283BA /* SRValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRValidator.m; sourceTree = "<group>"; };
-		D61A61FE14414C9D00A283BA /* container-migration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "container-migration.plist"; sourceTree = SOURCE_ROOT; };
+		D61A61FE14414C9D00A283BA /* container-migration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "container-migration.plist"; path = "LaunchIt/container-migration.plist"; sourceTree = SOURCE_ROOT; };
 		D61A6200144153CE00A283BA /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		D63DD49612EE93D00096FEF7 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = en; path = Resources/en.lproj/AboutWindow.xib; sourceTree = "<group>"; };
 		D63DD49712EE93F60096FEF7 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = Resources/about.png; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 		D66968D712EA846C000C39E7 /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Website.h; path = Classes/Models/LaunchIt/Website.h; sourceTree = "<group>"; };
 		D66968D812EA846C000C39E7 /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Website.m; path = Classes/Models/LaunchIt/Website.m; sourceTree = "<group>"; };
 		D696873B12EA8CA10033FAC7 /* v3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v3.xcdatamodel; sourceTree = "<group>"; };
-		D6BF674212E2562C008BCC5B /* Launch it.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Launch it.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6BF674212E2562C008BCC5B /* Launch it!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Launch it!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BF674612E2562C008BCC5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D6BF674912E2562C008BCC5B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D6BF674A12E2562C008BCC5B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -419,8 +419,6 @@
 		D6BF673712E2562C008BCC5B = {
 			isa = PBXGroup;
 			children = (
-				D61A61ED1441440D00A283BA /* Launch it.entitlements */,
-				D61A61FE14414C9D00A283BA /* container-migration.plist */,
 				D6BF674C12E2562C008BCC5B /* LaunchIt */,
 				D6BF674512E2562C008BCC5B /* Frameworks */,
 				D6BF674312E2562C008BCC5B /* Products */,
@@ -430,7 +428,7 @@
 		D6BF674312E2562C008BCC5B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6BF674212E2562C008BCC5B /* Launch it.app */,
+				D6BF674212E2562C008BCC5B /* Launch it!.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -476,6 +474,8 @@
 		D6BF674D12E2562C008BCC5B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D61A61ED1441440D00A283BA /* Launch it.entitlements */,
+				D61A61FE14414C9D00A283BA /* container-migration.plist */,
 				D6BF678C12E25D81008BCC5B /* Credits.rtf */,
 				D6BF678E12E25D81008BCC5B /* InfoPlist.strings */,
 				D6BF674E12E2562C008BCC5B /* LaunchIt-Info.plist */,
@@ -753,9 +753,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D6BF674112E2562C008BCC5B /* Launch it */ = {
+		D6BF674112E2562C008BCC5B /* Launch it! */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "Launch it" */;
+			buildConfigurationList = D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "Launch it!" */;
 			buildPhases = (
 				D6BF673E12E2562C008BCC5B /* Sources */,
 				D6BF673F12E2562C008BCC5B /* Frameworks */,
@@ -766,9 +766,9 @@
 			);
 			dependencies = (
 			);
-			name = "Launch it";
+			name = "Launch it!";
 			productName = LaunchIt;
-			productReference = D6BF674212E2562C008BCC5B /* Launch it.app */;
+			productReference = D6BF674212E2562C008BCC5B /* Launch it!.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -792,7 +792,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6BF674112E2562C008BCC5B /* Launch it */,
+				D6BF674112E2562C008BCC5B /* Launch it! */,
 			);
 		};
 /* End PBXProject section */
@@ -1037,7 +1037,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "Launch it.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "LaunchIt/Launch it.entitlements";
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Made By Rocket, Inc.";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1060,7 +1060,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "Launch it.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "LaunchIt/Launch it.entitlements";
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1104,7 +1104,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "Launch it.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "LaunchIt/Launch it.entitlements";
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1135,7 +1135,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "Launch it" */ = {
+		D6BF677512E2562C008BCC5B /* Build configuration list for PBXNativeTarget "Launch it!" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6BF677612E2562C008BCC5B /* Debug */,

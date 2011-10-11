@@ -14,8 +14,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D6BF674112E2562C008BCC5B"
-               BuildableName = "Launch it.app"
-               BlueprintName = "Launch it"
+               BuildableName = "Launch it!.app"
+               BlueprintName = "Launch it!"
                ReferencedContainer = "container:Launch it.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,8 +32,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D6BF674112E2562C008BCC5B"
-            BuildableName = "Launch it.app"
-            BlueprintName = "Launch it"
+            BuildableName = "Launch it!.app"
+            BlueprintName = "Launch it!"
             ReferencedContainer = "container:Launch it.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -50,8 +50,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D6BF674112E2562C008BCC5B"
-            BuildableName = "Launch it.app"
-            BlueprintName = "Launch it"
+            BuildableName = "Launch it!.app"
+            BlueprintName = "Launch it!"
             ReferencedContainer = "container:Launch it.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -68,8 +68,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D6BF674112E2562C008BCC5B"
-            BuildableName = "Launch it.app"
-            BlueprintName = "Launch it"
+            BuildableName = "Launch it!.app"
+            BlueprintName = "Launch it!"
             ReferencedContainer = "container:Launch it.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
