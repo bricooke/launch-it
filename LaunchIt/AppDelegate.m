@@ -11,6 +11,8 @@
 #import "CoreData+ActiveRecordFetching.h"
 #import "LIConstants.h"
 #import <ServiceManagement/SMLoginItem.h>
+#import "LIWindowController.h"
+
 
 @implementation AppDelegate
 
@@ -42,6 +44,90 @@
   
   [self.window setCollectionBehavior: NSWindowCollectionBehaviorCanJoinAllSpaces];
 }
+
+
+
+// this takes the NSPersistentStoreDidImportUbiquitousContentChangesNotification
+// and transforms the userInfo dictionary into something that
+// -[NSManagedObjectContext mergeChangesFromContextDidSaveNotification:] can consume
+// then it posts a custom notification to let detail views know they might want to refresh.
+// The main list view doesn't need that custom notification because the NSFetchedResultsController is
+// already listening directly to the NSManagedObjectContext
+- (void)mergeiCloudChanges:(NSDictionary*)noteInfo forContext:(NSManagedObjectContext*)moc {
+
+  NSMutableDictionary *localUserInfo = [NSMutableDictionary dictionary];
+  NSSet* allInvalidations = [noteInfo objectForKey:NSInvalidatedAllObjectsKey];
+  
+  if (nil == allInvalidations) {
+    // (1) we always materialize deletions to ensure delete propagation happens correctly, especially with 
+    // more complex scenarios like merge conflicts and undo.  Without this, future echoes may 
+    // erroreously resurrect objects and cause dangling foreign keys
+    // (2) we always materialize insertions to make new entries visible to the UI
+    NSString* materializeKeys[] = { NSDeletedObjectsKey, NSInsertedObjectsKey };
+    int c = (sizeof(materializeKeys) / sizeof(NSString*));
+    for (int i = 0; i < c; i++) {
+      NSSet* set = [noteInfo objectForKey:materializeKeys[i]];
+      if ([set count] > 0) {
+        NSMutableSet* objectSet = [NSMutableSet set];
+        for (NSManagedObjectID* moid in set) {
+          [objectSet addObject:[moc objectWithID:moid]];
+        }
+        [localUserInfo setObject:objectSet forKey:materializeKeys[i]];
+      }
+    }
+    
+    // (3) we do not materialize updates to objects we are not currently using
+    // (4) we do not materialize refreshes to objects we are not currently using
+    // (5) we do not materialize invalidations to objects we are not currently using
+    NSString* noMaterializeKeys[] = { NSUpdatedObjectsKey, NSRefreshedObjectsKey, NSInvalidatedObjectsKey };
+    c = (sizeof(noMaterializeKeys) / sizeof(NSString*));
+    for (int i = 0; i < 2; i++) {
+      NSSet* set = [noteInfo objectForKey:noMaterializeKeys[i]];
+      if ([set count] > 0) {
+        NSMutableSet* objectSet = [NSMutableSet set];
+        for (NSManagedObjectID* moid in set) {
+          NSManagedObject* realObj = [moc objectRegisteredForID:moid];
+          if (realObj) {
+            [objectSet addObject:realObj];
+          }
+        }
+        [localUserInfo setObject:objectSet forKey:noMaterializeKeys[i]];
+      }
+    }
+    
+    NSNotification *fakeSave = [NSNotification notificationWithName:NSManagedObjectContextDidSaveNotification object:self  userInfo:localUserInfo];
+    [moc mergeChangesFromContextDidSaveNotification:fakeSave]; 
+    
+  } else {
+    [localUserInfo setObject:allInvalidations forKey:NSInvalidatedAllObjectsKey];
+  }
+  
+  [self.windowController willChangeValueForKey:@"anyEntities"];
+
+  [moc processPendingChanges];
+  
+  [self.windowController didChangeValueForKey:@"anyEntities"];
+  [self.windowController.collectionView setContent:[Group allSortedByName]];
+  
+  NSLog(@"Synced with iCloud - should be displaying: %ld items", [[Group allSortedByName] count]);
+}
+
+
+
+
+// NSNotifications are posted synchronously on the caller's thread
+// make sure to vector this back to the thread we want, in this case
+// the main thread for our views & controller
+- (void)mergeChangesFrom_iCloud:(NSNotification *)notification {
+  NSDictionary* ui = [notification userInfo];
+	NSManagedObjectContext* moc = [self managedObjectContext];
+  
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [self mergeiCloudChanges:ui forContext:moc];
+  });
+}
+
+
 
 
 /**
@@ -102,19 +188,38 @@
   NSURL *url = [NSURL fileURLWithPath:[applicationSupportDirectory stringByAppendingPathComponent:@"launchables.sqlite3"]];
   persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
 
-  NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
-                           [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
-                           [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+  
+  // iCloud
+  // do this asynchronously since if this is the first time this particular device is syncing with preexisting
+  // iCloud content it may take a long long time to download
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSURL *storeUrl = url;
+    // this needs to match the entitlements and provisioning profile
+    NSURL *cloudURL = [fileManager URLForUbiquityContainerIdentifier:nil];
+    NSString* coreDataCloudContent = [[cloudURL path] stringByAppendingPathComponent:@"launchit"];
+    cloudURL = [NSURL fileURLWithPath:coreDataCloudContent];
+    
+    //  The API to turn on Core Data iCloud support here.
+    NSDictionary* options = [NSDictionary dictionaryWithObjectsAndKeys:
+                             @"com.madebyrocket.launchables-helper.1", NSPersistentStoreUbiquitousContentNameKey, 
+                             cloudURL, NSPersistentStoreUbiquitousContentURLKey, 
+                             [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
+                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption,nil];
+    
+    NSError *error = nil;    
+    NSPersistentStoreCoordinator *psc = persistentStoreCoordinator;    
+    [psc lock];
+    [self.windowController willChangeValueForKey:@"anyEntities"];
 
-  if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
-                                                configuration:nil
-                                                          URL:url
-                                                      options:options
-                                                        error:&error]) {
-    [[NSApplication sharedApplication] presentError:error];
-    persistentStoreCoordinator = nil;
-    return nil;
-  }
+    if (![psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:options error:&error]) {
+      [[NSApplication sharedApplication] presentError:error];
+    } 
+    [self.windowController didChangeValueForKey:@"anyEntities"];
+    [self.windowController.collectionView setContent:[Group allSortedByName]];
+    [psc unlock];
+  });
 
   return persistentStoreCoordinator;
 }
@@ -142,6 +247,8 @@
   managedObjectContext = [[NSManagedObjectContext alloc] init];
   [managedObjectContext setPersistentStoreCoordinator:coordinator];
 
+  [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(mergeChangesFrom_iCloud:) name:NSPersistentStoreDidImportUbiquitousContentChangesNotification object:coordinator];
+  
   return managedObjectContext;
 }
 

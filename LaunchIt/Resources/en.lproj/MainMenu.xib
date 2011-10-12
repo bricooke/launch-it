@@ -1385,7 +1385,7 @@
 									<string key="NSFrame">{{7, 192}, {288, 92}}</string>
 									<reference key="NSSuperview" ref="1034562960"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="594824825"/>
+									<reference key="NSNextKeyView"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSImageCell" key="NSCell" id="129386401">
 										<int key="NSCellFlags">130560</int>
@@ -1451,7 +1451,7 @@
 													<string key="NSFrameSize">{300, 284}</string>
 													<reference key="NSSuperview" ref="910059448"/>
 													<reference key="NSWindow"/>
-													<reference key="NSNextKeyView" ref="708215735"/>
+													<reference key="NSNextKeyView" ref="763280256"/>
 													<int key="NSViewLayerContentsRedrawPolicy">2</int>
 													<string key="NSMinGridSize">{0, 0}</string>
 													<string key="NSMaxGridSize">{0, 0}</string>
@@ -1516,7 +1516,7 @@
 									<string key="NSFrame">{{0, 1}, {300, 284}}</string>
 									<reference key="NSSuperview" ref="1034562960"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView" ref="910059448"/>
+									<reference key="NSNextKeyView" ref="708215735"/>
 									<int key="NSViewLayerContentsRedrawPolicy">2</int>
 									<int key="NSsFlags">133648</int>
 									<reference key="NSVScroller" ref="763280256"/>
@@ -1549,6 +1549,7 @@
 							<string key="NSFrame">{{289, 3}, {8, 9}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSImageCell" key="NSCell" id="866149760">
 								<int key="NSCellFlags">130560</int>
@@ -1571,7 +1572,7 @@
 					<reference key="NSNextKeyView" ref="126732566"/>
 					<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1440, 900}}</string>
 				<string key="NSMinSize">{300, 322}</string>
 				<string key="NSMaxSize">{300, 1046}</string>
 				<string key="NSFrameAutosaveName">launchit_mainwindow</string>
@@ -3861,20 +3862,6 @@
 						<reference key="parent" ref="594824825"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">577</int>
-						<reference key="object" ref="221353614"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="129386401"/>
-						</object>
-						<reference key="parent" ref="1034562960"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">578</int>
-						<reference key="object" ref="129386401"/>
-						<reference key="parent" ref="221353614"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">584</int>
 						<reference key="object" ref="760587747"/>
 						<object class="NSMutableArray" key="children">
@@ -3925,6 +3912,20 @@
 						<int key="objectID">607</int>
 						<reference key="object" ref="500503642"/>
 						<reference key="parent" ref="980684824"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">577</int>
+						<reference key="object" ref="221353614"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="129386401"/>
+						</object>
+						<reference key="parent" ref="1034562960"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">578</int>
+						<reference key="object" ref="129386401"/>
+						<reference key="parent" ref="221353614"/>
 					</object>
 				</object>
 			</object>
@@ -4330,7 +4331,7 @@
 				<reference key="dict.values" ref="1049"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">610</int>
+			<int key="maxID">617</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

@@ -206,9 +206,9 @@
   [panel setCanCreateDirectories:NO];
   [panel setAllowsMultipleSelection:NO];
   [panel setDirectoryURL:[NSURL fileURLWithPath:@"/Applications"]];
-  [panel setAllowedFileTypes:[NSArray arrayWithObjects:@"app", @"scpt", nil]];
+  [panel setAllowedFileTypes:[NSArray arrayWithObjects:@"app", nil]];
   
-  [panel beginSheetModalForWindow:[[self view] window] completionHandler:^(NSInteger result) {
+  [panel beginWithCompletionHandler:^(NSInteger result) {
     if (result == NSFileHandlingPanelOKButton)
       [self addApplicationAtPath:[[panel URL] path]];
   }];

@@ -1248,7 +1248,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = LaunchIt/LaunchItHelper.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Made By Rocket, Inc.";
+				CODE_SIGN_IDENTITY = "Mac Developer: Brian Cooke (YDGH36M7CZ)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1262,7 +1262,7 @@
 				INFOPLIST_FILE = "LaunchIt/LaunchItHelper-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "DDAC9803-DAE0-4488-94FE-4FC55A010C78";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1350,6 +1350,7 @@
 				D6B8F8E71444606E00373312 /* Appstore */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6BF673C12E2562C008BCC5B /* Build configuration list for PBXProject "Launch it" */ = {
 			isa = XCConfigurationList;
