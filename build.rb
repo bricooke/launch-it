@@ -51,6 +51,6 @@ end
 #%x(cp ~/projects/builds/Trial/launchit.trial.#{friendly_rev}.zip "/Users/bcooke/Dropbox/[rocket]/Launch it!/builds/launchit.trial.#{friendly_rev}.zip")
 
 
-%x(open "/Users/bcooke/Dropbox/[rocket]/Launch\ it\!/builds")
+%x(open "/Users/bcooke/Dropbox/[rocket] apps/Launch it\!/builds")
 
 %x(git commit -v -a -m 'new build')
