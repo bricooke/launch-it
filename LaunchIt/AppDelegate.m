@@ -108,8 +108,6 @@
   
   [self.windowController didChangeValueForKey:@"anyEntities"];
   [self.windowController.collectionView setContent:[Group allSortedByName]];
-  
-  NSLog(@"Synced with iCloud - should be displaying: %ld items", [[Group allSortedByName] count]);
 }
 
 
