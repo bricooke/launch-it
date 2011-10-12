@@ -126,7 +126,6 @@
 {
   if ([NSManagedObjectContext defaultContext] == nil) 
     [NSManagedObjectContext setDefaultContext:[[AppDelegate sharedAppDelegate] managedObjectContext]];
-  NSLog(@"Any entities: %d", [[Group allSortedByName] count] > 0);
   return [[Group allSortedByName] count] > 0;
 }
 
