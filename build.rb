@@ -39,7 +39,7 @@ end
 
 # zip it up
 %x(ditto -ck --sequesterRsrc --keepParent "/Users/bcooke/projects/builds/Release/Launch it!.app" ~/projects/builds/Release/launchit.#{friendly_rev}.zip)
-%x(cp ~/projects/builds/Release/launchit.#{friendly_rev}.zip "/Users/bcooke/Dropbox/[rocket]/Launch it!/builds/launchit.#{build_num.to_s.rjust(4, '0')}_#{friendly_rev}.zip")
+%x(cp ~/projects/builds/Release/launchit.#{friendly_rev}.zip "/Users/bcooke/Dropbox/[rocket] apps/Launch it\!/builds/launchit.#{build_num.to_s.rjust(4, '0')}_#{friendly_rev}.zip")
 
 #puts "Building trial version..."
 #clean
