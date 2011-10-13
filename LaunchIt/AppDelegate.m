@@ -108,6 +108,8 @@
   
   [self.windowController didChangeValueForKey:@"anyEntities"];
   [self.windowController.collectionView setContent:[Group allSortedByName]];
+  
+  [Group bindAllHotkeys];
 }
 
 
@@ -200,7 +202,7 @@
     cloudURL = [NSURL fileURLWithPath:coreDataCloudContent];
     
     //  The API to turn on Core Data iCloud support here.
-    NSDictionary* options = [NSDictionary dictionaryWithObjectsAndKeys:
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                              @"com.madebyrocket.launchables-helper.1", NSPersistentStoreUbiquitousContentNameKey, 
                              cloudURL, NSPersistentStoreUbiquitousContentURLKey, 
                              [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
@@ -217,6 +219,8 @@
     [self.windowController didChangeValueForKey:@"anyEntities"];
     [self.windowController.collectionView setContent:[Group allSortedByName]];
     [psc unlock];
+    
+    [Group bindAllHotkeys];
   });
 
   return persistentStoreCoordinator;
