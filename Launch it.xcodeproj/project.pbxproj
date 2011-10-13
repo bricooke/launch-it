@@ -1124,7 +1124,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = LaunchItWrapper/LaunchItWrapper.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "Mac Developer: Brian Cooke (YDGH36M7CZ)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -1141,7 +1141,7 @@
 				INFOPLIST_FILE = "LaunchItWrapper/LaunchItWrapper-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "CCEA1F28-0288-4843-AF0F-7082E9CF6CDE";
 				VERSION_INFO_FILE = LaunchItWrapper_vers.c;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1153,7 +1153,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = LaunchItWrapper/LaunchItWrapper.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "Mac Developer: Brian Cooke (YDGH36M7CZ)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -1165,7 +1165,7 @@
 				INFOPLIST_FILE = "LaunchItWrapper/LaunchItWrapper-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "CCEA1F28-0288-4843-AF0F-7082E9CF6CDE";
 				VERSION_INFO_FILE = LaunchItWrapper_vers.c;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1264,7 +1264,7 @@
 				INFOPLIST_FILE = "LaunchIt/LaunchItHelper-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "DDAC9803-DAE0-4488-94FE-4FC55A010C78";
+				PROVISIONING_PROFILE = "CB527A8F-F4F8-4907-B422-587A6B1F92CF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1275,7 +1275,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = LaunchIt/LaunchItHelper.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "Mac Developer: Brian Cooke (YDGH36M7CZ)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1293,7 +1293,7 @@
 					"-Werror",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "CB527A8F-F4F8-4907-B422-587A6B1F92CF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
