@@ -111,7 +111,7 @@
   NSInteger webCount = [self.websites count];
   NSString *ret = @"";
   if (appCount > 0) {
-    ret = [ret stringByAppendingFormat:@"%d app%@", appCount, appCount != 1 ? @"s" : @""];
+    ret = [ret stringByAppendingFormat:@"%ld app%@", (long)appCount, appCount != 1 ? @"s" : @""];
   }
   
   if (webCount > 0 && appCount > 0) {
@@ -119,7 +119,7 @@
   }
   
   if (webCount > 0) {
-    ret = [ret stringByAppendingFormat:@"%d site%@", webCount, webCount != 1 ? @"s" : @""];
+    ret = [ret stringByAppendingFormat:@"%ld site%@", (long)webCount, webCount != 1 ? @"s" : @""];
   }
   
   return ret;

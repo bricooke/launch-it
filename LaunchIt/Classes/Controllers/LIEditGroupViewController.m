@@ -216,23 +216,15 @@
   [panel setCanChooseDirectories:NO];
   [panel setCanCreateDirectories:NO];
   [panel setAllowsMultipleSelection:NO];
+  [panel setDirectoryURL:[NSURL fileURLWithPath:@"/Applications"]];
+  [panel setAllowedFileTypes:[NSArray arrayWithObject:@"app"]];
 
-  [panel beginSheetForDirectory:@"/Applications"
-                           file:nil
-                          types:[NSArray arrayWithObject:@"app"]
-                 modalForWindow:[[self view] window]
-                  modalDelegate:self
-                 didEndSelector:@selector(didChooseApplication:returnCode:contextInfo:)
-                    contextInfo:nil];
+  [panel beginSheetModalForWindow:[[self view] window] completionHandler:^(NSInteger result) {
+    if (result != 0) {
+      [self addApplicationAtPath:[[panel URL] path]];
+    }
+  }];
 }
-
-
-- (void)didChooseApplication:(NSOpenPanel *)panel returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
-{
-  if (returnCode != 0)
-    [self addApplicationAtPath:[[panel filenames] objectAtIndex:0]];
-}
-
 
 - (void)addApplicationAtPath:(NSString *)aFile
 {

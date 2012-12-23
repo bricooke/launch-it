@@ -118,7 +118,7 @@ static NSNumber *defaultBatchSize = nil;
 			}
 			else
 			{
-				NSLog(@"Property '%@' not found in %@ properties for %@", propertyName, [propDict count], NSStringFromClass(self));
+				NSLog(@"Property '%@' not found in %lu properties for %@", propertyName, (unsigned long)[propDict count], NSStringFromClass(self));
 			}
 		}
 	}

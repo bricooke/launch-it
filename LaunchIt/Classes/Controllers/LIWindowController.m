@@ -182,7 +182,7 @@
 
 - (IBAction)delete:(id)sender
 {
-  NSAlert *alert = [NSAlert alertWithMessageText:@"Are you sure you want to delete this shortcut?" defaultButton:@"Yes, delete it" alternateButton:@"Don't delete" otherButton:nil informativeTextWithFormat:[NSString stringWithFormat:@"Really delete the shortcut for %@?", self.editGroupController.group.name]];
+  NSAlert *alert = [NSAlert alertWithMessageText:@"Are you sure you want to delete this shortcut?" defaultButton:@"Yes, delete it" alternateButton:@"Don't delete" otherButton:nil informativeTextWithFormat:@"Really delete the shortcut for %@?", self.editGroupController.group.name];
 
   if ([alert runModal] == 1) {
     [self.editGroupController.group deleteEntity];
